@@ -1,0 +1,23 @@
+.tweetIconsContainer{
+    display: grid;
+    box-sizing: border-box;
+    width: 100%;
+    grid-template-columns: 5% 5% 5% 5%;
+    grid-column-gap: 20%;
+}
+.tweetContainer{
+    box-sizing: border-box;
+    border: 1px groove rgb(75 75 75 / 10%);
+    display: grid;
+    grid-template-columns: 10% 90%;
+    column-gap: 3%;
+}
+.tweetContainer *{
+    box-sizing: border-box;
+}
+.tweettext{
+    width:90%;
+}
+.tweetImage{
+    border-radius: 50%;
+}

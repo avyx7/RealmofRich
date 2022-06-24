@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+font-family: 'Roboto', Arial, sans-serif;
+}
+.educationhomeheader{
+box-sizing: border-box;
+width:100%;
+padding:1vw 5vw 0vw 5vw;
+display: grid;
+grid-template-columns: 20% 60% 20%;
+background: rgb(51, 53, 69);
+}
+.not-active{display: none;}
+.profilemenu{
+  
+}
+@media screen and (max-width: 700px){
+  .elogo{
+  height:6vw;
+  width:15vw;
+  position: relative;
+	overflow: hidden;
+  }
+}
+.elogo{
+grid-column: 1/1;
+width:100%;
+max-width: 18vw;
+}
+
+.wrapper{
+grid-column: 2/2;
+width: 100%;
+max-width: 50vw;
+}
+.profilecontainer{
+  grid-column: 3/3; 
+  display: grid;
+  grid-template-columns: 40% 20% 80%;
+}
+.vip{
+  grid-column: 1/1;
+}
+@media screen and (max-width: 700px){
+  .elogo img{
+    max-width: 18vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  /* ------animation styles fadein LOGO image---- */
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	20% { opacity: 0; }
+	60% { opacity: 1; }
+	100% { opacity: 1; }
+}
+
+.fadeInClass {
+	animation-name: fadeIn;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+}
+/* ------End of animation styles fadein LOGO image---- */
+  .vip{
+    max-width: 6vw;
+  }
+  .profilepic{
+    max-width: 15vw;
+  } 
+}
+@media screen and (min-width: 700px){
+  .elogo img{
+    max-width: 18vw;
+  }
+  .fadeInClass{
+    display: none;
+  }
+  .vip{
+    max-width: 4vw;
+  }
+  .profilepic{
+    max-width: 5vw;
+  }
+}
+.profilepic{
+  grid-column: 2/2;
+}
+.searchicon{
+  width:24px;
+  height:24px
+} 
+.label{
+font-size: .625rem;
+font-weight: 400;
+text-transform: uppercase;
+letter-spacing: +1.3px;
+margin-bottom: 1rem;
+}
+  
+.searchBar {
+width: 100%;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+  
+#searchQueryInput {
+width: 100%;
+height: 2.8rem;
+background: #f5f5f5;
+outline: none;
+border: none;
+border-radius: 0.625rem;
+padding: 0 3.5rem 0 1.5rem;
+font-size: 1rem;
+}
+  
+#searchQuerySubmit {
+width: 3.5rem;
+height: 2.8rem;
+margin-left: -3.5rem;
+background: none;
+border: none;
+outline: none;
+}
+#searchQuerySubmit:hover {
+cursor: pointer;
+}
+/*Beginning of pulse animation*/
+.pulse-button {
+  color: white;
+  border: none;
+  border-radius: 50%;
+  background: #080808;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(23, 24, 24, 0.5);
+  -webkit-animation: pulse 1.5s infinite; /* Safari & Chrome */
+-moz-animation: pulse 1.5s infinite; /* Firefox */
+-ms-animation: pulse 1.5s infinite; /* Internet Explorer */
+-o-animation: pulse 1.5s infinite; /* Opera */
+animation: pulse 1.5s infinite; /* W3C */
+}
+.pulse-button:hover {
+  -webkit-animation: none;
+  -moz-animation: none; /* Firefox */
+-ms-animation: none; /* Internet Explorer */
+-o-animation:  none; /* Opera */
+animation: none; /* W3C */
+}
+@keyframes pulse {
+  0% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  70% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(90, 153, 212, 0);
+  }
+  100% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+  }
+}
+
+/*Ending of pulse animation*/
+.educationsubheader{
+box-sizing: border-box;
+width: 100%;
+height: 40px;
+-webkit-box-align: center;
+align-items: center;
+-webkit-box-pack: start;
+background: rgb(34, 37, 57);
+}
+/*Beginning of Education Caraousel */
+@keyframes tonext {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: 100%;
+    }
+    98% {
+      left: 100%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes tostart {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: -300%;
+    }
+    98% {
+      left: -300%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes snap {
+    96% {
+      scroll-snap-align: center;
+    }
+    97% {
+      scroll-snap-align: none;
+    }
+    99% {
+      scroll-snap-align: none;
+    }
+    100% {
+      scroll-snap-align: center;
+    }
+  }
+@media screen and (max-width: 900px){
+  .educationcarousel {
+    width:100vw;
+  }
+  .carousel__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    counter-increment: item;
+  }
+  .caraouselimage{
+    width:100vw;
+  }
+}
+@media screen and (min-width: 900px){
+  .educationcarousel {
+    width:100vw;
+  }
+  .carousel__slide {
+    position: relative;
+    flex: 0 0 50%;
+    width: 100%;
+    counter-increment: item;
+  }
+  .caraouselimage{
+    width:50vw;
+  }
+}
+  
+  .carousel * {
+    box-sizing: border-box;
+    scrollbar-color: transparent transparent; /* thumb and track color */
+    scrollbar-width: 0px;
+  }
+  
+  .carousel *::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  .carousel *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .carousel *::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+  }
+  
+  .carousel * {
+    -ms-overflow-style: none;
+  }
+  
+  ol, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .carousel {
+    position: relative;
+  }
+  
+  .carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+ .carousel__snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+  }
+  
+  @media (hover: hover) {
+    .carousel__snapper {
+      animation-name: tonext, snap;
+      animation-timing-function: ease;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+  
+    .carousel__slide:last-child .carousel__snapper {
+      animation-name: tostart, snap;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .carousel__snapper {
+      animation-name: none;
+    }
+  }
+  
+  .carousel:hover .carousel__snapper,
+  .carousel:focus-within .carousel__snapper {
+    animation-name: none;
+  } 
+
+
+  /*---------- Profile Menu ------*/
+  .profile-menu{
+    width: 30vw;
+    background-color: white;
+    position: absolute;
+    top: 17vh;
+    left: 65vw;
+    z-index: 2;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.profile-menu-items{
+    padding: 1vh 5vh;
+    width:100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.profile-menu-items:last-child {
+    border-bottom: none;
+    padding: 1vh 5vh 0 5vh;
+  }
+.profile-menu-items a{
+    text-decoration: none;
+}
+.nav-text{
+    color:black;
+    font-size: 20px;
+    align-items: center;
+    transform: translate(0%, 17%);
+}
+  /*---------- upgrade VIP css ------*/
+  @import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
+  .completebackground{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width:100vw;
+  }
+  .backgroundVIP{
+    background-image: url("./6e400.jpg");
+    position: fixed;
+    top:0;
+  }
+  .close{
+    height:10vh;
+    width:10vh;
+    float: right;
+    margin-right: 2vh;
+    background: url("./icons/001-close.png");
+  }
+  .gamefont{
+    font-family: 'Stalinist One', cursive;
+  }
+  .upgradeVIP-heading{
+    font-size: 200%;
+    padding: 10vh;
+    text-align: center;
+    color:rgb(197, 211, 121);
+  }

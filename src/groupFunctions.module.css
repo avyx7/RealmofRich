@@ -1,0 +1,167 @@
+.groupMenuModal{
+    position: absolute;
+    top: 15vh;
+    left: 15vw;
+    right: 15vw;
+    bottom: 30vw;
+    width: 70vw;
+    height: 50vh;
+    background-color: rgba(12, 10, 12, 0.9);
+}
+.groupMenuOverlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size:cover;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.boundary{
+    position: absolute;
+    border-left: 1px solid rgb(255, 255, 255);
+    width: 70vw;
+    height: 50vh;
+}
+.closemodalIcon{
+    position: relative;
+    width: 7vh;
+    margin-top: -5vh;
+    margin-left: 65vw;
+    z-index: 10;
+}
+.groupIconsContainergrid{
+    position: relative;
+    width: 70vw;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 2vw;
+}
+.achievementsIcon{
+    grid-row: 1/1;
+    grid-column: 1/1;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    background: url("./icons/002-achievement.png") no-repeat;
+    background-position: center;
+    background-color: #111f38;
+    background-size: 7vh 7vh;
+ }
+ .achievementsIcon:hover{
+ background-size: 6vh 6vh;
+ }
+ .leaderboardIcon{
+    grid-row: 2/2;
+    grid-column: 1/1;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    background: url("./icons/001-podium.png") no-repeat;
+    background-position: center;
+    background-color: #111f38;
+    background-size: 7vh 7vh;
+ }
+ .leaderboardIcon:hover{
+ background-size: 6vh 6vh;
+ }
+ .tournamentIcon{
+    grid-row: 3/3;
+    grid-column: 1/1;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    background: url("./icons/003-soccer-field.png") no-repeat;
+    background-position: center;
+    background-color: #111f38;
+    background-size: 7vh 7vh;
+ }
+ .tournamentIcon:hover{
+ background-size: 6vh 6vh;
+ }
+.creategroupIcon{
+    grid-row: 1/1;
+    grid-column: 2/2;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    background: url("./icons/group-min.png") no-repeat;
+    background-position: center;
+    background-color: #111f38;
+    background-size: 7vh 7vh;
+ }
+ .creategroupIcon:hover{
+    background-size: 6vh 6vh;
+ }
+ .searchgroupIcon{
+    grid-row: 2/2;
+    grid-column: 2/2;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    background: url("./icons/037-chat-min.png") no-repeat;
+    background-position: center;
+    background-color: #111f38;
+    background-size: 7vh 7vh;
+ }
+ .searchgroupIcon:hover{
+    background-size: 6vh 6vh;
+ }
+ .mygroupsIcon{
+    grid-row: 3/3;
+    grid-column: 2/2;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    background: url("./icons/036-network-min.png") no-repeat;
+    background-position: center;
+    background-color: #111f38;
+    background-size: 7vh 7vh;
+ }
+ .mygroupsIcon:hover{
+    background-size: 6vh 6vh;
+ }
+ .alertsIcon{
+    grid-row: 1/1;
+    grid-column: 3/3;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    background: url("./icons/notification-min.png") no-repeat;
+    background-position: center;
+    background-color: #111f38;
+    background-size: 7vh 7vh;
+ }
+ .alertsIcon:hover{
+    background-size: 6vh 6vh;
+ }
+ .mailIcon{
+    grid-row: 2/2;
+    grid-column: 3/3;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    background: url("./icons/mail-min.png") no-repeat;
+    background-position: center;
+    background-color: #111f38;
+    background-size: 7vh 7vh;
+ }
+ .mailIcon:hover{
+    background-size: 6vh 6vh;
+ }
+ .giftboxIcon{
+    grid-row: 3/3;
+    grid-column: 3/3;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    background: url("./icons/029-gift-box-min.png") no-repeat;
+    background-position: center;
+    background-color: #111f38;
+    background-size: 7vh 7vh;
+ }
+ .giftboxIcon:hover{
+    background-size: 6vh 6vh;
+ }
