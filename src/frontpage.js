@@ -1,4 +1,7 @@
+import { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+import { ui, uiConfig } from "./App";
 import Divider from "./divider";
 import Header from "./header";
 import Homepage from "./homepage";
@@ -12,7 +15,13 @@ import Cookie from "./cookie";
 import Faq from "./faq";
 
 
+
 function Frontpage() {
+
+  useEffect(() => {
+    ui.start('#auth-options', uiConfig);
+  });
+
     return (
       <Router>
         <div>

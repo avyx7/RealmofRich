@@ -1,4 +1,4 @@
-import { ChatRoom } from './App';
+import { ChatRoom } from './chatFunction';
 import React from "react";
 
 class ChatModule extends React.Component {

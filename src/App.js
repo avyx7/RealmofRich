@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import Frontpage from "./frontpage";
 import Loading from "./loading";
 
@@ -7,34 +7,34 @@ import Loading from "./loading";
 import firebase from "firebase/app";
 import 'firebase/auth';
 import 'firebase/firestore';
+import 'firebase/database';
 import 'firebase/analytics';
 
 import * as firebaseui from 'firebaseui';
 import 'firebaseui/dist/firebaseui.css';
 
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { useCollectionData } from 'react-firebase-hooks/firestore';
 import Home from './home';
-import firebasekeys from './firebaselock';
+import {firebaseConfig} from './firebaselock';
+import Pepper from './pepper';
+import Realm from './realm';
 import EducationHome from './educationHome';
-import GameFinances from './game-finances';
 
-firebasekeys();
-
+export const realm = firebase.initializeApp(firebaseConfig);
 export const auth = firebase.auth();
-const firestore = firebase.firestore();
-const analytics = firebase.analytics();
+export const firestore = firebase.firestore();
+export const database = firebase.database();
+export const analytics = firebase.analytics();
 
 // Initialize the FirebaseUI Widget using Firebase.
-const ui = new firebaseui.auth.AuthUI(firebase.auth());
+export const ui = new firebaseui.auth.AuthUI(firebase.auth());
 
-const uiConfig = {
+export const uiConfig = {
   callbacks: {
     signInSuccessWithAuthResult: function(authResult, redirectUrl) {
       // User successfully signed in.
       // Return type determines whether we continue the redirect automatically
       // or whether we leave that to developer to handle.
-      return true;
+      return false;
     },
     uiShown: function() {
       // The widget is rendered.
@@ -44,7 +44,7 @@ const uiConfig = {
   },
   // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
   signInFlow: 'popup',
-  signInSuccessUrl: "/crush",
+  signInSuccessUrl: "/",
   signInOptions: [
     // Leave the lines as is for the providers you want to offer your users.
     {
@@ -94,8 +94,26 @@ const uiConfig = {
         };
       }
     },
-    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-    firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+    {
+      provider: firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      scopes: [
+        'https://www.googleapis.com/auth/contacts.readonly'
+      ],
+      customParameters: {
+        // Forces account selection even when one account
+        // is available.
+        prompt: 'select_account'
+      }
+    },
+    {
+      provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+      scopes: [
+        'public_profile',
+        'email',
+        'user_likes',
+        'user_friends'
+      ]
+    },
     firebase.auth.TwitterAuthProvider.PROVIDER_ID
     
   ],
@@ -105,16 +123,30 @@ const uiConfig = {
   //privacyPolicyUrl: '/privacypolicy'
 };
 
-ui.start('#auth-options', uiConfig);
 
 let user = {};
 
 function App() {
-  const user = useAuthState(auth);
+
+
+
+useEffect(() => {
+
   // Is there an email link sign-in?
-if (ui.isPendingRedirect()) {
-  ui.start('#auth-options', uiConfig);
-}
+  if (ui.isPendingRedirect()) {
+    ui.start('#auth-options', uiConfig);
+  }
+
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+      <Redirect false to='/Home' component = {Home}/>
+    } else {
+      // No user is signed in.
+      <Redirect false to='/' component = {Frontpage}/>
+    }
+    });
+});
 
 
   return (
@@ -140,104 +172,7 @@ if (ui.isPendingRedirect()) {
   );
 }
 
-export function Setlogout(){
-  auth.signOut();
-  
-}
-export function SignIn() {
 
-  const signInWithGoogle = () => {
-    const provider = new firebase.auth.GoogleAuthProvider();
-    auth.signInWithPopup(provider);
-  }
-
-  return (
-    <>
-      <button className="sign-in" onClick={signInWithGoogle}>Sign in with Google</button>
-      <p>Do not violate the community guidelines or you will be banned for life!</p>
-    </>
-  )
-
-}
-
-export function SignOut() {
-  return auth.currentUser && (
-    <button className="sign-out" onClick={() => auth.signOut()}>Sign Out</button>
-  )
-}
-
-export function ChatRoom(){
-  const dummy = useRef();
-  const messagesRef = firestore.collection('messages');
-  const query = messagesRef.orderBy('createdAt');
-
-  const [messages] = useCollectionData(query, { idField: 'id' });
-
-  const [formValue, setFormValue] = useState('');
-
-  useEffect(() => {
-    dummy.current.scrollIntoView({ behavior: 'smooth' });
-
-  });
-
-
-  const sendMessage = async (e) => {
-    e.preventDefault();
-
-    const { uid, photoURL } = auth.currentUser;
-
-    await messagesRef.add({
-      text: formValue,
-      createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-      uid,
-      photoURL
-    })
-
-    setFormValue('');
-    dummy.current.scrollIntoView({ behavior: 'smooth' });
-  }
-
-  {/*
-    React.useEffect(() => {
-    dummy.current.scrollIntoView({ behavior: 'smooth' });
-  }, [error]);
-*/}
-
-function ChatMessage(props){
-  const { text, uid, photoURL } = props.message;
-
-  const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
-
-  return (<>
-    <div className={`message ${messageClass}`}>
-      <img className ="profilepic" src={photoURL || './1111.jpg'} />
-      <p>{text}</p>
-    </div>
-  </>)
-}
-
-  return (
-    <div className="chatbonegrid">
-      <main>
-
-        {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
-
-        <span ref={dummy}></span>
-
-      </main>
-
-      <div className="inputbox">
-        <form className="chatform" onSubmit={sendMessage}>
-
-          <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
-
-          <button type="submit" disabled={!formValue}>🕊️</button>
-
-        </form>
-      </div>
-    </div>
-  )
-}
 
 
 
@@ -247,24 +182,6 @@ function ChatMessage(props){
 
 
 // Firebase App (the core Firebase SDK) is always required and must be listed first
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

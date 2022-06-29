@@ -3,7 +3,8 @@ import {BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-rou
 import './home.css';
 import EducationHome from "./educationHome";
 import './educationHome.css';
-import GameFinances from './game-finances';
+import Pepper from './pepper';
+import Realm from './realm';
 import firebase from "firebase/app";
 import 'firebase/auth';
 
