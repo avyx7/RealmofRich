@@ -44,6 +44,7 @@ class EducationHome extends React.Component {
     
 
     render(){
+        <h1>HELLO from EducationHome</h1>
         if (this.state.upgradeVIP) {
             return (<UpgradeVIP
                 setupgradeVIP = {()=>this.setupgradeVIP}

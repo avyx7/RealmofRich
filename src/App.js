@@ -154,15 +154,14 @@ useEffect(() => {
       <Router>
         <div>
           <Switch>
-            <Route exact path = "/crush">
-            {user ? <Loading/> : <Frontpage/>}
-            </Route>
             <Route exact path = "/">
-            {/*{user ? <Loading /> : <Frontpage/>}*/}
-            <Frontpage/>
+            {user ? <Redirect to="/home" /> : <Frontpage/>}
             </Route>
-            <Route exact path = "/Home">
-            <Home/>
+            <Route exact path = "/home">
+            {user ? <Home/> : <Frontpage/>}
+            </Route>
+            <Route exact path = "/:c">
+            <Redirect to="/home" />
             </Route>
 
           </Switch>

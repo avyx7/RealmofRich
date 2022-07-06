@@ -24,7 +24,7 @@ class ProfileMenu extends Component {
                                 Help & Support
                             </Link>
                         </li>
-                        <li className="profile-menu-items" onClick={Setlogout()}>
+                        <li className="profile-menu-items" >
                             <Link to = "#">
                                 Log Out
                             </Link>
