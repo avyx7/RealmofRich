@@ -15,7 +15,7 @@ function Home() {
     let c = useParams();
 
     return (
-      <div>
+      <>
         
         <div className ="home-container">
 
@@ -95,7 +95,7 @@ function Home() {
         </div>
 
         
-      </div>
+      </>
     );
 
 

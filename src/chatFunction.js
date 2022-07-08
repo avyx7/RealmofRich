@@ -8,7 +8,7 @@ import { useList } from 'react-firebase-hooks/database';
     const dummy = useRef();
     
     const writemessagesRef = firebase.database().ref('messages');
-    const messagesRef = firebase.database().ref('messages').orderByKey().limitToLast(10);
+    const messagesRef = firebase.database().ref('messages').orderByKey();
     const [snapshots, loading, error] = useList(messagesRef);
     
     let [messages, setmessages] = useState([]);
