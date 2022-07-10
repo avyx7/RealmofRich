@@ -130,23 +130,23 @@ function App() {
 
 
 
-useEffect(() => {
+  useEffect(() => {
 
-  // Is there an email link sign-in?
-  if (ui.isPendingRedirect()) {
-    ui.start('#auth-options', uiConfig);
-  }
-
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      // User is signed in.
-      <Redirect false to='/Home' component = {Home}/>
-    } else {
-      // No user is signed in.
-      <Redirect false to='/' component = {Frontpage}/>
+    // Is there an email link sign-in?
+    if (ui.isPendingRedirect()) {
+      ui.start('#auth-options', uiConfig);
     }
-    });
-});
+
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+        <Redirect false to='/Home' component = {Home}/>
+      } else {
+        // No user is signed in.
+        <Redirect false to='/' component = {Frontpage}/>
+      }
+      });
+  });
 
 
   return (

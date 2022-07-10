@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 
-class ProfileMenu extends Component {
+function ProfileMenu(props) {
 
-    render() {
         return (
             <div>
-                <nav className={!this.props.profilemenu ? "not-active": "profilemenu"} onClick = {this.props.onClick()}>
+                <nav className={!props.profilemenu ? "not-active": "profilemenu"} onClick = {props.onClick()}>
                     <ul className="profile-menu">
-                        <li className="profile-menu-items" onClick={this.props.setupgradeVIP()}>
+                        <li className="profile-menu-items" onClick={props.setupgradeVIP()}>
  
                             <img className="vip" src = "../icons/vipcircle-min.png" alt = "vip icon"></img> Upgrade VIP
 
@@ -33,7 +32,7 @@ class ProfileMenu extends Component {
                 </nav>
             </div>
         )
-    }
+
 }
 
 export default ProfileMenu;

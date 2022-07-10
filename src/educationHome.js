@@ -1,3 +1,4 @@
+import React, { useState} from 'react';
 import EducationHomeHeader from "./educationHomeHeader";
 import EducationCarousel from "./educationCarousel";
 import './educationHome.css';
@@ -6,59 +7,42 @@ import './chat.css';
 import DogAnimated from "./dogAnimated";
 import ChatModule from "./chatmodule";
 import UpgradeVIP from "./upgradeVIP";
-import React from "react";
 
 
-class EducationHome extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state={
-            chatOpen: true,
-            profilemenu: false,
-            upgradeVIP:false
-        };
-        this.setchatOpen = this.setchatOpen.bind(this);
-        this.setprofilemenu = this.setprofilemenu.bind(this);
-        this.setupgradeVIP = this.setupgradeVIP.bind(this);
+function EducationHome() {
+    const [chatOpen, setchatOpen] = useState(true);
+    const [profilemenu, setprofilemenu] = useState(false);
+    const [upgradeVIP, setupgradeVIP] = useState(false);
 
+
+    const togglechatOpen = ()=> {
+        setchatOpen(!chatOpen);
     }
-
-    setchatOpen() {
-        this.setState({
-            chatOpen: !(this.state.chatOpen)
-        });
-
+    const toggleprofilemenu = ()=> {
+        setprofilemenu(!profilemenu);
     }
-    setprofilemenu() {
-        this.setState({
-            profilemenu: !(this.state.profilemenu)
-        });
-
-    }
-    setupgradeVIP() {
-        this.setState({
-            upgradeVIP: !(this.state.upgradeVIP)
-        });
-
+    const toggleupgradeVIP = ()=> {
+        setupgradeVIP(!upgradeVIP);
     }
     
 
-    render(){
-        <h1>HELLO from EducationHome</h1>
-        if (this.state.upgradeVIP) {
+
+
+        /*if (this.state.upgradeVIP) {
             return (<UpgradeVIP
                 setupgradeVIP = {()=>this.setupgradeVIP}
                  />)
         }else
+        */
      return (
         <div>
 
             <EducationHomeHeader
-            profilemenu = {this.state.profilemenu}
-            setprofilemenu = {this.setprofilemenu}
-            upgradeVIP = {this.state.upgradeVIP}
-            setupgradeVIP = {this.setupgradeVIP}
-            setlogout = {this.setlogout}
+            profilemenu = {profilemenu}
+            setprofilemenu = {toggleprofilemenu}
+            upgradeVIP = {upgradeVIP}
+            setupgradeVIP = {toggleupgradeVIP}
+            //setlogout = {setlogout}
             />
             <div id="main">
             <EducationCarousel/>
@@ -66,8 +50,8 @@ class EducationHome extends React.Component {
             <section>
 
                 <Chat 
-                chatOpen= {this.state.chatOpen}
-                setchatOpen = {this.setchatOpen}
+                chatOpen= {chatOpen}
+                setchatOpen = {togglechatOpen}
                 />
             </section>
             </div>
@@ -75,28 +59,22 @@ class EducationHome extends React.Component {
         </div>
 
 
-        );
-    }
+    );
+
 }
 
-    class Chat extends React.Component {
-        constructor(props){
-            super(props);
-            this.state={
-            };
-        }
-        render(){
+    function Chat(props) {
+
             return(
-            <div className={"sticktobottom"+(this.props.chatOpen ? "":' sticktobottom-inactive')}>
+            <div className={"sticktobottom"+(props.chatOpen ? "":' sticktobottom-inactive')}>
             <DogAnimated/>
             
             <ChatModule 
-            chatOpen ={this.props.chatOpen}
-            onClick = {()=> this.props.setchatOpen}
+            chatOpen ={props.chatOpen}
+            onClick = {()=> props.setchatOpen}
             />
             </div>
             );
-        }
     }
     
 export default EducationHome;

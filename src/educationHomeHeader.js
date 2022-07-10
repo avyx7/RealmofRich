@@ -1,26 +1,19 @@
-import { auth } from 'firebaseui';
-import React from "react";
+import { auth } from './App';
+import React, { useState, useEffect} from 'react';
 import ProfileMenu from './profileMenu';
 
-class EducationHomeHeader extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state={
-            pulse:true
-        }
-        this.setpulse = this.setpulse.bind(this);
+function EducationHomeHeader(props) {
+    const [pulse, setpulse] = useState(true);
+
+    const togglepulse= ()=>{
+        setpulse(!pulse);
     }
-    setpulse(){
-        this.setState({
-        pulse: !this.state.pulse
-        });
-    }
-render () {
+
     return (
-        <div>
+        <>
             <div class="educationhomeheader"
-                            onMouseEnter={() => this.setpulse}
-                            onMouseLeave={() => this.setpulse}
+                            onMouseEnter={togglepulse}
+                            onMouseLeave={togglepulse}
             >
                 <div className = "elogo">
                     
@@ -37,18 +30,18 @@ render () {
                 </div>
                 <div className="profilecontainer">
                 <img className="vip" src = "../icons/002-coin.png" alt = "vip icon"></img>
-                <img className = {"profilepic "+(this.state.pulse ? "pulse-button":'')}
+                <img className = {"profilepic "+(pulse ? "pulse-button":'')}
                 src = "../icons/profilepic-min.png" alt = "profile pic"
-                onClick = {()=>this.props.setprofilemenu()}
+                onClick = {()=>props.setprofilemenu()}
                 ></img>
                 <ProfileMenu
-                profilemenu = {this.props.profilemenu}
-                onClick = {()=> this.props.setprofilemenu}
+                profilemenu = {props.profilemenu}
+                onClick = {()=> props.setprofilemenu}
 
-                upgradeVIP = {this.props.upgradeVIP}
-                setupgradeVIP = {()=> this.props.setupgradeVIP}
+                upgradeVIP = {props.upgradeVIP}
+                setupgradeVIP = {()=> props.setupgradeVIP}
 
-                setlogout = {()=> this.props.setlogout }
+                setlogout = {()=> props.setlogout }
                 />
                 </div>
                 
@@ -58,9 +51,9 @@ render () {
                 
 
             </div>
-        </div>
+        </>
     );
-}
+
 }
 
 function SignOut() {
