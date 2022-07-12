@@ -4,6 +4,7 @@ import ProfileMenu from './profileMenu';
 
 function EducationHomeHeader(props) {
     const [pulse, setpulse] = useState(true);
+    const { uid, photoURL } = auth.currentUser;
 
     const togglepulse= ()=>{
         setpulse(!pulse);
@@ -11,15 +12,13 @@ function EducationHomeHeader(props) {
 
     return (
         <>
-            <div class="educationhomeheader"
+            <div className="educationhomeheader"
                             onMouseEnter={togglepulse}
                             onMouseLeave={togglepulse}
             >
-                <div className = "elogo">
-                    
-                </div>
 
-                <div class="wrapper">
+
+                <div className="wrapper">
                     <div class="searchBar">
                         <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Search for People, Group, Services" value="" />
                         <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit">
@@ -29,20 +28,22 @@ function EducationHomeHeader(props) {
                     </div>
                 </div>
                 <div className="profilecontainer">
-                <img className="vip" src = "../icons/002-coin.png" alt = "vip icon"></img>
-                <img className = {"profilepic "+(pulse ? "pulse-button":'')}
-                src = "../icons/profilepic-min.png" alt = "profile pic"
-                onClick = {()=>props.setprofilemenu()}
-                ></img>
-                <ProfileMenu
-                profilemenu = {props.profilemenu}
-                onClick = {()=> props.setprofilemenu}
+                    <div className="profilegrid">
+                    <img className="vip" src = "../icons/002-coin.png" alt = "vip icon"></img>
+                    <img className = {"profilepic "+(pulse ? "pulse-button":'')}
+                    src = {photoURL || "../icons/profilepic-min.png"} alt = "profile pic"
+                    onClick = {()=>props.setprofilemenu()}
+                    ></img>
+                    <ProfileMenu
+                    profilemenu = {props.profilemenu}
+                    onClick = {()=> props.setprofilemenu}
 
-                upgradeVIP = {props.upgradeVIP}
-                setupgradeVIP = {()=> props.setupgradeVIP}
+                    upgradeVIP = {props.upgradeVIP}
+                    setupgradeVIP = {()=> props.setupgradeVIP}
 
-                setlogout = {()=> props.setlogout }
-                />
+                    setlogout = {()=> props.setlogout }
+                    />
+                    </div>
                 </div>
                 
             </div>

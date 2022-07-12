@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect, useParams } from "react-router-dom";
 import Frontpage from "./frontpage";
 import Loading from "./loading";
 
@@ -157,11 +157,13 @@ function App() {
             <Route exact path = "/">
             {user ? <Redirect to="/home" /> : <Frontpage/>}
             </Route>
+            {/*
             <Route exact path = "/home">
             {user ? <Home/> : <Frontpage/>}
             </Route>
+            */}
             <Route exact path = "/:c">
-            <Redirect to="/home" />
+            <Home/>
             </Route>
 
           </Switch>

@@ -47,13 +47,13 @@ function EducationHome() {
             <div id="main">
             <EducationCarousel/>
             
-            <section>
+            <>
 
                 <Chat 
                 chatOpen= {chatOpen}
                 setchatOpen = {togglechatOpen}
                 />
-            </section>
+            </>
             </div>
 
         </div>

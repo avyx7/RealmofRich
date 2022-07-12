@@ -6,12 +6,18 @@
     color:black;
     box-sizing: border-box;
 }
+.RORlogo{
+    margin: 1vw;
+    width: 6vw;
+    height: 7vw;
+    object-fit: fill;
+}
 @media only screen and (min-width: 700px)  {
 .home-container{
     display: grid;
     grid-template-columns: 23% 77%;
 }
-.home-container-min{
+#homecontainermin{
     display: grid;
     grid-template-columns: 7% 93%;
 }
@@ -37,6 +43,9 @@
 }
 .nav-text a{
     text-decoration: none;
+}
+#homecontainermin .nav-text{
+    display:none;
 }
 .navicon{
     height:30px;

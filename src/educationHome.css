@@ -5,9 +5,9 @@ font-family: 'Roboto', Arial, sans-serif;
 .educationhomeheader{
 box-sizing: border-box;
 width:100%;
-padding:1vw 5vw 0vw 5vw;
+padding:2% 5% 0% 5%;
 display: grid;
-grid-template-columns: 20% 60% 20%;
+grid-template-columns: 50% 39%;
 background: rgb(51, 53, 69);
 }
 .not-active{display: none;}
@@ -15,6 +15,7 @@ background: rgb(51, 53, 69);
   
 }
 @media screen and (max-width: 700px){
+/*
   .elogo{
   height:6vw;
   width:15vw;
@@ -27,7 +28,7 @@ grid-column: 1/1;
 width:100%;
 max-width: 18vw;
 }
-
+*/
 .wrapper{
 grid-column: 2/2;
 width: 100%;
@@ -41,7 +42,6 @@ max-width: 50vw;
 .vip{
   grid-column: 1/1;
 }
-@media screen and (max-width: 700px){
   .elogo img{
     max-width: 18vw;
     position: absolute;
@@ -72,8 +72,19 @@ max-width: 50vw;
   } 
 }
 @media screen and (min-width: 700px){
-  .elogo img{
-    max-width: 18vw;
+  .wrapper{
+    grid-column: 1/1;
+    width: 100%;
+    max-width: 50vw;
+  }
+  .profilecontainer{
+    grid-column: 2/2;
+    padding-left: 5%;
+  }
+  .profilegrid{
+    display: grid;
+    grid-gap: 10%;
+    grid-template-columns: 40% 20% 40%;
   }
   .fadeInClass{
     display: none;
@@ -244,7 +255,7 @@ background: rgb(34, 37, 57);
 }
 @media screen and (min-width: 900px){
   .educationcarousel {
-    width:100vw;
+    width:100%;
   }
   .carousel__slide {
     position: relative;

@@ -12,58 +12,58 @@ function Home() {
 
 
 
-    let c = useParams();
+    let {c} = useParams();
 
     return (
       <>
         
-        <div className ="home-container">
-
+        <div className ="home-container" id = {c=="home"? '':'homecontainermin'}>
+        {/*<h3>ID: {c}</h3>*/}
             <div className="SideNav">
               
               <Link className="" to ="#">
-                <img src = "IMG_1019.jpg" />
+                <img className = {c=="home"? '': "RORlogo"} src = {c=="home"? "IMG_1019.jpg": "291105576.PNG"} />
               </Link>
             
           
-          <nav className = {true? 'nav-menu active': 'nav-menu'}>
-            <ul className = 'nav-menu-items'>
 
-              <li className = ''>
-                <Link to = "/home">
-                  <div className = "navicon friendship"></div>
-                  <div className = "nav-text">Home</div>
-                </Link>
-              </li>
-              <li className = ''>
-                <Link to = "/realm">
-                <div className = "navicon coin"></div>
-                <div className = "nav-text">Realm</div>
-                </Link>
-              </li>
-              <li className = ''>
-                <Link to = "education">
-                  <div className = "navicon trophy"></div>
-                  <div className = "nav-text">Education</div>
-                </Link>
-              </li>
-            </ul>
-          </nav>
+                <ul className = 'nav-menu-items'>
+
+                  <li className = ''>
+                    <Link to = "/home">
+                      <div className = "navicon friendship"></div>
+                      <div className = "nav-text">Home</div>
+                    </Link>
+                  </li>
+                  <li className = ''>
+                    <Link to = "/realm">
+                    <div className = "navicon coin"></div>
+                    <div className = "nav-text">Realm</div>
+                    </Link>
+                  </li>
+                  <li className = ''>
+                    <Link to = "/education">
+                      <div className = "navicon trophy"></div>
+                      <div className = "nav-text">Education</div>
+                    </Link>
+                  </li>
+                </ul>
+
           </div>
-          {
-            /*
-            <Router>
+
+
+           {/* <Router>
               <Switch>
-              <Route exact path="/education" component={EducationHome} />
-                <Route exact path="/home" component={Pepper} />
-                <Route exact path="/realm" component={Realm} />
+              <Route exact path="/education"  />
+                <Route exact path="/home}" />
+                <Route exact path="/realm" />
 
               </Switch>
-            </Router>
-            */
-          }
-            
-          {c=="home"? <Pepper/> : c=="realm"? <Realm/> : <EducationHome/> }
+            </Router>*/}
+
+          <div className='homegrid'>
+            {c=="home"? <Pepper/> : c=="realm"? <Realm/> : <EducationHome/> }
+          </div>
           
 
           <div className="mobile-menu">

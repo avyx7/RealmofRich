@@ -1,7 +1,7 @@
 .sticktobottom{
   position: fixed;
   bottom:0;
-  width: 100vw;
+  width: 100%;
 }
 .puppychatcontainer{
   position: relative;
@@ -10,7 +10,7 @@
 
 .chatcontainer{
   position: absolute;
-  width: 100vw;
+  width: 100%;
   color: white;
   background-color: #282c34;
 }
@@ -107,7 +107,7 @@
   }
 .chatgrid{
   display: grid;
-  grid-template-columns: 20vw 50vw 30vw;
+  grid-template-columns: 23.5% 46% 23.5%;
 }
 .chatgrid-inactive{
   display: none;
