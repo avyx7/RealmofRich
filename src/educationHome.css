@@ -98,6 +98,7 @@ max-width: 50vw;
 }
 .profilepic{
   grid-column: 2/2;
+  border-radius: 50%;
 }
 .searchicon{
   width:24px;
