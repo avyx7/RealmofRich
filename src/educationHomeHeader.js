@@ -29,21 +29,22 @@ function EducationHomeHeader(props) {
                 </div>
                 <div className="profilecontainer">
                     <div className="profilegrid">
-                    <img className="vip" src = "../icons/002-coin.png" alt = "vip icon"></img>
-                    <img className = {"profilepic "+(pulse ? "pulse-button":'')}
-                    src = {photoURL || "../icons/profilepic-min.png"} alt = "profile pic"
-                    onClick = {()=>props.setprofilemenu()}
-                    ></img>
-                    <ProfileMenu
-                    profilemenu = {props.profilemenu}
-                    onClick = {()=> props.setprofilemenu}
-
-                    upgradeVIP = {props.upgradeVIP}
-                    setupgradeVIP = {()=> props.setupgradeVIP}
-
-                    setlogout = {()=> props.setlogout }
-                    />
+                        <div className="vip"><img src = "../icons/002-coin.png" alt = "vip icon"/></div>
+                        <i className="fi fi-bs-shopping-cart carticon" id = "carticonactive"></i>
+                        <div><img className = {"profilepic "+(pulse ? "pulse-button":'')}
+                        src = {photoURL || "../icons/profilepic-min.png"} alt = "profile pic"
+                        onClick = {()=>props.setprofilemenu()}
+                        /></div>
                     </div>
+                    <ProfileMenu
+                        profilemenu = {props.profilemenu}
+                        onClick = {()=> props.setprofilemenu}
+
+                        upgradeVIP = {props.upgradeVIP}
+                        setupgradeVIP = {()=> props.setupgradeVIP}
+
+                        setlogout = {()=> props.setlogout }
+                        />
                 </div>
                 
             </div>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css');
 *{
 font-family: 'Roboto', Arial, sans-serif;
 }
@@ -15,57 +16,55 @@ background: rgb(51, 53, 69);
   
 }
 @media screen and (max-width: 700px){
-/*
+  /*
+    .elogo{
+    height:6vw;
+    width:15vw;
+    position: relative;
+    overflow: hidden;
+    }
+  }
   .elogo{
-  height:6vw;
-  width:15vw;
-  position: relative;
-	overflow: hidden;
-  }
-}
-.elogo{
-grid-column: 1/1;
-width:100%;
-max-width: 18vw;
-}
-*/
-.wrapper{
-grid-column: 2/2;
-width: 100%;
-max-width: 50vw;
-}
-.profilecontainer{
-  grid-column: 3/3; 
-  display: grid;
-  grid-template-columns: 40% 20% 80%;
-}
-.vip{
   grid-column: 1/1;
-}
-  .elogo img{
-    max-width: 18vw;
-    position: absolute;
-    top: 0;
-    left: 0;
+  width:100%;
+  max-width: 18vw;
   }
-  /* ------animation styles fadein LOGO image---- */
-@keyframes fadeIn {
-	0% { opacity: 0; }
-	20% { opacity: 0; }
-	60% { opacity: 1; }
-	100% { opacity: 1; }
-}
+  */
+  .wrapper{
+  grid-column: 2/2;
+  width: 100%;
+  max-width: 50vw;
+  }
+  .profilecontainer{
+    grid-column: 3/3; 
+    display: grid;
+    grid-template-columns: 40% 20% 80%;
+  }
+  .vip{
+    grid-column: 1/1;
+  }
+    /* ------animation styles fadein LOGO image---- */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    20% { opacity: 0; }
+    60% { opacity: 1; }
+    100% { opacity: 1; }
+  }
 
-.fadeInClass {
-	animation-name: fadeIn;
-	animation-duration: 3s;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-	animation-timing-function: linear;
-}
-/* ------End of animation styles fadein LOGO image---- */
+  .fadeInClass {
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+  /* ------End of animation styles fadein LOGO image---- */
   .vip{
     max-width: 6vw;
+  }
+  .carticon{
+    color:white;
+    font-size:500%;
   }
   .profilepic{
     max-width: 15vw;
@@ -84,13 +83,21 @@ max-width: 50vw;
   .profilegrid{
     display: grid;
     grid-gap: 10%;
-    grid-template-columns: 40% 20% 40%;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .fadeInClass{
     display: none;
   }
   .vip{
     max-width: 4vw;
+  }
+  .carticon{
+    color:rgba(255, 255, 255, 0.6);
+    font-size:500%;
+  }
+  #carticonactive{
+    text-shadow:5px 5px 50px white;
+    color:rgba(255, 255, 255, 1);
   }
   .profilepic{
     max-width: 5vw;

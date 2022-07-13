@@ -352,6 +352,14 @@
    transition-timing-function: linear;
 }
 @media only screen and (min-width: 900px)  {
+.leadershipiconscontainer{
+   width:6vw;
+   margin: 2vw auto;
+   display: grid;
+   grid-template-rows: 1fr 1fr 1fr;
+   grid-gap: 1vw;
+   box-sizing: border-box;
+}
 .groupiconscontainer{
     margin: 2vw 0 0 2vw;
     display: grid;
@@ -363,7 +371,42 @@
 .circularicon{
     display: none;
 }
-
+.achievement{
+   grid-row: 1/1;
+   width: 6vw; height: 6vw;
+   border-radius: 50%;
+   background: url("./icons/001-medal.png") no-repeat;
+   background-position: center;
+   background-color: #111f38;
+   background-size: 5vw 5vw;
+}
+.achievement:hover{
+   background-size: 6vw 6vw;
+}
+.leaderboard{
+   grid-row: 2/2;
+   width: 6vw; height: 6vw;
+   border-radius: 50%;
+   background: url("./icons/001-podium.png") no-repeat;
+   background-position: center;
+   background-color: #111f38;
+   background-size: 5vw 5vw;
+}
+.leaderboard:hover{
+   background-size: 6vw 6vw;
+}
+.tournament{
+   grid-row: 3/3;
+   width: 6vw; height: 6vw;
+   border-radius: 50%;
+   background: url("./icons/003-soccer.png") no-repeat;
+   background-position: center;
+   background-color: #111f38;
+   background-size: 5vw 5vw;
+}
+.tournament:hover{
+   background-size: 6vw 6vw;
+}
 .creategroup{
     grid-column: 1/1;
     grid-row: 1/1;
@@ -437,16 +480,6 @@
 }
 .searchgroup:hover{
    background-size: 4.6vw 4.6vw;
-}
-.creategroup{
-   grid-column: 1/1;
-   grid-row: 1/1;
-   width: 6vw; height: 6vw;
-   border-radius: 50%;
-   background: url("./icons/group-min.png") no-repeat;
-   background-position: center;
-   background-color: #111f38;
-   background-size: 5vw 5vw;
 }
 .mygroups{
     grid-column: 1/1;

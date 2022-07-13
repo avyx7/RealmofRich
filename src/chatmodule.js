@@ -1,15 +1,8 @@
 import { ChatRoom } from './chatFunction';
 import React from "react";
 
-class ChatModule extends React.Component {
-    
-    constructor(props){
-        super(props);
-        this.state={
-        };
-    }
+function ChatModule(props) {
 
-    render(){
     return (               
         <div>      
         {/* Added Chat container from here */}
@@ -28,19 +21,28 @@ class ChatModule extends React.Component {
                         <a href="#" class="menu-item red"> <i class="fa fa-diamond"></i> </a>
                     </nav>
                 </div>
-        <div className={"downArrow"+(this.props.chatOpen ? "":' downArrow-maximize')} onClick = {this.props.onClick()}></div>
-        <div className={"chatcontainer"+(this.props.chatOpen ? "":' chatcontainer-inactive')}>
+        <div className={"downArrow"+(props.chatOpen ? "":' downArrow-maximize')} onClick = {props.onClick()}></div>
+        <div className={"chatcontainer"+(props.chatOpen ? "":' chatcontainer-inactive')}>
             <header>
 
             
             <div className="chatheader push-to-side"></div>
-            <div className={"chatheader minimize"+(this.props.chatOpen ? "":'-invert')} onClick = {this.props.onClick()}></div>
+            <div className={"chatheader minimize"+(props.chatOpen ? "":'-invert')} onClick = {props.onClick()}></div>
 
 
             </header>
-        <div className={"chatgrid"+(this.props.chatOpen ? "":' chatgrid-inactive')} >
+        <div className={"chatgrid"+(props.chatOpen ? "":' chatgrid-inactive')} >
             <div className="leftchat">
-                        
+                <div className="leadershipiconscontainer">
+                    <div className="achievement icon-animate">
+                    </div>
+
+                    <div className="leaderboard icon-animate">
+                    </div>
+
+                    <div className="tournament icon-animate">
+                    </div>
+                </div>    
 
             </div>
         
@@ -77,7 +79,7 @@ class ChatModule extends React.Component {
         </div>  
     );
     
-}
+
 }
 
 export default ChatModule;
