@@ -1,6 +1,7 @@
 import { auth } from './App';
 import React, { useState, useEffect} from 'react';
 import ProfileMenu from './profileMenu';
+import ShopButton from './shopButton';
 
 function EducationHomeHeader(props) {
     const [pulse, setpulse] = useState(true);
@@ -51,7 +52,7 @@ function EducationHomeHeader(props) {
 
             <div className="educationsubheader">
                 
-
+                <ShopButton/>
             </div>
         </>
     );

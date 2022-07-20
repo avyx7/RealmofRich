@@ -22,7 +22,7 @@ function Home() {
             <div className="SideNav">
               
               <Link className="" to ="#">
-                <img className = {c=="home"? '': "RORlogo"} src = {c=="home"? "IMG_1019.jpg": "291105576.PNG"} />
+                <img className = {c=="home"? '': "RORlogo"} src = {c=="home"? "IMG_1019.JPG": "291105576.png"} />
               </Link>
             
           

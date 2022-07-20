@@ -378,10 +378,10 @@
    background: url("./icons/001-medal.png") no-repeat;
    background-position: center;
    background-color: #111f38;
-   background-size: 5vw 5vw;
+   background-size: 3.5vw 3.5vw;
 }
 .achievement:hover{
-   background-size: 6vw 6vw;
+   background-size: 4.5vw 4.5vw;
 }
 .leaderboard{
    grid-row: 2/2;
@@ -390,10 +390,10 @@
    background: url("./icons/001-podium.png") no-repeat;
    background-position: center;
    background-color: #111f38;
-   background-size: 5vw 5vw;
+   background-size: 3.5vw 3.5vw;
 }
 .leaderboard:hover{
-   background-size: 6vw 6vw;
+   background-size: 4.5vw 4.5vw;
 }
 .tournament{
    grid-row: 3/3;
@@ -402,10 +402,10 @@
    background: url("./icons/003-soccer.png") no-repeat;
    background-position: center;
    background-color: #111f38;
-   background-size: 5vw 5vw;
+   background-size: 3.5vw 3.5vw;
 }
 .tournament:hover{
-   background-size: 6vw 6vw;
+   background-size: 4.5vw 4.5vw;
 }
 .creategroup{
     grid-column: 1/1;

@@ -44,7 +44,7 @@ export const uiConfig = {
   },
   // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
   signInFlow: 'popup',
-  signInSuccessUrl: "/",
+  signInSuccessUrl: "/home",
   signInOptions: [
     // Leave the lines as is for the providers you want to offer your users.
     {
@@ -124,11 +124,10 @@ export const uiConfig = {
 };
 
 
-let user = {};
 
 function App() {
 
-
+  const [uservar, setuservar] = useState("");
 
   useEffect(() => {
 
@@ -140,10 +139,11 @@ function App() {
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         // User is signed in.
-        <Redirect false to='/Home' component = {Home}/>
+        setuservar(user);
+
       } else {
         // No user is signed in.
-        <Redirect false to='/' component = {Frontpage}/>
+        setuservar("");
       }
       });
   });
@@ -151,17 +151,18 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Uservar: {uservar? 'User variable set' : ''}</h1>
       <Router>
         <div>
           <Switch>
             <Route exact path = "/">
-            {user ? <Redirect to="/home" /> : <Frontpage/>}
+            {uservar ? <Redirect to="/home" /> : <Frontpage/>}
             </Route>
-            {/*
+          
             <Route exact path = "/home">
-            {user ? <Home/> : <Frontpage/>}
+            {uservar ? <Home/> : <Frontpage/>}
             </Route>
-            */}
+
             <Route exact path = "/:c">
             <Home/>
             </Route>
