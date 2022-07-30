@@ -23,7 +23,7 @@ function ProfileMenu(props) {
                                 Help & Support
                             </Link>
                         </li>
-                        <li className="profile-menu-items" >
+                        <li className="profile-menu-items" onClick={props.setlogout()}>
                             <Link to = "#">
                                 Log Out
                             </Link>

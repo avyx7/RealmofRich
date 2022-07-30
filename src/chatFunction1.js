@@ -9,75 +9,39 @@ import { useList } from 'react-firebase-hooks/database';
     
     const writemessagesRef = firebase.database().ref('messages');
     const messagesRef = firebase.database().ref('messages').orderByKey();
-    //const [snapshots, loading, error] = useList(messagesRef);
-    const [snapshotContainer, setsnapshotContainer] = useState([]);
-    const [dataContainer, setdataContainer] = useState([]);
-    let newArray = [];
+    const [snapshots, loading, error] = useList(messagesRef);
+    
     let [messages, setmessages] = useState([]);
     const [formValue, setFormValue] = useState('');
   
     useEffect(() => {
-      
-      messagesRef.on('child_added', (data) => {
-          
-
-            var key = data.key;
-            var value = data.val();
+      /*
+      messagesRef.once('value', (snapshot) => {
+        if (snapshot.exists()) {
+          let newArray = [];
+          let mArray = snapshot.val();
+          snapshot.forEach((childSnapshot) => {
+            var childKey = childSnapshot.key;
+            var childData = childSnapshot.val();
             // ...
             newArray.push({
-              key: key,
-              text: data.val().text,
-              createdAt: data.val().createdAt,
-              uid: data.val().uid,
-              photoURL: data.val().photoURL
-
+              key: childKey,
+              text: mArray[childKey].text,
+              createdAt: mArray[childKey].createdAt,
+              uid: mArray[childKey].uid,
+              photoURL: mArray[childKey].photoURL
 
             });
-            setsnapshotContainer(newArray);
-
-            
-        dummy.current.scrollIntoView({ behavior: 'smooth' });
-      });
-
-          
-  
-
-        
-
-
-    //Snapshot on 'value'
-    /*
-    messagesRef.on('value', (snapshot) => {
-      if (snapshot.exists()) {
-        
-        snapshot.forEach((child) => {
-          var childKey = child.key;
-          var childData = child.val();
-          console.log(childData.text); 
-          // ...
-          newArray.push({
-            key: childKey,
-            text: childData.text,
-            createdAt: childData.createdAt,
-            uid: childData.uid,
-            photoURL: childData.photoURL
-
-
           });
-          
-          
-        });
-        setsnapshotContainer(newArray);
-        dummy.current.scrollIntoView({ behavior: 'smooth' });
+          setmessages(newArray)
+  
+        } else {
+          console.log("No data available");
+        }
+      },[messagesRef]);
+      */
 
-      } else {
-        console.log("No data available");
-      }
-      
-    });
-    */
-      
-
+      dummy.current.scrollIntoView({ behavior: 'smooth' });
     },[]);
     
   
@@ -119,15 +83,13 @@ import { useList } from 'react-firebase-hooks/database';
     return (
       <div className="chatbonegrid">
         <main>
-        {/*error && <strong>Error: {error}</strong>*/}
-        {/*loading && <span>List: Loading...</span>*/}
-        {snapshotContainer && (
+        {error && <strong>Error: {error}</strong>}
+        {loading && <span>List: Loading...</span>}
+        {!loading && snapshots && (
           
             <span>
-
-              {snapshotContainer.map((v) => (
-
-                <ChatMessage key={v.key} message={v}/>
+              {snapshots.map((v) => (
+                <ChatMessage key={v.key} message={v.val()}/>
               ))}
             </span>
           

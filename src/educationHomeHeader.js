@@ -44,7 +44,7 @@ function EducationHomeHeader(props) {
                         upgradeVIP = {props.upgradeVIP}
                         setupgradeVIP = {()=> props.setupgradeVIP}
 
-                        setlogout = {()=> props.setlogout }
+                        setlogout = {()=>SignOut }
                         />
                 </div>
                 
@@ -61,11 +61,8 @@ function EducationHomeHeader(props) {
 
 function SignOut() {
     
-        if (auth.currentUser = null){
-            return null;
-        }
-        else{
-            return (<button className="headerbutton sign-out" id ="loginbutton" onClick={() => auth.signOut()}>Sign Out</button>);
+        if (auth.currentUser){
+            //auth.signOut();
         }
       
 

@@ -454,3 +454,49 @@ background: /*rgb(123, 132, 192)*/ rgb(34, 37, 57);
     text-align: center;
     color:rgb(197, 211, 121);
   }
+  /*---------- upgrade VIP css ------*/
+
+
+  /*-------------------Modal Flower menu items --------------------*/
+.ReactModal__Overlay{
+  z-index: 10;
+}
+.ReactModal__Content{
+  top:10vh;
+  right:30vw;
+  bottom:10vh;
+  left:30vw;
+}
+.modalcontainer{
+  width:100%;
+  height:100%;
+  z-index: 10;
+  display: grid;
+  grid-template-rows: 10% 90%;
+  background-color: #0f0b1bb0;
+}
+.modalhead{
+  background-color: #0f0b1bb0;
+  grid-row: 1/1;
+}
+.modalcontent{
+  margin:2%;
+  grid-row: 2/2;
+  background-color: white;
+  border-radius: 2%;
+}
+.modalheadcontainer{
+  display: grid;
+  grid-template-columns: 90% 10%;
+}
+.modalheadtext{
+  grid-column: 1/1;
+  color: white;
+  margin: auto;
+  font-weight: 800;
+}
+.modalclosebutton{
+  grid-column: 2/2;
+  margin-left: auto;
+  margin-right: 0;
+}
