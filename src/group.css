@@ -6,7 +6,7 @@
         height:27vw;
         width:20vw;
     }
-    .creategroup, .searchgroup, .mygroups, .alerts, .mail, .giftbox{
+    .creategroup, .friends, .mygroups, .alerts, .mail, .giftbox{
         display: none;
     }
     .circularicon{
@@ -347,9 +347,35 @@
 }
 
 .icon-animate{
+   position:relative;
    transition-property: background-size;
    transition-duration: 0.3s;
    transition-timing-function: linear;
+}
+.displaynone{
+   display: none;
+}
+.alertnumber{
+   position: absolute;
+   top:0;
+   right:0;
+   margin: 15% 15% 0 0;
+   background: rgb(220, 216, 245);
+   border-radius: 50% 50%;
+   width:20px;
+   height:20px;
+}
+.locked{
+   position: absolute;
+   top:0;
+   right:0;
+   margin: 15% 15% 0 0;
+   border-radius: 50% 50%;
+   width:40px;
+   height:40px;
+   background: url("./icons/001-padlock.png") no-repeat rgb(220, 216, 245);;
+   background-size: cover;
+
 }
 @media only screen and (min-width: 900px)  {
 .leadershipiconscontainer{
@@ -468,17 +494,17 @@
    }
  }
 
-.searchgroup{
+.friends{
     grid-column: 1/1;
     grid-row: 2/2;
     width: 6vw; height: 6vw;
     border-radius: 50%;
-    background: url("./icons/037-chat-min.png") no-repeat;
+    background: url("./icons/001-add-friend.png") no-repeat;
     background-position: center;
     background-color: #111f38;
     background-size: 4vw 4vw;
 }
-.searchgroup:hover{
+.friends:hover{
    background-size: 4.6vw 4.6vw;
 }
 .mygroups{

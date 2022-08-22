@@ -11,12 +11,11 @@ import { useList } from 'react-firebase-hooks/database';
     const messagesRef = firebase.database().ref('messages').orderByKey();
     //const [snapshots, loading, error] = useList(messagesRef);
     const [snapshotContainer, setsnapshotContainer] = useState([]);
-    const [dataContainer, setdataContainer] = useState([]);
     let newArray = [];
     let [messages, setmessages] = useState([]);
     const [formValue, setFormValue] = useState('');
   
-    useEffect(() => {
+    useEffect(async () => {
       
       messagesRef.on('child_added', (data) => {
           
@@ -36,10 +35,10 @@ import { useList } from 'react-firebase-hooks/database';
             setsnapshotContainer(newArray);
 
             
-        dummy.current.scrollIntoView({ behavior: 'smooth' });
+        
       });
 
-          
+      await dummy.current.scrollIntoView({ behavior: 'smooth' });         
   
 
         
@@ -110,7 +109,7 @@ import { useList } from 'react-firebase-hooks/database';
   
     return (<>
       <div className={`message ${messageClass}`}>
-        <img className ="profilepic" src={photoURL || './1111.jpg'} />
+        <img className ="profilepic" src={photoURL || '../icons/profilepic-min.png'} />
         <p>{text}</p>
       </div>
     </>)

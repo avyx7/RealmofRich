@@ -34,13 +34,20 @@ function ChatModule(props) {
         <div className={"chatgrid"+(props.chatOpen ? "":' chatgrid-inactive')} >
             <div className="leftchat">
                 <div className="leadershipiconscontainer">
-                    <div className="achievement icon-animate">
+                    <div className="achievement icon-animate" onClick={()=> props.flowermenuOpen('achievement')}>
+                        <div className={props.flowermenuAchievementAlert == 0? 'displaynone': 'alertnumber'}>
+                            {props.flowermenuAchievementAlert}
+                        </div>
                     </div>
 
-                    <div className="leaderboard icon-animate">
+                    <div className="leaderboard icon-animate" onClick={()=> props.flowermenuOpen('leaderboard')}>
+                        <div className={props.flowermenuLeaderboardAlert == 0? 'displaynone': 'alertnumber'}>
+                            {props.flowermenuLeaderboardAlert}
+                        </div>
                     </div>
 
                     <div className="tournament icon-animate">
+                        <div className='locked'></div>
                     </div>
                 </div>    
 
@@ -54,22 +61,34 @@ function ChatModule(props) {
         <div className="chatright">
             <div className="groupiconscontainer">
                 
-                <div className="creategroup icon-animate">
+                <div className="creategroup icon-animate" onClick={()=> props.flowermenuOpen('creategroup')}>
                 </div>
 
-                <div className="searchgroup icon-animate">
+                <div className="friends icon-animate" onClick={()=> props.flowermenuOpen('friends')}>
+                    <div className={props.flowermenuFriendsAlert == 0? 'displaynone': 'alertnumber'}>
+                        {props.flowermenuFriendsAlert}
+                    </div>
                 </div>
 
-                <div className="mygroups icon-animate">
+                <div className="mygroups icon-animate" onClick={()=> props.flowermenuOpen('mygroups')}>
                 </div>
 
-                <div className="alerts icon-animate">
+                <div className="alerts icon-animate" onClick={()=> props.flowermenuOpen('alerts')}>
+                    <div className={props.flowermenuAlertsAlert == 0? 'displaynone': 'alertnumber'}>
+                        {props.flowermenuAlertsAlert}
+                    </div>
                 </div>
 
-                <div className="mail icon-animate">
+                <div className="mail icon-animate" onClick={()=> props.flowermenuOpen('mail')}>
+                    <div className={props.flowermenuMailAlert == 0? 'displaynone': 'alertnumber'}>
+                        {props.flowermenuMailAlert}
+                    </div>
                 </div>
 
-                <div className="giftbox icon-animate">
+                <div className="giftbox icon-animate" onClick={()=> props.flowermenuOpen('giftbox')}>
+                    <div className={props.flowermenuGiftboxAlert == 0? 'displaynone': 'alertnumber'}>
+                        {props.flowermenuGiftboxAlert}
+                    </div>
                 </div>
             </div>
         </div>
