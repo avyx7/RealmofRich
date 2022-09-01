@@ -50,7 +50,7 @@ function EducationHomeHeader(props) {
                 
             </div>
 
-            <div className="educationsubheader">
+            <div className="educationsubheader" onClick = {()=>props.openeducationShop()}>
                 
                 <ShopButton/>
             </div>

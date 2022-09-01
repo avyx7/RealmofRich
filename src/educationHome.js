@@ -11,7 +11,19 @@ import Modal from 'react-modal';
 import close from "./icons/close.png";
 import firebase from "firebase/app";
 import 'firebase/firestore';
+import EducationShop from './educationShop';
 
+const educationShopStyles = {
+    content: {
+        top: '0',
+        right: '0',
+        bottom: '0',
+        left: '0',
+        border: 'none',
+        padding:'0',
+        background: 'none',
+    },
+  };
 const customStyles = {
     content: {
         top: '10vh',
@@ -29,6 +41,7 @@ function EducationHome() {
     const [chatOpen, setchatOpen] = useState(true);
     const [profilemenu, setprofilemenu] = useState(false);
     const [upgradeVIP, setupgradeVIP] = useState(false);
+    const [educationShopIsOpen, seteducationShopIsOpen] = useState(false);
     const [FlowermodalIsOpen, setFlowermodalIsOpen] = useState(true);
     const [FlowermodalOption, setFlowermodalOption] = useState('');
     const [flowermenuAchievement, setflowermenuAchievement] = useState('');
@@ -48,6 +61,7 @@ function EducationHome() {
     const [flowermenuGiftbox, setflowermenuGiftbox] = useState('');
     const [flowermenuGiftboxAlert, setflowermenuGiftboxAlert] = useState(0);
 
+    let unsubscribe;
 
     const togglechatOpen = ()=> {
         setchatOpen(!chatOpen);
@@ -59,8 +73,16 @@ function EducationHome() {
         setupgradeVIP(!upgradeVIP);
     }
     
+    function openeducationShop() {
+        seteducationShopIsOpen(true);
+
+    }
+
+    function closeeducationShop() {
+        seteducationShopIsOpen(false);
+    }
+
     //<-----------------------------Flower Menu -------------------------------->
-    let unsubscribe;
     function openFlowerModal(option) {
 
         setFlowermodalOption(option);
@@ -92,7 +114,7 @@ function EducationHome() {
     //<--------------------------End of Flower Menu ----------------------------->
     useEffect(()=>{
         // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
-        Modal.setAppElement('#flowermenu');
+        Modal.setAppElement('#modalanchor');
 
         //attching Snapshot Listener
         const dataref = firebase.firestore().collection("flowermenu/doc/achievement/");
@@ -122,8 +144,23 @@ function EducationHome() {
         */
      return (
         <div>
-            <div id = 'flowermenu'></div>
-            <button onClick={openFlowerModal}>Open Modal</button>
+            <div id = 'modalanchor'></div>
+                <div className={educationShopIsOpen? 'educationmodalcontainer' : 'not-active'}>
+                    <div className='educationmodalhead'>
+                        <div className='educationmodalheadcontainer'>
+                            <div className='educationmodalheadtext'>
+                            </div>
+                            <div className='educationmodalclosebutton' >
+                            <img src = {close} onClick={closeeducationShop}/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='educationmodalcontent' id = "educationmodalcontentid">
+                        
+                        <EducationShop/>
+                    </div>
+                </div>
+
             <Modal
                 isOpen={FlowermodalIsOpen}
                 //onAfterOpen={afterOpenModal}
@@ -157,6 +194,7 @@ function EducationHome() {
             setprofilemenu = {toggleprofilemenu}
             upgradeVIP = {upgradeVIP}
             setupgradeVIP = {toggleupgradeVIP}
+            openeducationShop = {openeducationShop}
             //setlogout = {setlogout}
             />
             <div id="main">

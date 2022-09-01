@@ -73,13 +73,14 @@
 @media only screen and (max-width: 700px)  {
     .home-container{
         display: grid;
-        grid-template-rows: 94% 6%;
+        grid-template-rows: 85% 13%;
         height:100vh;
     }
     .SideNav{display: none;}
     .mobile-menu{
         grid-row: 2/2;
         width:100vw;
+        height:13vh;
         position:fixed;
         bottom: 0;
         outline-color:black;
