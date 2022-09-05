@@ -80,7 +80,7 @@
     .mobile-menu{
         grid-row: 2/2;
         width:100vw;
-        height:13vh;
+        /*height:13vh;*/
         position:fixed;
         bottom: 0;
         outline-color:black;

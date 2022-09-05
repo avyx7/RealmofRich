@@ -11,6 +11,7 @@ function EducationHomeHeader(props) {
         setpulse(!pulse);
     }
 
+
     return (
         <>
             <div className="educationhomeheader"
@@ -31,21 +32,28 @@ function EducationHomeHeader(props) {
                 <div className="profilecontainer">
                     <div className="profilegrid">
                         <div className="vip"><img src = "../icons/002-coin.png" alt = "vip icon"/></div>
-                        <i className="fi fi-bs-shopping-cart carticon" id = "carticonactive"></i>
-                        <div><img className = {"profilepic "+(pulse ? "pulse-button":'')}
+                        
+                        <div className="shoppingcart">
+                        <i class="fi fi fi-bs-shopping-cart carticon"></i>
+                        </div>
+
+                        <div className="profile"><img className = {"profilepic "+(pulse ? "pulse-button":'')}
                         src = {photoURL || "../icons/profilepic-min.png"} alt = "profile pic"
                         onClick = {()=>props.setprofilemenu()}
                         /></div>
                     </div>
-                    <ProfileMenu
-                        profilemenu = {props.profilemenu}
-                        onClick = {()=> props.setprofilemenu}
+                    <div className='profilemenucontainer'>
+                        <ProfileMenu
+                            profilemenu = {props.profilemenu}
+                            onClick = {()=> props.setprofilemenu}
 
-                        upgradeVIP = {props.upgradeVIP}
-                        setupgradeVIP = {()=> props.setupgradeVIP}
+                            upgradeVIP = {props.upgradeVIP}
+                            setupgradeVIP = {()=> props.setupgradeVIP}
 
-                        setlogout = {()=>SignOut }
+                            setlogout = {()=>SignOut }
                         />
+                    </div>
+                    
                 </div>
                 
             </div>

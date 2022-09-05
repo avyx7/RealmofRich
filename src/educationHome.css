@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css');
+/*@import "~@flaticon/flaticon-uicons/css/all/all";*/
 *{
 font-family: 'Roboto', Arial, sans-serif;
 }
@@ -12,8 +13,12 @@ grid-template-columns: 50% 39%;
 background: rgb(51, 53, 69);
 }
 .not-active{display: none;}
+.profilemenucontainer{
+  position: relative;
+}
 .profilemenu{
-  
+  position:absolute;
+  z-index:11;
 }
 @media screen and (max-width: 700px){
   /*
@@ -30,18 +35,38 @@ background: rgb(51, 53, 69);
   max-width: 18vw;
   }
   */
+  .educationhomeheader{
+    padding:2% 2% 0% 2%;
+    grid-template-columns: 50% 50%;
+  }
   .wrapper{
-  grid-column: 2/2;
+  grid-column: 1/1;
   width: 100%;
   max-width: 50vw;
   }
   .profilecontainer{
-    grid-column: 3/3; 
+    margin-left: 3%;
+    grid-column: 2/2;
+  }
+  .profilegrid{
     display: grid;
-    grid-template-columns: 40% 20% 80%;
+    grid-gap: 10%;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .vip{
     grid-column: 1/1;
+  }
+  .shoppingcart{
+    grid-column: 2/2;
+  }
+  .profile{
+    grid-column: 3/3;
+  }
+  .vip img{
+    max-width: 100%;
+  }
+  .profile img{
+    max-width: 100%;
   }
     /* ------animation styles fadein LOGO image---- */
   @keyframes fadeIn {
@@ -59,12 +84,9 @@ background: rgb(51, 53, 69);
     animation-timing-function: linear;
   }
   /* ------End of animation styles fadein LOGO image---- */
-  .vip{
-    max-width: 6vw;
-  }
   .carticon{
-    color:white;
-    font-size:500%;
+    color:rgba(255, 255, 255, 0.6);
+    font-size:300%;
   }
   .profilepic{
     max-width: 15vw;
@@ -400,10 +422,7 @@ background: /*rgb(123, 132, 192)*/ rgb(34, 37, 57);
   .profile-menu{
     width: 30vw;
     background-color: white;
-    position: absolute;
-    top: 17vh;
-    left: 65vw;
-    z-index: 2;
+
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .profile-menu-items{
@@ -567,7 +586,7 @@ background: /*rgb(123, 132, 192)*/ rgb(34, 37, 57);
 }
 .educationItemsGrid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(33%, 100%));
+  grid-template-columns: repeat(3, minmax(33%, 100%));
 }
 .educationItemContainer{
   box-shadow: 10px 10px lightblue;

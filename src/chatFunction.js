@@ -4,7 +4,7 @@ import {auth} from "./App";
 import { useList } from 'react-firebase-hooks/database';
 
 
-  export function ChatRoom(){
+  export function ChatRoom(props){
     const dummy = useRef();
     
     const writemessagesRef = firebase.database().ref('messages');
@@ -115,6 +115,7 @@ import { useList } from 'react-firebase-hooks/database';
     </>)
   }
   
+  
     return (
       <div className="chatbonegrid">
         <main>
@@ -139,7 +140,7 @@ import { useList } from 'react-firebase-hooks/database';
         <div className="inputbox">
           <form className="chatform" onSubmit={sendMessage}>
   
-            <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
+            <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" onFocus={props.addmargin} onBlur={props.addmargin} />
   
             <button type="submit" disabled={!formValue}>🕊️</button>
   

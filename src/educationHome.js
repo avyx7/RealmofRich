@@ -225,9 +225,13 @@ function EducationHome() {
 }
 
     function Chat(props) {
+        const [addmargin, setaddmargin] = useState(false);
+        const toggleaddmargin = ()=>{
+            setaddmargin(!addmargin);
+        }
 
             return(
-            <div className={"sticktobottom"+(props.chatOpen ? "":' sticktobottom-inactive')}>
+            <div className={"sticktobottom"+(props.chatOpen ? "":' sticktobottom-inactive')+(addmargin ? ' addmargintochat' :'')}>
             <DogAnimated/>
             
             <ChatModule 
@@ -241,6 +245,7 @@ function EducationHome() {
             flowermenuAlertsAlert = {props.flowermenuAlertsAlert}
             flowermenuMailAlert = {props.flowermenuMailAlert}
             flowermenuGiftboxAlert = {props.flowermenuGiftboxAlert}
+            addmargin = {toggleaddmargin}
             />
             </div>
             );

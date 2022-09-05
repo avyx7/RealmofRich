@@ -26,15 +26,22 @@
 .chatgrid-inactive{
   display: none;
 }
+ /*
 @media only screen and (max-width: 700px)  {
   .chatcontainer, .sticktobottom{
     margin-bottom: 13vh;
   }
 }
+*/
+@media only screen and (max-width: 700px)  {
+  .addmargintochat{
+    margin-bottom: 11vh;
+  }
+}
 @media only screen and (max-width: 900px)  {
 
 .chatcontainer, .sticktobottom{
-  height:40vh;
+  height:47vh;
 }
 .downArrow{
   position: relative;

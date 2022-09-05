@@ -20,7 +20,7 @@ function Frontpage() {
 
   useEffect(() => {
     ui.start('#auth-options', uiConfig);
-  });
+  },[]);
 
     return (
       <Router>

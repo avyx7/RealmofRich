@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 
 function ProfileMenu(props) {
 
         return (
-            <div>
+            <>
                 <nav className={!props.profilemenu ? "not-active": "profilemenu"} onClick = {props.onClick()}>
                     <ul className="profile-menu">
                         <li className="profile-menu-items" onClick={props.setupgradeVIP()}>
@@ -30,7 +30,7 @@ function ProfileMenu(props) {
                         </li>
                     </ul>
                 </nav>
-            </div>
+            </>
         )
 
 }

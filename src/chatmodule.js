@@ -54,7 +54,8 @@ function ChatModule(props) {
             </div>
         
         <div className="chatbone">
-            <ChatRoom/>
+            <ChatRoom
+            addmargin = {props.addmargin} />
 
 
         </div>
