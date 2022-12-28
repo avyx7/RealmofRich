@@ -12,6 +12,7 @@ import close from "./icons/close.png";
 import firebase from "firebase/app";
 import 'firebase/firestore';
 import EducationShop from './educationShop';
+import Vimeo from './vimeo';
 
 const educationShopStyles = {
     content: {
@@ -40,7 +41,7 @@ const customStyles = {
 function EducationHome() {
     const [chatOpen, setchatOpen] = useState(true);
     const [profilemenu, setprofilemenu] = useState(false);
-    const [upgradeVIP, setupgradeVIP] = useState(false);
+    const [upgradeVIP, setupgradeVIP] = useState(true);
     const [educationShopIsOpen, seteducationShopIsOpen] = useState(false);
     const [FlowermodalIsOpen, setFlowermodalIsOpen] = useState(true);
     const [FlowermodalOption, setFlowermodalOption] = useState('');
@@ -131,6 +132,13 @@ function EducationHome() {
                 setflowermenuAchievementAlert(flowermenuAchievementAlert+1);
             })
         }
+
+
+        //Adding External Javascript script files here
+            const script = document.createElement('script');
+            script.src = "/jsfiles/addons.js";
+            script.async = true;
+            document.body.appendChild(script);
         return function cleanup(){
             // Stop listening to changes
             unsubscribe();
@@ -145,6 +153,7 @@ function EducationHome() {
      return (
         <div>
             <div id = 'modalanchor'></div>
+                {/*---------------------------------Education Shop------------------------------------ */}
                 <div className={educationShopIsOpen? 'educationmodalcontainer' : 'not-active'}>
                     <div className='educationmodalhead'>
                         <div className='educationmodalheadcontainer'>
@@ -161,6 +170,14 @@ function EducationHome() {
                     </div>
                 </div>
 
+                {/*---------------------------------Pricing page------------------------------------ */}
+                <div className={upgradeVIP? '' : 'not-active'}>
+                <UpgradeVIP
+                toggleopenclose = {toggleupgradeVIP}
+                 />
+                </div>
+
+                {/*---------------------------------Flower menu Modals------------------------------ */}
             <Modal
                 isOpen={FlowermodalIsOpen}
                 //onAfterOpen={afterOpenModal}
@@ -192,14 +209,14 @@ function EducationHome() {
             <EducationHomeHeader
             profilemenu = {profilemenu}
             setprofilemenu = {toggleprofilemenu}
-            upgradeVIP = {upgradeVIP}
-            setupgradeVIP = {toggleupgradeVIP}
+            toggleopenclose = {toggleupgradeVIP}
             openeducationShop = {openeducationShop}
             //setlogout = {setlogout}
             />
             <div id="main">
             <EducationCarousel/>
-            
+
+            <Vimeo/>
             <>
 
                 <Chat 

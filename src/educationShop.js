@@ -1,6 +1,5 @@
 import React, { useEffect} from 'react';
-import * as ReactDOM from 'react-dom';
-import { database } from './App';
+
 
 export default function EducationShop() {
   const shopItems = {

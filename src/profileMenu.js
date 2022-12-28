@@ -8,9 +8,9 @@ function ProfileMenu(props) {
             <>
                 <nav className={!props.profilemenu ? "not-active": "profilemenu"} onClick = {props.onClick()}>
                     <ul className="profile-menu">
-                        <li className="profile-menu-items" onClick={props.setupgradeVIP()}>
+                        <li className="profile-menu-items" onClick={props.toggleopenclose}>
  
-                            <img className="vip" src = "../icons/vipcircle-min.png" alt = "vip icon"></img> Upgrade VIP
+                            <img className="profilevipicon" src = "../icons/vipcircle-min.png" alt = "vip icon"></img> Upgrade VIP
 
                         </li>
                         <li className="profile-menu-items">

@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect, useParams } from "react-router-dom";
+import './app.css';
 import Frontpage from "./frontpage";
 import Loading from "./loading";
 
@@ -15,8 +16,8 @@ import 'firebaseui/dist/firebaseui.css';
 
 import Home from './home';
 import {firebaseConfig} from './firebaselock';
-import Pepper from './pepper';
-import Realm from './realm';
+import Pepper from './components/pepper/pepper';
+import Realm from './components/realm/realm';
 import EducationHome from './educationHome';
 
 export const realm = firebase.initializeApp(firebaseConfig);
@@ -151,7 +152,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Uservar: {uservar? 'User variable set' : ''}</h1>
       <Router>
         <div>
           <Switch>
@@ -159,9 +159,7 @@ function App() {
             {uservar ? <Redirect to="/home" /> : <Frontpage/>}
             </Route>
           
-            <Route exact path = "/home">
-            {uservar ? <Home/> : <Frontpage/>}
-            </Route>
+
 
             <Route exact path = "/:c">
             <Home/>

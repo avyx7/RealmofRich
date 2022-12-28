@@ -7,9 +7,9 @@ function Homepage() {
             <div className={style.homepagecontainer}>
                 <div className={style.segment} id ={style.coaching}>
                     <div className={style.segmenttext}>
-                        <span className ={style.segmenttextheader}>Become the intelligent Superman</span>
+                        <span className ={style.segmenttextheader}>The Classroom Superman</span>
                         <br/><br/><span className ={style.segmenttextcontent}>Enjoy all subjects coaching
-                        <br/>for just <span>&#8377;</span>199.
+                        <br/>for just <span>&#8377;</span>230.
                         <br/>Class 4 - 12</span>
                     </div>
                     <div className={style.bookcontainer}>
@@ -154,8 +154,8 @@ function Homepage() {
                     <thead>
                       <tr>
                         <th scope="col"></th>
-                        <th scope="col">Standard</th>
-                        <th scope="col">Deep Learning</th>
+                        <th scope="col">Silver VIP</th>
+                        <th scope="col">Bronze VIP</th>
                     
                       </tr>
                     </thead>
@@ -168,8 +168,8 @@ function Homepage() {
                       </tr>
                       <tr>
                         <td scope="row" data-label="Account">Coaching Level</td>
-                        <td data-label="Due Date">Awesome</td>
-                        <td data-label="Amount">Expert</td>
+                        <td data-label="Due Date">Standard</td>
+                        <td data-label="Amount">Deep Learning</td>
                         
                       </tr>
                       <tr>

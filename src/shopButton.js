@@ -3,8 +3,12 @@ import React from 'react'
 export default function ShopButton() {
   return (
     <div className='shoptext noselect pointer'>
-        <div className='blobtext'>
-            SHOP!
+        <div className='blobtext waviy'>
+        <span style={{"--i":"1"}}>S</span>
+        <span style={{"--i":"2"}}>H</span>
+        <span style={{"--i":"3"}}>O</span>
+        <span style={{"--i":"4"}}>P</span>
+        <span style={{"--i":"5"}}>!</span>
         </div>
         
         <div className='blob'>

@@ -1,0 +1,10 @@
+.pepperContainer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.peeps{
+    grid-column: 1/1;
+}
+.rightSideBar{
+    grid-column: 2/2;
+}

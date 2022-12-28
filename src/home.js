@@ -3,8 +3,8 @@ import {BrowserRouter as Router, Switch, Route, Link, useParams } from 'react-ro
 import './home.css';
 import EducationHome from "./educationHome";
 import './educationHome.css';
-import Pepper from './pepper';
-import Realm from './realm';
+import Pepper from './components/pepper/pepper';
+import Realm from './components/realm/realm';
 import firebase from "firebase/app";
 import 'firebase/auth';
 
@@ -19,7 +19,7 @@ function Home() {
         
         <div className ="home-container" id = {c=="home"? '':'homecontainermin'}>
         {/*<h3>ID: {c}</h3>*/}
-            <div className="SideNav">
+            <div className="SideNav" id = {c=="home"? 'SideNavmin' : ''}>
               
               <Link className="" to ="#">
                 <img className = {c=="home"? '': "RORlogo"} src = {c=="home"? "IMG_1019.JPG": "291105576.png"} />

@@ -1,4 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+/* CSS HEX 
+--jet: #333545ff;
+--english-violet: #58445fff;
+--magnolia: #f8f0fbff;
+--minion-yellow: #ffe347ff;
+--jazzberry-jam: #970c4bff;
+*/
+/* CSS HSL 
+--jet: hsla(233, 15%, 24%, 1);
+--english-violet: hsla(284, 17%, 32%, 1);
+--magnolia: hsla(284, 58%, 96%, 1);
+--minion-yellow: hsla(51, 100%, 64%, 1);
+--jazzberry-jam: hsla(333, 85%, 32%, 1);
+*/
 
 .home-container *{
     font-family: 'Merriweather', serif;
@@ -15,7 +29,7 @@
 @media only screen and (min-width: 700px)  {
 .home-container{
     display: grid;
-    grid-template-columns: 23% 77%;
+    grid-template-columns: 30% 70%;
 }
 #homecontainermin{
     display: grid;
@@ -26,6 +40,10 @@
     background-color:white;
     grid-column: 1/1;
     height:100vh;
+}
+#SideNavmin{
+    margin-left: 5%;
+    padding: 5% 10%;
 }
 .nav-menu-items li{
     padding: 1vh 5vh;

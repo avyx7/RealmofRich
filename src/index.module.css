@@ -1,29 +1,5 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Roboto:wght@300;400&display=swap');
-body{
-  font-family: 'Lato', sans-serif;
-}
+
 nav.menu{
-  z-index:3;
   height:8vh;
   display:grid;
   grid-template-columns: 5% 20% 55% 15% 5%;
@@ -31,19 +7,14 @@ nav.menu{
   /*background-image: linear-gradient( 45DEG, rgba(255,0,0,0), #405DE6, #5851DB, #833AB4,  #C13584, #E1306C, #FD1D1D);*/
 }
 .logo, .logo img{
-  max-height:4vw;
   grid-column: 2/3;
   grid-row: 2/2;
-  width:20vw;
 }
 .navicons{
   grid-column: 4/4;
   grid-row: 2/2;
 }
-button.headerbutton{
-  background-color: transparent;
-}
-.headerbutton, button.headerbutton{
+.headerbutton{
   box-sizing: border-box;
   width: 95%;
   padding-top: 20px;
@@ -63,25 +34,22 @@ button.headerbutton{
   -webkit-transition: background 300ms ease-in-out;
   transition: background 300ms ease-in-out;
 }
-.headerbutton:hover,  button.headerbutton:hover{
+.headerbutton:hover{
   background-position: 100%;
   color: #db0d5c;
-}
-#loginbutton{
-  max-width:130px;
 }
 
 /*popup css*/
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  border: 2px solid #00898E;
   border-radius: 10px;
-  transition: background .3s;
+  transition: background .5s;
 }
+/*
 .btn:hover {
   background: #00898E;
-}
+}*/
 .popup {
   position: fixed;
   padding: 10vw;
@@ -154,10 +122,8 @@ button.headerbutton{
 
 .appheader{
   height: 100vh;
-  background-size: 100% auto;
   background-repeat: no-repeat;
   background-size: cover;
-  /*background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7)), url(./8_34381.jpg);*/
   background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.9)), url(./199729203.jpg);
 }
 .bookcontainer{
@@ -250,9 +216,9 @@ grid-column: 1/1;
 .materialtextfield input{
   box-sizing: border-box;
   width: 100%;
-  height: 6vw;
+  height: 100%;
   font-family: 'Lato', sans-serif;
-  font-size: 1rem;
+  font-size: 1.4rem;
   padding: 0.5rem 0.5rem;
 }
 .materialtextfield input:invalid{
@@ -362,6 +328,9 @@ grid-column: 1/1;
 
 
 /* Plans */
+.tablecontainer{
+  margin-right:10%;
+}
 .container1 {
   margin: 0 auto;
   width: 90%;
@@ -515,7 +484,7 @@ table th {
   text-transform: uppercase;
 }
 
-
+/*
 @media screen and (max-width: 600px) {
   .segment {
     max-height: none;
@@ -559,10 +528,10 @@ table th {
   }
   
   table td::before {
-    /*
-    * aria-label has no advantage, it won't be read inside a table
-    content: attr(aria-label);
-    */
+    
+    //* aria-label has no advantage, it won't be read inside a table
+    //content: attr(aria-label);
+    
     content: attr(data-label);
     float: left;
     font-weight: bold;
@@ -576,7 +545,7 @@ table th {
     display:block;
   }
 }
-
+*/
 /*--JOBS--*/
 .container {
   grid-column: 1/span 2;
@@ -775,7 +744,7 @@ overflow-y: auto;
   grid-row: 3/3;
 }
 
-/* --Media Queries smaller screens -- */
+/* -----------------------------------------------------------Media Queries smaller screens -- ------------------------------*/
 @media screen and (min-width: 1120px) {
   .grid-1-5 {
     width: 29%;
@@ -793,9 +762,7 @@ overflow-y: auto;
   label::before, input[required]:focus ~ label::before{
     top: -3.3rem;
 }
-.headerbutton {
-  padding-top: 10px;
-}
+
 }
 @media screen and (max-width: 900px) {
   .headerstoryboard {
@@ -811,12 +778,6 @@ overflow-y: auto;
   }
   .segment > div{
     grid-column: 1/span 2;
-  }
-  #first-book{
-
-  }
-  #second-book{
-
   }
   #earnmoney {
     height: 50vh;
@@ -877,10 +838,7 @@ overflow-y: auto;
     margin-left:-7vw;
   }
   #loginbutton{
-    box-sizing: border-box;
     width:25vw;
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
   .logo, .logo img {
     width: 30vw;
@@ -901,7 +859,6 @@ overflow-y: auto;
     top: -4rem;
 }
   #getstartedbutton {
-    grid-column: 1/span 2;
     max-width: none;
     max-height: none;
     width: 40vw;
@@ -930,7 +887,7 @@ input:invalid ~ label::before {
   font-size: 0.8rem;
 }
 }
-/*---Privacy Policy---*/
+/*---------------------------------------Privacy Policy----------------------------------------------------------------*/
 .privacypolicy{
   font-family: 'Lato', sans-serif;
 }

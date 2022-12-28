@@ -6,7 +6,7 @@ function EducationCarousel() {
             <section className="carousel">
             <ol className="carousel__viewport">
                 <li className="carousel__slide">
-                <img className="caraouselimage" src="../educationimages/1111.JPG"></img>
+                <img className="caraouselimage" src="../educationimages/1111.jpg"></img>
                 <div class="carousel__snapper"></div>
                 </li>
                 <li className="carousel__slide">
@@ -14,7 +14,7 @@ function EducationCarousel() {
                 <div className="carousel__snapper"></div>
                 </li>
                 <li className="carousel__slide">
-                <img className="caraouselimage" src="../educationimages/3333.JPG"></img>
+                <img className="caraouselimage" src="../educationimages/3333.jpg"></img>
                 <div className="carousel__snapper"></div>
                 </li>
                 <li className="carousel__slide">

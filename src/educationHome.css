@@ -10,6 +10,7 @@ width:100%;
 padding:2% 5% 0% 5%;
 display: grid;
 grid-template-columns: 50% 39%;
+grid-gap: 3%;
 background: rgb(51, 53, 69);
 }
 .not-active{display: none;}
@@ -19,6 +20,12 @@ background: rgb(51, 53, 69);
 .profilemenu{
   position:absolute;
   z-index:11;
+  right: 0;
+  width: 400px;
+  max-width: 49vw;
+}
+.profilevipicon{
+  width: 10vw;
 }
 @media screen and (max-width: 700px){
   /*
@@ -37,7 +44,7 @@ background: rgb(51, 53, 69);
   */
   .educationhomeheader{
     padding:2% 2% 0% 2%;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
   }
   .wrapper{
   grid-column: 1/1;
@@ -45,7 +52,6 @@ background: rgb(51, 53, 69);
   max-width: 50vw;
   }
   .profilecontainer{
-    margin-left: 3%;
     grid-column: 2/2;
   }
   .profilegrid{
@@ -254,6 +260,24 @@ background: /*rgb(123, 132, 192)*/ rgb(34, 37, 57);
   text-shadow: 10px 10px 20px rgb(29 40 114);
 }
 
+.waviy span {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  font-size:1em;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
 .svgblob{
   position:absolute;
   width:30vw;
@@ -420,7 +444,6 @@ background: /*rgb(123, 132, 192)*/ rgb(34, 37, 57);
 
   /*---------- Profile Menu ------*/
   .profile-menu{
-    width: 30vw;
     background-color: white;
 
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -443,37 +466,61 @@ background: /*rgb(123, 132, 192)*/ rgb(34, 37, 57);
     align-items: center;
     transform: translate(0%, 17%);
 }
-  /*---------- upgrade VIP css ------*/
-  @import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
+  /*------------------------------------------ upgrade VIP css --------------------------------------*/
   .completebackground{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    width:100vw;
+    height: 180vh;
+    position: absolute;
+    top:0;
+    z-index:5;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-rows: 3% 97%;
+  }
+  @media screen and (min-width: 700px){
+    .completebackground{
+      width:93%;
+    }
+  }
+  @media screen and (min-width: 700px){
+
   }
   .backgroundVIP{
-    background-image: url("./6e400.jpg");
-    position: fixed;
-    top:0;
+    background-image: url("./272533702.jpg");
+    
   }
-  .close{
-    height:10vh;
-    width:10vh;
-    float: right;
-    margin-right: 2vh;
-    background: url("./icons/001-close.png");
-  }
-  .gamefont{
-    font-family: 'Stalinist One', cursive;
-  }
-  .upgradeVIP-heading{
-    font-size: 200%;
-    padding: 10vh;
+  .upgradeVIPheading{
     text-align: center;
-    color:rgb(197, 211, 121);
+    font-size:3em;
+    letter-spacing:0.1em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;
+    text-shadow: 
+    0.1em 0.1em #ff1f8f, 0.15em 0.15em #000000
   }
-  /*---------- upgrade VIP css ------*/
+  .pricingcontainer{
+    padding: 5%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .pricingcontainer .segment{
+    background: hsl(204 100% 5%);
+    color: white;
+  }
+  .pricingcontainer .segmenttextcontent *{
+    padding:5%;
+    color:white;
+    text-transform: none;
+    text-align: center;
+
+  }
+  .pricingcontainer .segmenttextcontent .textcenter{
+    text-align: center;
+    font-size: 140%;
+  }
+  /*-------------------------------- End of upgrade VIP css ----------------------------------------*/
 
   /*-------------------Modal EducationShop --------------------*/
 
@@ -591,3 +638,251 @@ background: /*rgb(123, 132, 192)*/ rgb(34, 37, 57);
 .educationItemContainer{
   box-shadow: 10px 10px lightblue;
 }
+
+/* --------------------------------------------Plans -------------------------------------------------*/
+.container1 {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  grid-column: 1/span 2;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.grid-1-5 {
+  border: 2px solid #5d4e65;
+  padding: 1.25em;
+  position: relative;
+  text-align: center;
+  transition: all .2s ease-in-out;
+}
+.no-border{
+  border:none;
+  pointer-events: none;
+  text-align: right;
+}
+
+
+
+
+.grid-1-5:hover {
+  background-color: #53455b;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF53455B', endColorstr='#FF201D22');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzUzNDU1YiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIwMWQyMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #53455b), color-stop(100%, #201d22));
+  background-image: -moz-linear-gradient(top, #53455b 0%, #201d22 100%);
+  background-image: -webkit-linear-gradient(top, #53455b 0%, #201d22 100%);
+  background-image: linear-gradient(to bottom, #53455b 0%, #201d22 100%);
+  border-top: 2px solid #ec7a37;
+  border-bottom: 2px solid #ff4f69;
+  box-shadow: 0px 0px 10px 0px #323232;
+  transform: scale(1.025);
+  z-index: 2;
+}
+.grid-1-5:hover:before, .grid-1-5:hover:after {
+  content: "";
+  position: absolute;
+  background-color: #f67d35;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFF67D35', endColorstr='#FFFF4F68');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y2N2QzNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmNGY2OCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f67d35), color-stop(100%, #ff4f68));
+  background-image: -moz-linear-gradient(top, #f67d35 0%, #ff4f68 100%);
+  background-image: -webkit-linear-gradient(top, #f67d35 0%, #ff4f68 100%);
+  background-image: linear-gradient(to bottom, #f67d35 0%, #ff4f68 100%);
+  top: -2px;
+  bottom: -2px;
+  width: 2px;
+}
+.grid-1-5:hover:before {
+  left: -2px;
+}
+.grid-1-5:hover:after {
+  right: -2px;
+}
+h2, h3, p, ul {
+  margin: 0;
+}
+
+h2 {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0 0 0.5em;
+}
+
+h3 {
+  font-size: 1.5em;
+  letter-spacing: 0.0625em;
+  margin: 0 0 0.3333333333333333em;
+}
+
+p {
+  font-size: 0.875em;
+}
+
+p, ul {
+  margin: 0 0 1.5em;
+}
+
+ul {
+  color: #796583;
+  font-size: 0.75em;
+  list-style-type: none;
+  padding: 0;
+}
+ul li {
+  margin: 0 0 0.8333333333333333em;
+}
+
+.uppercase, .button, h2 {
+  text-transform: uppercase;
+}
+
+sup, .small {
+  font-size: 0.6125em;
+}
+
+/*--new plan table--*/
+.fontblack{
+  color:#0a0a0a
+}
+.tablecontainersmallscreen{
+  display: none;
+}
+.table-container, .table-container-smallscreen{
+  padding-right:10vw;
+  grid-column: 1/span 2;
+}
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+  color:black;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.bubbly-button {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #ff0081;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+}
+@media screen and (max-width: 700px){
+  .bubbly-button {
+    padding: 1em 1em;
+  }
+}
+.bubbly-button:focus {
+  outline: 0;
+}
+.bubbly-button:before, .bubbly-button:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button:before {
+  display: none;
+  top: -105%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button:after {
+  display: none;
+  bottom: -105%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button:active {
+  transform: scale(0.9);
+  background-color: #e60074;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.bubbly-button.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 1s forwards;
+}
+.bubbly-button.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 1s forwards;
+}
+
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.upgradeVIPimage{
+  width:100%;
+}
+
+/* ----------------------------------------End of Plans -------------------------------------------------*/

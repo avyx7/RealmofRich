@@ -46,9 +46,7 @@ function EducationHomeHeader(props) {
                         <ProfileMenu
                             profilemenu = {props.profilemenu}
                             onClick = {()=> props.setprofilemenu}
-
-                            upgradeVIP = {props.upgradeVIP}
-                            setupgradeVIP = {()=> props.setupgradeVIP}
+                            toggleopenclose = {props.toggleopenclose}
 
                             setlogout = {()=>SignOut }
                         />
