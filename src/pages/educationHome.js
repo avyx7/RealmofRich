@@ -1,18 +1,18 @@
 import React, { useEffect, useState} from 'react';
-import EducationHomeHeader from "./educationHomeHeader";
-import EducationCarousel from "./educationCarousel";
-import './educationHome.css';
-import './group.css';
-import './chat.css';
-import DogAnimated from "./dogAnimated";
-import ChatModule from "./chatmodule";
-import UpgradeVIP from "./upgradeVIP";
+import EducationHomeHeader from "../components/education/educationHomeHeader";
+import EducationCarousel from "../components/education/educationCarousel";
+import '../assets/educationHome.css';
+import '../assets/group.css';
+import '../assets/chat.css';
+import DogAnimated from "../features/dogAnimated";
+import ChatModule from "../features/chat/chatmodule";
+import UpgradeVIP from "../components/upgradeVIP";
 import Modal from 'react-modal';
-import close from "./icons/close.png";
+import close from "../assets/icons/close.png";
 import firebase from "firebase/app";
 import 'firebase/firestore';
-import EducationShop from './educationShop';
-import Vimeo from './vimeo';
+import EducationShop from '../components/education/educationShop';
+import Vimeo from '../services/vimeo';
 
 const educationShopStyles = {
     content: {

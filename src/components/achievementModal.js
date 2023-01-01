@@ -1,5 +1,5 @@
 import React from 'react'
-import close from "../icons/close.png"
+import close from "../assets/icons/close.png"
 
 export default function AchievementModal(props) {
   return (

@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect, useParams } from "react-router-dom";
-import './app.css';
-import Frontpage from "./frontpage";
+import './assets/app.css';
+import Frontpage from "./frontpage/frontpage";
 import Loading from "./loading";
 
 
@@ -14,11 +14,11 @@ import 'firebase/analytics';
 import * as firebaseui from 'firebaseui';
 import 'firebaseui/dist/firebaseui.css';
 
-import Home from './home';
+import Home from './pages/home';
 import {firebaseConfig} from './firebaselock';
 import Pepper from './components/pepper/pepper';
 import Realm from './components/realm/realm';
-import EducationHome from './educationHome';
+import EducationHome from './pages/educationHome';
 
 export const realm = firebase.initializeApp(firebaseConfig);
 export const auth = firebase.auth();

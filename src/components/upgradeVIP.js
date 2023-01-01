@@ -1,5 +1,5 @@
 import React, {useEffect } from 'react';
-import close from "./icons/close.png";
+import close from "../assets/icons/close.png";
 
 function UpgradeVIP(props) {
     return (

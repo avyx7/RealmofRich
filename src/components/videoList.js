@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './videoList.module.css';
+import style from '../assets/videoList.module.css';
 
 
 function VideoList() {

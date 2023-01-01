@@ -1,6 +1,6 @@
-import { auth } from './App';
+import { auth } from '../../App';
 import React, { useState, useEffect} from 'react';
-import ProfileMenu from './profileMenu';
+import ProfileMenu from '../../layouts/profileMenu';
 import ShopButton from './shopButton';
 
 function EducationHomeHeader(props) {

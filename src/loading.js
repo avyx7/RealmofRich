@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 
 import firebase from "firebase/app";
-import Home from "./home";
-import Frontpage from "./frontpage";
+import Home from "./pages/home";
+import Frontpage from "./frontpage/frontpage";
 
 
 function Loading() {

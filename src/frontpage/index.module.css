@@ -124,7 +124,7 @@ nav.menu{
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.9)), url(./199729203.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.9)), url(../199729203.jpg);
 }
 .bookcontainer{
   display:grid;
@@ -709,7 +709,7 @@ overflow-y: auto;
 }
 
 #pic1,#pic2,#pic3,#pic4,#pic5,#pic6,#pic7 {
-  background-image: url(./trophyicon.png);
+  background-image: url(../trophyicon.png);
 }
 
 /*--Footer--*/
@@ -892,7 +892,7 @@ input:invalid ~ label::before {
   font-family: 'Lato', sans-serif;
 }
 .privacyheader{
-  background-image: url(./35307971595.jpg);
+  background-image: url(../35307971595.jpg);
   min-height:100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -991,7 +991,7 @@ input:invalid ~ label::before {
 
 /* FAQ HelpCenter Account Jobs CompanyInformation ContactUs */
 .logoheader{
-  background-image: url(./redback.jpg);
+  background-image: url(../redback.jpg);
 }
 .logoheader nav {
    height:auto;

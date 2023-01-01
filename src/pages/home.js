@@ -1,10 +1,10 @@
 import { Component } from 'react';
 import {BrowserRouter as Router, Switch, Route, Link, useParams } from 'react-router-dom';
-import './home.css';
+import '../assets/home.css';
 import EducationHome from "./educationHome";
-import './educationHome.css';
-import Pepper from './components/pepper/pepper';
-import Realm from './components/realm/realm';
+import '../assets/educationHome.css';
+import Pepper from '../components/pepper/pepper';
+import Realm from '../components/realm/realm';
 import firebase from "firebase/app";
 import 'firebase/auth';
 

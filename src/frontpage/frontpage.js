@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import { ui, uiConfig } from "./App";
+import { ui, uiConfig } from "../App";
 import Divider from "./divider";
 import Header from "./header";
 import Homepage from "./homepage";

@@ -1,6 +1,6 @@
 import React, {useRef, useState, useEffect} from 'react';
 import firebase from "firebase/app";
-import {auth} from "./App";
+import {auth} from "../../App";
 import { useList } from 'react-firebase-hooks/database';
 
 
