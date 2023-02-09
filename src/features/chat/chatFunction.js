@@ -140,7 +140,7 @@ import { useList } from 'react-firebase-hooks/database';
         <div className="inputbox">
           <form className="chatform" onSubmit={sendMessage}>
   
-            <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" onFocus={props.addmargin} onBlur={props.addmargin} />
+            <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" /*onFocus={props.addmargin} onBlur={props.addmargin}*/ />
   
             <button type="submit" disabled={!formValue}>🕊️</button>
   

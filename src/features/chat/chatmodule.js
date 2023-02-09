@@ -4,24 +4,28 @@ import React from "react";
 function ChatModule(props) {
 
     return (               
-        <div>      
+        <>      
         {/* Added Chat container from here */}
-        <div className="circularicon">
-                    <nav class="menu">
-                        <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
-                        <label class="menu-open-button" for="menu-open">
-                                    
-                        </label>
+        <div className='circularicongroup'>
+            <div className="circularicon" onClick = {props.toggleflowermenu}>
+                        {/* 
+                        <nav class="menu">
+                            <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+                            <label class="menu-open-button" for="menu-open">
+                                        
+                            </label>
 
-                        <a href="#" class="menu-item blue"> <i class="fa fa-anchor"></i> </a>
-                        <a href="#" class="menu-item green"> <i class="fa fa-coffee"></i> </a>
-                        <a href="#" class="menu-item red"> <i class="fa fa-heart"></i> </a>
-                        <a href="#" class="menu-item purple"> <i class="fa fa-microphone"></i> </a>
-                        <a href="#" class="menu-item orange"> <i class="fa fa-star"></i> </a>
-                        <a href="#" class="menu-item red"> <i class="fa fa-diamond"></i> </a>
-                    </nav>
-                </div>
-        <div className={"downArrow"+(props.chatOpen ? "":' downArrow-maximize')} onClick = {props.onClick()}></div>
+                            <a href="#" class="menu-item blue"> <i class="fa fa-anchor"></i> </a>
+                            <a href="#" class="menu-item green"> <i class="fa fa-coffee"></i> </a>
+                            <a href="#" class="menu-item red"> <i class="fa fa-heart"></i> </a>
+                            <a href="#" class="menu-item purple"> <i class="fa fa-microphone"></i> </a>
+                            <a href="#" class="menu-item orange"> <i class="fa fa-star"></i> </a>
+                            <a href="#" class="menu-item red"> <i class="fa fa-diamond"></i> </a>
+                        </nav>
+                        */}
+            </div>
+            <div className={"downArrow"+(props.chatOpen ? "":' downArrow-maximize')} onClick = {props.onClick()}></div>
+        </div>
         <div className={"chatcontainer"+(props.chatOpen ? "":' chatcontainer-inactive')}>
             <header>
 
@@ -55,7 +59,7 @@ function ChatModule(props) {
         
         <div className="chatbone">
             <ChatRoom
-            addmargin = {props.addmargin} />
+            /*addmargin = {props.addmargin}*/ />
 
 
         </div>
@@ -96,7 +100,7 @@ function ChatModule(props) {
         </div>
             </div>
             {/* End of Chat container -------- */}
-        </div>  
+        </>  
     );
     
 

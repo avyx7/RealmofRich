@@ -11,10 +11,12 @@ function Navbar() {
                     <img src = "774655QZp2g5GY.png" alt = "Logo of Realm of Rich"></img>
                 </Link>
             </div>
-            <div className = {style.navicons}>
-                <a href="#popup1" className={`${style.headerbutton} ${style.btn}`} id ={style.loginbutton}>Log In</a>
+            
+            <div className = {style.navitemcompany}>Company</div>
+            <div className = {style.navitempricing}>Pricing</div>
+            {/*<a href="#popup1" className={`${style.headerbutton} ${style.btn}`} id ={style.loginbutton}>Log In</a>*/}
                 
-            </div>
+            
             <div id="popup1" class={style.popup}>
             <a href="#popupclose" class={style.close}>&times;</a>
             <h2>Login to enjoy the magic</h2>

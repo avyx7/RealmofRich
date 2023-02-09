@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
 /*@import "~@flaticon/flaticon-uicons/css/all/all";*/
 *{
 font-family: 'Roboto', Arial, sans-serif;
 }
 .educationhomeheader{
 box-sizing: border-box;
-width:100%;
 padding:2% 5% 0% 5%;
 display: grid;
-grid-template-columns: 50% 39%;
-grid-gap: 3%;
+grid-template-columns: 5fr 5fr;
+grid-gap: 6%;
 background: rgb(51, 53, 69);
+place-items: center;
 }
-.not-active{display: none;}
+.not-active{display: none; height:0}
 .profilemenucontainer{
   position: relative;
 }
@@ -47,17 +47,19 @@ background: rgb(51, 53, 69);
     grid-template-columns: 1fr 1fr;
   }
   .wrapper{
-  grid-column: 1/1;
+  grid-column: 1/2;
   width: 100%;
   max-width: 50vw;
   }
   .profilecontainer{
-    grid-column: 2/2;
+    grid-column: 2/3;
+    width:100%;
   }
   .profilegrid{
     display: grid;
     grid-gap: 10%;
     grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
   }
   .vip{
     grid-column: 1/1;
@@ -93,6 +95,7 @@ background: rgb(51, 53, 69);
   .carticon{
     color:rgba(255, 255, 255, 0.6);
     font-size:300%;
+    font-family: "Flaticon";
   }
   .profilepic{
     max-width: 15vw;
@@ -100,13 +103,13 @@ background: rgb(51, 53, 69);
 }
 @media screen and (min-width: 700px){
   .wrapper{
-    grid-column: 1/1;
+    grid-column: 1/2;
     width: 100%;
     max-width: 50vw;
   }
   .profilecontainer{
-    grid-column: 2/2;
-    padding-left: 5%;
+    grid-column: 2/3;
+    width:100%;
   }
   .profilegrid{
     display: grid;
@@ -122,13 +125,11 @@ background: rgb(51, 53, 69);
   .carticon{
     color:rgba(255, 255, 255, 0.6);
     font-size:500%;
+    font-family: "Flaticon";
   }
   #carticonactive{
     text-shadow:5px 5px 50px white;
     color:rgba(255, 255, 255, 1);
-  }
-  .profilepic{
-    max-width: 5vw;
   }
 }
 .profilepic{
@@ -249,7 +250,8 @@ background: /*rgb(123, 132, 192)*/ rgb(34, 37, 57);
 .pointer {cursor: pointer;}
 .blobtext{
   position: absolute;
-  left:40vw;
+  left:50%;
+  transform: translate(-50%, 0%);
   font-family: Roboto;
   z-index: 2;
   line-height: 60px;
@@ -335,9 +337,11 @@ background: /*rgb(123, 132, 192)*/ rgb(34, 37, 57);
       scroll-snap-align: center;
     }
   }
-@media screen and (max-width: 900px){
+@media screen and (max-width: 700px){
   .educationcarousel {
     width:100vw;
+    height:40vw;
+    overflow: hidden;
   }
   .carousel__slide {
     position: relative;
@@ -349,9 +353,11 @@ background: /*rgb(123, 132, 192)*/ rgb(34, 37, 57);
     width:100vw;
   }
 }
-@media screen and (min-width: 900px){
+@media screen and (min-width: 700px){
   .educationcarousel {
-    width:100%;
+    width:93vw;
+    height:20vw;
+    overflow: hidden;
   }
   .carousel__slide {
     position: relative;
@@ -527,8 +533,11 @@ background: /*rgb(123, 132, 192)*/ rgb(34, 37, 57);
   .educationmodalcontainer{
     position:absolute;
     z-index:5;
-    width:93%;
-    height:300%;
+    margin-top: 22vh;
+    border-radius: 8vw 8vw 0 0;
+    border: solid 13px white;
+    width: 85%;
+    margin-left:5%; margin-right: 5%;
     display: grid;
     grid-template-rows: 3% 97%;
     background-color: #FF5BFA;
@@ -536,10 +545,31 @@ background: /*rgb(123, 132, 192)*/ rgb(34, 37, 57);
     background-attachment: fixed;
     background-size: cover;
   }
+  .educationshopfront{
+    position:absolute;
+    top:0;
+    width:82.97vw;
+    z-index:1;
+  }
+  @media screen and (max-width: 700px){
+    .educationmodalcontainer{
+      width: calc(100% + 26px);
+      margin-left:-13px; margin-right: -13px;
+      border-radius: 16vw 16vw 0 0;
+    }
+    .educationshopfront{
+      width:92vw;
+    }
+  }
+  .megasale{
+    position: absolute;
+    top:0;
+    width:22vw;
+    z-index:2;
+  }
   .educationmodalhead{
-    grid-row: 1/1;
-    position: fixed;
-    width:93%;
+    grid-row: 1/2;
+    position: relative;
   }
   .educationmodalcontent{
     margin:2%;
@@ -547,68 +577,59 @@ background: /*rgb(123, 132, 192)*/ rgb(34, 37, 57);
   }
   .educationmodalheadcontainer{
     display: grid;
-    grid-template-columns: 90% 10%;
+    grid-template-columns: 9fr 1fr;
   }
   .educationmodalheadtext{
-    grid-column: 1/1;
+    grid-column: 1/2;
 
   }
   .educationmodalclosebutton{
-    grid-column: 2/2;
+    grid-column: 2/3;
     margin-left: auto;
     margin-right: 0;
+    z-index:5
   }
-  /*-------------------Modal Flower menu items --------------------*/
-.ReactModal__Overlay{
-  z-index: 10;
-}
-.ReactModal__Content{
-  top:10vh;
-  right:30vw;
-  bottom:10vh;
-  left:30vw;
-}
-.modalcontainer{
-  width:100%;
-  height:100%;
-  z-index: 10;
-  display: grid;
-  grid-template-rows: 10% 90%;
-  background-color: #0f0b1bb0;
-}
-.modalhead{
-  background-color: #0f0b1bb0;
-  grid-row: 1/1;
-}
-.modalcontent{
-  margin:2%;
-  grid-row: 2/2;
-  background-color: white;
-  border-radius: 2%;
-}
-.modalheadcontainer{
-  display: grid;
-  grid-template-columns: 90% 10%;
-}
-.modalheadtext{
-  grid-column: 1/1;
-  color: white;
-  margin: auto;
-  font-weight: 800;
-}
-.modalclosebutton{
-  grid-column: 2/2;
-  margin-left: auto;
-  margin-right: 0;
-}
-
-/*<---------------------------Education Shop ------------------------------>*/
-.educationShopContainer{
-  height:100%;
-  display:grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-}
+  .educationalItems{
+    margin-top:30vh;
+  }
+  .educationalItemsbanner{
+    margin: 0 auto;
+    position: relative;
+    width: 31vw;
+    height: 9.35vw;
+    color:white;
+  }
+  .educationalItemsbannertext{
+    line-height: 9.35vw;
+    color:white;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    font-weight: 600;
+    font-size: xx-large;
+    font-family: 'Vollkorn';
+  }
+  @media screen and (max-width: 700px){
+    .educationalItems{
+      margin-top:6vh;
+    }
+    .educationalItemsbanner{
+      width: 61vw;
+      height: 19vw;
+    }
+    .educationalItemsbanner img{
+      width: 61vw;
+      height: 19vw;
+    }
+    .educationalItemsbannertext{
+      width:61vw;
+      line-height: 19vw;
+      text-align: center;
+      font-size:large;
+    }
+  }
 .educationPara{
   margin: 6%;
   background: rgba(0, 0, 0, 0.3);
@@ -617,28 +638,627 @@ background: /*rgb(123, 132, 192)*/ rgb(34, 37, 57);
   border-width: 1.5vh;
 }
 .educationShopBanner{
+  position: relative;
   margin: 0 auto;
-  padding: 1% 20%;
-  width:70%;
-  height:10%;
-  background: url("../ribbonRed.png") no-repeat center;
+  margin-top:5vw;
+  width:100%; height:8vh;
+  background: url("./education/ribbonRed.png") no-repeat center;
   background-size: contain;
-  font-size:50px;
-  letter-spacing:0.1em;
+}
+.educationShopBannertext{
+  position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    font-size: 1.6vw;
+    letter-spacing:0.1em;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: white;
   text-shadow: 
   0.1em 0.1em #ff1f8f, 0.15em 0.15em #000000
-}
-.educationItemsGrid{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(33%, 100%));
-}
-.educationItemContainer{
-  box-shadow: 10px 10px lightblue;
-}
 
+}
+@media screen and (max-width: 700px){
+  .educationPara{
+    margin: 6% 0;
+    border:none;
+  }
+  .educationShopBannertext{
+    font-size: 3vw;
+  }
+}
+.educationalItemsgrid{
+  margin:2vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:5vw;
+}
+.winnerMindsetgrid, .examPrepgrid{
+  width: 30vw;
+  height: 15vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.winnerMindset{
+  width: 30vw;
+  height: 15vw;
+  grid-column: 1/2;
+  background: url(./education/winner_mindset.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 1vw;
+}
+.examPrep{
+  width: 30vw;
+  height: 15vw;
+  grid-column: 2/3;
+  background: url(./education/exam_mania.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 1vw;
+}
+@media screen and (max-width: 700px){
+  .winnerMindset, .examPrep{
+    width: 43vw;
+    height: 22vw;
+  }
+  .winnerMindsetgrid, .examPrepgrid{
+    width: 43vw;
+    height: 22vw;
+  }
+}
+.decor{
+  grid-column: 1/5;
+  grid-row: 1/4;
+  max-height: 15vw;
+  max-width: 27vw;
+}
+.buyButton{
+  width:12vw;
+  grid-column: 5/9;
+  grid-row: 4/5;
+}
+@media screen and (max-width: 700px){
+  .decor{
+    max-height: 27vw;
+    max-width: 37vw;
+  }
+  .buyButton{
+    width:20vw;
+  }
+}
+.educationalItemsgrid1{
+  margin:2vw;
+  margin-top:5vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap:5vw;
+}
+.audioBook1, .audioBook2, .audioBook3{
+  display: grid;
+  grid-template-rows: 4fr 3fr;
+  grid-gap:2vh;
+  place-items: center;
+  background: rgb(245,232,39);
+  background: linear-gradient(45deg, rgba(245,232,39,0.6558998599439776) 0%, rgba(228,228,236,0.6026785714285714) 100%);
+}
+.audioBook1{
+  grid-column: 1/2;
+}
+.audioBook2{
+  grid-column: 2/3;
+}
+.audioBook3{
+  grid-column: 3/4;
+}
+.audioBookimg{
+  width:9vw;
+}
+@media screen and (max-width: 700px){
+  .audioBookimg{
+    width:17vw;
+  }
+}
+.bookName{
+  padding:0.5vw 1vw;
+  color:#000;
+  background: white;
+}
+.buyButtonsecondcontainer{
+  position: relative;
+}
+.buyButtonsecond{
+  width:4vw;
+  height:2.3vw;
+}
+@media screen and (max-width: 700px){
+  .buyButtonsecondcontainer{
+    margin: 0 auto;
+    width: 20vw;
+    height: 12.3vw;
+  }
+  .buyButtonsecond{
+    width: 20vw;
+    height: 12.3vw;
+  }
+}
+.buttonprice{
+  position: absolute;
+  left:50%; top:50%;
+  transform: translate(-50%, -50%);
+  color:white;
+}
+.forces, .heat, .forces img, .heat img{
+  width: 25vw;
+  height: 36.8vw;
+}
+.algebra, .fractional, .bundle, .algebra img, .fractional img, .bundle img{
+  width: 18vw;
+  height: 26.5vw;
+}
+@media screen and (max-width: 700px){
+  .forces, .heat, .forces img, .heat img{
+    width: 38vw;
+    height: 55.94vw;
+  }
+  .algebra, .fractional, .bundle, .algebra img, .fractional img, .bundle img{
+    width: 27vw;
+    height: 39.75vw;
+  }
+}
+  /*-------------------Modal Flower menu items --------------------*/
+  .flowermodaloverlay{
+    position: fixed;
+    inset: 0px;
+    background-color: rgba(255, 255, 255, 0.75);
+    z-index: 10;
+  }
+  .flowermodal{
+    position: absolute;
+    inset: 10vh 23vw;
+    border: none;
+    background: none;
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 0px;
+  }
+  @media screen and (max-width: 700px){
+    .flowermodal{
+      position: absolute;
+      inset: 14vh 0;
+      border: none;
+      background: none;
+      border-radius: 4px;
+      outline: none;
+      padding: 0px;
+      border-bottom: 5px solid #585858;
+    }
+    #flowermodal{
+      inset: 20vh 6vw;
+    }
+    .flowermenu{
+      width:100%; height:100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+    .flowermenu_achievement, .flowermenu_leaderboard, .flowermenu_creategroup, .flowermenu_friends, .flowermenu_mygroups, .flowermenu_alerts,
+    .flowermenu_mail, .flowermenu_giftbox{
+      width:7vh;height:8vh;
+      margin:auto;
+      filter: drop-shadow(0.35rem 1rem 0.4rem rgba(0, 0, 0, 0.5));
+    }
+    .flowermenu_achievement{
+      background: url('./icons/001-medal.png');
+      background-repeat: no-repeat;background-size: contain;
+    }
+    .flowermenu_leaderboard{
+      background: url('./icons/001-podium.png');
+      background-repeat: no-repeat;background-size: contain;
+    }
+    .flowermenu_creategroup{
+      background: url('./icons/group-min.png');
+      background-repeat: no-repeat;background-size: contain;
+    }
+    .flowermenu_friends{
+      background: url('./icons/001-add-friend.png');
+      background-repeat: no-repeat;background-size: contain;
+    }
+    .flowermenu_mygroups{
+      background: url('./icons/mygroups.png');
+      background-repeat: no-repeat;background-size: contain;
+    }
+    .flowermenu_alerts{
+      background: url('./icons/notification-min.png');
+      background-repeat: no-repeat;background-size: contain;
+    }
+    .flowermenu_mail{
+      background: url('./icons/mail-min.png');
+      background-repeat: no-repeat;background-size: contain;
+    }
+    .flowermenu_giftbox{
+      background: url('./icons/029-gift-box-min.png');
+      background-repeat: no-repeat;background-size: contain;
+    }
+  }
+.modalcontainer{
+  width:100%;
+  height:100%;
+  z-index: 10;
+  display: grid;
+  grid-template-rows: 1fr 9fr;
+  background-color: #0f0b1bb0;
+
+}
+.modalhead{
+  background-color: #0f0b1bb0;
+  grid-row: 1/2;
+}
+.modalcontent{
+  margin:2%;
+  grid-row: 2/3;
+  background: rgb(245,232,39);
+  background: linear-gradient(45deg, rgba(245,232,39,0.6558998599439776) 0%, rgba(58,58,133,0.6026785714285714) 100%);
+  border-radius: 2%;
+}
+#modalcontent{
+  background: #22292C;
+}
+.modalheadcontainer{
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.modalheadtext{
+  grid-column: 1/2;
+  color: white;
+  margin: auto;
+  font-weight: 800;
+}
+.modalclosebutton{
+  grid-column: 2/3;
+  margin-left: auto;
+  margin-right: 0;
+}
+@media screen and (max-width: 700px){
+  .modalheadcontainer{
+    grid-template-columns: 8fr 1fr;
+  }
+  .modalclosebutton img{
+    width: 7vh;
+  }
+}
+.achievementModalgrid{
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 68vh;
+}
+.achiementTasks{
+  padding: 1vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.3fr;
+  height:10vh;
+  margin: 0.5vw;
+  border-radius: 1vh;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.700717787114846) 50%, rgba(255,255,255,1) 100%);
+  filter: drop-shadow(0.35rem 0.1rem 0.4rem rgba(0, 0, 0, 0.5));
+}
+.stars{
+  width:15vw;height:8vh;
+  max-height:10vh;
+  background:url(./education/backgroundRibbon.png) no-repeat;
+  background-size: contain;
+  position:relative;
+}
+.star{
+  position:absolute;
+  width:7vh; height:7vh;
+  max-height:7vh;
+  filter: drop-shadow(0.35rem 0.1rem 0.4rem rgba(0, 0, 0, 0.5));
+}
+#star1{
+  top:2vh; left:2vh;
+}
+#star2{
+  top:1vh; left:10vh;
+}
+#star3{
+  top:2vh; left:18vh;
+}
+.tasks{
+  padding:1vh 0;
+  height:8vh;
+}
+.tasksheading{
+  padding:1vh;
+  font-weight: 800;
+  filter: drop-shadow(0.35rem 0.1rem 0.4rem rgba(0, 0, 0, 0.5));
+  font-size:2vh;
+}
+.tasksdescription{
+  padding-left: 1vh;
+}
+.completionlevel{
+  margin: 1vh;
+  display: flex;
+  flex-direction: column;
+}
+.completionlevelindicator{
+  height:9px; width:10vw;
+  border-radius: 6px;
+  border:1px solid black;
+  margin: 0 auto;
+}
+.completionlevelindicatorfill{
+  background-color: rgb(4, 136, 4);
+  height:9px;
+}
+.rewards{
+  margin: 0 auto;
+  padding-top:2vh;
+  display: flex;
+  flex-direction: row;
+}
+.rewardtext{
+  font-size: 1vh;
+  padding-top: 0.6vh;
+}
+.exprewards, .guildcoinsrewards{
+  margin:0 1vh;
+  font-size: 1.5vh;
+  color:white;
+  font-weight:1000;
+  filter: drop-shadow(0.35rem 0.1rem 0.4rem rgba(0, 0, 0, 0.5));
+}
+.exprewards img, .guildcoinsrewards img{
+  width:1.5vw; height:1.5vw;
+  vertical-align: middle;
+}
+@media screen and (max-width: 700px){
+  .achiementTasks{
+    grid-template-columns: 1fr 1.8fr 1fr;
+  }
+  .stars{
+    width:23vw;
+  }
+  .star{
+    width: 4vh;
+    height: 4vh;
+  }
+  #star1{
+    top:1vh;
+    left:0;
+  }
+  #star2{
+    top:0;
+    left:4vh;
+  }
+  #star3{
+    top:1vh;
+    left:8vh;
+  }
+  .tasks{
+    padding:0;
+  }
+  .tasksheading{
+    padding:0;
+    font-size: 1.8vh;
+    width:40vw;
+    text-align: center;
+  }
+  .tasksdescription{
+    font-size: 1.6vh;
+    width:40vw;
+    text-align: center;
+  }
+  .completionlevel{
+    margin: 0;
+  }
+  .completionlevelindicator{
+    width:26vw;
+  }
+  .rewardtext{
+    display: none;
+  }
+  .exprewards img, .guildcoinsrewards img {
+    width: 4vw;
+    height: 4vw;
+}
+}
+.leaderboardslot{
+  padding: 1vh;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  height:10vh;
+  margin: 0.5vw 0.5vw;
+  border-radius: 1vh;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,1) 100%);
+  filter: drop-shadow(0.35rem 0.1rem 0.4rem rgba(0, 0, 0, 0.5));
+}
+.numberedList{
+  display: flex;
+  flex-direction: row;
+}
+.number{
+  width:5vh; height:5vh;
+  border-radius: 50%;
+  background-color: yellow;
+  text-align: center;
+  font-size: 200%;
+  margin-top: 4vh;
+  transform: translate(0, -50%);
+  line-height: 5vh;
+}
+.leaderprofilepic{
+  padding-left:1vh;
+}
+.leaderprofilepic img{
+  width:8vh; height:8vh;
+  border-radius: 10%;
+}
+.milestone, .milestone img, .bonus, .bonus img, .trophyicon, .trophyicon img {
+  margin: auto 0;
+  width:6vh; height:6vh;
+}
+.trophies{
+  display: flex;
+  flex-direction: row;
+}
+.trophynumber{
+  background: white;
+  width: 4vw;
+  height: 2.5vw;
+  border-radius: 50%;
+  border: 6px solid yellow;
+  text-align: center;
+  font-size: 120%;
+  transform: translate(0, 40%);
+  line-height: 2.5vw;
+}
+@media screen and (max-width: 700px){
+  .trophynumber{
+    width: 20vw;
+    height: 11.5vw;
+    line-height: 7vw;
+  }
+}
+.createguildhead{
+  font-size:120%;
+  color:white;
+  text-align: center;
+}
+#guildsearch{
+  width: 90%;
+  margin: 0 5%;
+  height:4vh;
+}
+.createguildinternal{
+  margin: 10% auto;
+  width:90%;
+  height:70%;
+  background: linear-gradient(45deg, rgba(245,232,39,0.6558998599439776) 0%, rgba(58,58,133,0.6026785714285714) 100%);
+  box-shadow: 10px 10px 5px rgba(26, 25, 25, 0.25) inset;
+}
+.guildsList{
+  padding: 1vh;
+  display: grid;
+  grid-template-columns: 0.6fr 1.8fr 0.8fr 0.8fr;
+  height:10vh;
+  margin: 0.5vw 0.5vw;
+  border-radius: 1vh;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,1) 100%);
+  filter: drop-shadow(0.35rem 0.1rem 0.4rem rgba(0, 0, 0, 0.5));
+}
+.castleicon{
+  height:8vh;
+  background: url("../assets/icons/002-castle.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.guildname{
+  line-height:8vh;
+  text-align: center;
+  font-size: 1.2vw;
+}
+.members, .mighte{
+  line-height: 3vh;
+  text-align: center;
+  font-size: 1.2vw;
+  padding-top: 1vh;
+}
+.membersprop, .mightprop{
+  font-size: 0.8vw;
+}
+@media screen and (max-width: 700px){
+  .guildname, .members, .mighte{
+    font-size: 3.5vw;
+  }
+  .membersprop, .mightprop{
+    font-size: 2.8vw;
+  }
+  .publicprivate{
+    font-size: 3.5vw;
+  }
+}
+.publicprivate{
+  line-height: 8vh;
+}
+.FriendsList{
+  padding: 1vh;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1.5fr;
+  height:10vh;
+  margin: 0.5vw 0.5vw;
+  border-radius: 1vh;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,1) 100%);
+  filter: drop-shadow(0.35rem 0.1rem 0.4rem rgba(0, 0, 0, 0.5));
+}
+.FriendsList> *{
+  max-height: 8vh;
+}
+@media screen and (max-width: 700px){
+  .FriendsList > .leaderprofilepic img{
+    padding-left: 0;
+  }
+}
+.personname{
+  margin: auto;
+  text-align: center;
+}
+.AlertList{
+  padding: 1vh;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  height:5vh;
+  margin: 0.1vw 0.5vw;
+  border-radius: 1vh;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.8) 100%);
+  filter: drop-shadow(0.35rem 0.1rem 0.1rem rgba(0, 0, 0, 0.5));
+}
+.alert{
+  font-size: 1.5vh;
+  line-height: 3vh;
+  padding-left: 2vh;
+}
+.alerttime{
+  font-size: 1vh;
+  line-height: 3vh;
+}
+.MailList{
+  padding: 1vh;
+  display: grid;
+  grid-template-columns: 0.6fr 2fr 1fr;
+  height:10vh;
+  margin: 0.5vw 0.5vw;
+  border-radius: 1vh;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,1) 100%);
+  filter: drop-shadow(0.35rem 0.1rem 0.4rem rgba(0, 0, 0, 0.5));
+}
+.subjectLine{
+  font-size: 1.5vh;
+  line-height: 8vh;
+  padding-left: 2vh;
+}
+.mailtime{
+  font-size: 1vh;
+  line-height: 8vh;
+}
+@media screen and (max-width: 700px){
+  .subjectLine{
+    margin: auto;
+    line-height: initial;
+  }
+}
 /* --------------------------------------------Plans -------------------------------------------------*/
 .container1 {
   margin: 0 auto;
@@ -886,3 +1506,183 @@ table th {
 }
 
 /* ----------------------------------------End of Plans -------------------------------------------------*/
+
+.mainContent{
+  width:92vw;
+  padding:2vw;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap:1vw;
+}
+.Main_achievement, .Main_leadersboard, .Main_mygroups, .Main_searchgroup, .Main_friend, .Main_alerts, .Main_mail, .Main_gifts{
+  width: 19vw;
+  height: 6vw;
+  border-radius: 1vw;
+  text-align: center;
+  line-height: 6vw;
+  color: #000;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #F4F200;
+  background-image: #F4F200;
+  background-image: -moz-linear-gradient(top, #fff 0%, #F4F200 100%); 
+  background-image: -webkit-linear-gradient(top, #fff 0%,#F4F200 100%); 
+  background-image: linear-gradient(to bottom, #fff 0%,#F4F200 100%); 
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 500ms ease-in-out;
+  transition: background 500ms ease-in-out;
+  border: solid 1px rgb(122, 121, 121);
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+  font-size: calc( 12px + 0.6vw );
+}
+.Main_achievement:hover, .Main_leadersboard:hover, .Main_mygroups:hover, .Main_searchgroup:hover, .Main_friend:hover, .Main_alerts:hover, .Main_mail:hover, .Main_gifts:hover{
+  background-position: -200%;
+  transition: background 500ms ease-in-out;
+}
+.Main_achievement{
+  grid-row:1/4;
+  grid-column: 1/4;
+}
+.Main_leadersboard{
+  grid-row:1/4;
+  grid-column: 4/7;
+}
+.Main_mygroups{
+  grid-row:1/4;
+  grid-column: 7/10;
+}
+.Main_searchgroup{
+  grid-row:1/4;
+  grid-column: 10/13;
+}
+.Main_alerts{
+  grid-row:4/7;
+  grid-column: 1/4;
+}
+.Main_mail{
+  grid-row:4/7;
+  grid-column: 4/7;
+}
+.Main_gifts{
+  grid-row:4/7;
+  grid-column: 7/10;
+}
+.Main_friend{
+  grid-row:4/7;
+  grid-column: 10/13;
+}
+.Main_achievement img, .Main_leadersboard img, .Main_mygroups img, .Main_searchgroup img, .Main_alerts img, .Main_mail img, .Main_gifts img{
+  vertical-align: middle;
+  width: 2vw;
+  height: 2vw;
+}
+@media screen and (max-width: 700px){
+  .mainContent{
+    width:100vw;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr ;
+  }
+  .Main_achievement, .Main_leadersboard, .Main_mygroups, .Main_searchgroup, .Main_alerts, .Main_mail, .Main_gifts, .Main_friend{
+    width: 30vw;
+    height: 15vw;
+    line-height: 15vw;
+    font-size: 12px;
+  }
+  .Main_achievement{
+    grid-row:1/2;
+    grid-column: 1/2;
+  }
+  .Main_leadersboard{
+    grid-row:1/2;
+    grid-column: 2/3;
+  }
+  .Main_mygroups{
+    grid-row:1/2;
+    grid-column: 3/4;
+  }
+  .Main_searchgroup{
+    grid-row:2/3;
+    grid-column: 1/2;
+  }
+  .Main_alerts{
+    grid-row:2/3;
+    grid-column: 2/3;
+  }
+  .Main_mail{
+    grid-row:2/3;
+    grid-column: 3/4;
+  }
+  .Main_gifts{
+    grid-row:3/4;
+    grid-column: 1/2;
+  }
+  .Main_friend{
+    grid-row:3/4;
+    grid-column: 2/3;
+  }
+  .Main_achievement img, .Main_leadersboard img, .Main_mygroups img, .Main_searchgroup img, .Main_alerts img, .Main_mail img, .Main_gifts img{
+    height:6vw;
+    width:6vw;
+    margin:0 auto;
+  }
+
+}
+.videoTabs{
+  width: 32vw;
+    height: 11vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+.videoTab1, .videoTab2{
+  margin:1vw;
+  width:15vw; height:5vw;
+  background-color: #689cd2;
+  padding: 15px;
+  box-shadow: 0px 1px 0 #4188d2, 
+    1px 2px 0 #4188d2,
+    2px 3px 0 #4188d2,
+    3px 4px 0 #4188d2,
+    4px 5px 0 #4188d2, 
+    1px 0 0 #0d58a6,
+  2px 1px 0 #0d58a6,
+  3px 2px 0 #0d58a6,
+  4px 3px 0 #0d58a6,
+  5px 4px 0 #0d58a6;
+  position:relative;
+  font-size: calc( 12px + 0.6vw );
+}
+@media screen and (max-width: 900px){
+  .videoTab1, .videoTab2{
+    height:9vw;
+    font-size: calc( 12px + 0.5vw );
+  }
+}
+.videoTab1:hover, .videoTab2:hover{
+  background-color: #608FBF;
+  top: 2px;
+  left:2px;
+  box-shadow: 0px 1px 0 #4188d2, 
+    1px 2px 0 #4188d2,
+    2px 3px 0 #4188d2,
+    1px 0 0 #0d58a6,
+  2px 1px 0 #0d58a6,
+  3px 2px 0 #0d58a6;
+  position:relative;
+}
+@media screen and (max-width: 700px){
+  .videoTabs{
+    width: 66vw;
+    height: 19vw;
+  }
+  .videoTab1, .videoTab2{
+    margin:1vw;
+    width:32vw; height:19vw;
+  }
+}

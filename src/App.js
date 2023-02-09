@@ -1,8 +1,8 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect, useParams } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import {Routes, Route, Navigate, } from "react-router-dom";
 import './assets/app.css';
 import Frontpage from "./frontpage/frontpage";
-import Loading from "./loading";
+import Loading from "./loading";import NotLoading from "./notLoading";
 
 
 import firebase from "firebase/app";
@@ -19,6 +19,18 @@ import {firebaseConfig} from './firebaselock';
 import Pepper from './components/pepper/pepper';
 import Realm from './components/realm/realm';
 import EducationHome from './pages/educationHome';
+
+import Privacy from "./frontpage/privacypolicy";
+import CompanyInformation from "./frontpage/companyinfo";
+import Jobs from "./frontpage/jobs";
+import Account from "./frontpage/account";
+import Termsofservice from "./frontpage/termsofservice";
+import Cookie from "./frontpage/cookie";
+import Faq from "./frontpage/faq";
+import userEvent from '@testing-library/user-event';
+import LandingEducation from './frontpage/landingEducationPage';
+
+import { useCookies } from 'react-cookie';
 
 export const realm = firebase.initializeApp(firebaseConfig);
 export const auth = firebase.auth();
@@ -129,6 +141,7 @@ export const uiConfig = {
 function App() {
 
   const [uservar, setuservar] = useState("");
+  const [cookies, setCookie, removeCookie] = useCookies(['']);
 
   useEffect(() => {
 
@@ -141,6 +154,7 @@ function App() {
       if (user) {
         // User is signed in.
         setuservar(user);
+        setCookie('repeatUser', true, {secure: true});
 
       } else {
         // No user is signed in.
@@ -152,22 +166,43 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
-        <div>
-          <Switch>
-            <Route exact path = "/">
-            {uservar ? <Redirect to="/home" /> : <Frontpage/>}
+      <Routes>
+          <Route element = {cookies.repeatUser && (!uservar ? <Loading/> : <NotLoading/>)}>
+            {/*<Route element = {cookies.repeatUser && (!uservar && <Loading/> )}>*/}
+            {/*<Route element = {true && (true && <Loading/> )}>*/}
+              <Route exact path = "/" element = {uservar ? <Navigate to="/home" /> : <Frontpage/>}>
+                </Route>
+              <Route element = {uservar ? <Home uservar = {uservar}/> : <Navigate to="/" />}>
+                <Route path = "/home" element = {<Pepper/>}>
+                </Route>
+                <Route path = "/realm" element = {<Realm/>}>
+                  {/*<Route path = "/user" element = {<Realm/>} />*/}
+                </Route>
+                <Route path = "/education" element = {<EducationHome/>}>
+                </Route>
+              </Route>
             </Route>
-          
-
-
-            <Route exact path = "/:c">
-            <Home/>
+            <Route path = "/:c" element = {<Home/>}>
+            </Route>
+            <Route path = "/privacypolicy" element = {<Privacy/>}>
+            </Route>
+            <Route path = "/companyinfo" element = {<CompanyInformation/>}>
+            </Route>
+            <Route path = "/jobs" element = {<Jobs/>}>
+            </Route>
+            <Route path = "/account" element = {<Account/>}>
+            </Route>
+            <Route path = "/termsofservice" element = {<Termsofservice/>}>
+            </Route>
+            <Route path = "/cookie" element = {<Cookie/>}>
+            </Route>
+            <Route path = "/faq" element = {<Faq/>}>
+            </Route>
+            <Route path = "/landingpage" element = {<LandingEducation/>}>
             </Route>
 
-          </Switch>
-        </div>
-      </Router>
+
+      </Routes>
     </div>
   );
 }

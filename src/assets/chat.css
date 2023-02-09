@@ -1,15 +1,22 @@
 .sticktobottom{
   position: fixed;
   bottom:0;
-  width: 100%;
+  width: 93vw;
+}
+@media only screen and (max-width: 700px)  {
+  .sticktobottom{
+    width: 100vw;
+  }
+}
+.sticktobottom .puppy{
+  display: none;
 }
 .puppychatcontainer{
   position: relative;
-  width: 100vw;
 }
 
 .chatcontainer{
-  position: absolute;
+  position:absolute;
   width: 100%;
   color: white;
   background-color: #282c34;
@@ -17,11 +24,9 @@
 .chatcontainer header {
   width: 100%;
   min-width: 30px;
-  align-items: center;
   box-sizing: border-box;
   background-color: #181717;
   padding-right: 5vw;
-  text-align: right;
 }
 .chatgrid-inactive{
   display: none;
@@ -44,14 +49,14 @@
   height:47vh;
 }
 .downArrow{
-  position: relative;
-  top:-9vh;
-  float:right;
-  margin-right: 3vw;
-  width:7vh;
-  height:7vh;
+  grid-column: 2/3;
+  position: absolute;
+  width:45px; height:45px;
+  top: 3px;
   background: url("./icons/down-arrow.png") no-repeat;
-  background-size: 7vh 7vh;
+  background-size: 45px 45px;
+  background-size: contain;
+
 }
 .downArrow-maximize{
   transform: rotate(180deg);
@@ -63,7 +68,10 @@
   height:3vh;
 }
 .sticktobottom-inactive{
-  height:3vw;
+  height: calc(3vw + 60px);
+}
+.sticktobottom-inactive .puppy{
+  display: block;
 }
   .chatgrid{
     display: grid;
@@ -95,10 +103,24 @@
     height:9vh;
   }
 }
+@media only screen and (min-width: 700px) and (max-width: 900px)  {
+  .chatbone {
+    height:44vh;
+  }
+  .chatbonegrid{
+    grid-template-rows: 35vh 9vh;
+  }
+  .chatbonegrid main{
+    height:35vh;
+  }
+}
 @media screen and (min-width: 900px) {
 
   .chatcontainer, .sticktobottom{
     height:30vw;
+  }
+  .chatcontainer{
+    width: 93vw;
   }
   .puppychatcontainer{
     display: none;
@@ -114,20 +136,19 @@
   }
 .chatgrid{
   display: grid;
-  grid-template-columns: 23.5% 46% 23.5%;
+  grid-template-columns: 1.25fr 2fr 1.25fr;
 }
 .chatgrid-inactive{
   display: none;
 }
 .leftchat{
-  grid-column: 1/1;
+  grid-column: 1/2;
 }
 .chatright{
-  grid-column: 3/3;
+  grid-column: 3/4;
 } 
 .chatbone{
-  grid-column: 2/2;
-  max-width: 900px;
+  grid-column: 2/3;
   height: 27vw;
   background-color: rgb(40, 37, 53);
 }
@@ -152,6 +173,7 @@ form.chatform>input {
     box-sizing: border-box;
     padding: 1vw;
     overflow-y: scroll;
+    overflow-x: hidden;
   }  
   .chatbonegrid>main::-webkit-scrollbar {
     width: 0.7rem;

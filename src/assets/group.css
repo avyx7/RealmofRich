@@ -9,18 +9,31 @@
     .creategroup, .friends, .mygroups, .alerts, .mail, .giftbox{
         display: none;
     }
+    .circularicongroup{
+      position:relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap:1rem;
+      float:right;
+      width:150px;
+      margin-right:9px;
+      margin-top:-50px;
+    }
     .circularicon{
        /* margin: 2vw;
         width: 17vw; height: 17vw;
         background: url("../icons/circular.png") no-repeat;
         background-size: 13vw 13vw;
         */
-        position: relative;
-        width:100%;
-        top: -10vw;
-        right: -20vw;
+        grid-column: 1/2;
+        position: absolute;
+        width:60px; height:50px;
+        background: url("./icons/circular.png") no-repeat;
+      background-size: 50px 50px;
+      background-size: contain;
     }
      
+{/*
      .menu-item,
      .menu-open-button {
         background: #9b1414;
@@ -112,9 +125,10 @@
      }
      
      
-     /* .menu-item {
-        transition: all 0.1s ease 0s;
-     } */
+// .menu-item {
+//       transition: all 0.1s ease 0s;
+//    }
+ 
      
      .menu-item:hover {
         background: #EEEEEE;
@@ -199,27 +213,27 @@
      
      .menu-open:checked ~ .menu-item:nth-child(4) {
         display:none;
-        /*transition-duration: 280ms;
+        transition-duration: 280ms;
         -webkit-transition-duration: 280ms;
         -webkit-transform: translate3d(90.9466px, -52.47586px, 0);
-        transform: translate3d(90.9466px, -52.47586px, 0);*/
+        transform: translate3d(90.9466px, -52.47586px, 0);
      }
      
      .menu-open:checked ~ .menu-item:nth-child(5) {
       display:none;
-        /*transition-duration: 380ms;
+        transition-duration: 380ms;
         -webkit-transition-duration: 380ms;
         -webkit-transform: translate3d(90.9466px, 52.47586px, 0);
-        transform: translate3d(90.9466px, 52.47586px, 0);*/
+        transform: translate3d(90.9466px, 52.47586px, 0);
      }
      
      .menu-open:checked ~ .menu-item:nth-child(6) {
         transition-duration: 480ms;
         -webkit-transition-duration: 480ms;
         /*-webkit-transform: translate3d(0.08361px, 104.99997px, 0);
-        transform: translate3d(0.08361px, 104.99997px, 0);*/
+        transform: translate3d(0.08361px, 104.99997px, 0);
         -webkit-transform: translate3d(0.08361px, 70px, 0);
-        /*transform: translate3d(0.08361px, 70px, 0);*/
+        /*transform: translate3d(0.08361px, 70px, 0);
         transform: translate3d(60.08361px, 45px, 0);
         background: url("./icons/mail-min.png") no-repeat;
       background-size: contain;
@@ -229,10 +243,10 @@
      .menu-open:checked ~ .menu-item:nth-child(7) {
         transition-duration: 580ms;
         -webkit-transition-duration: 580ms;
-        /*-webkit-transform: translate3d(-90.86291px, 52.62064px, 0);
-        transform: translate3d(-90.86291px, 52.62064px, 0);*/
+        -webkit-transform: translate3d(-90.86291px, 52.62064px, 0);
+        transform: translate3d(-90.86291px, 52.62064px, 0);
         -webkit-transform: translate3d(-60px, 32px, 0);
-        /*transform: translate3d(-60px, 32px, 0);*/
+        transform: translate3d(-60px, 32px, 0);
         transform: translate3d(-60px, 50px, 0);
         background: url("./icons/mygroups.png") no-repeat;
       background-size: contain;
@@ -242,10 +256,10 @@
      .menu-open:checked ~ .menu-item:nth-child(8) {
         transition-duration: 680ms;
         -webkit-transition-duration: 680ms;
-        /*-webkit-transform: translate3d(-91.03006px, -52.33095px, 0);
-        transform: translate3d(-91.03006px, -52.33095px, 0);*/
+        -webkit-transform: translate3d(-91.03006px, -52.33095px, 0);
+        transform: translate3d(-91.03006px, -52.33095px, 0);
         -webkit-transform: translate3d(-60x, -32px, 0);
-        /*transform: translate3d(-60px, -32px, 0);*/
+        transform: translate3d(-60px, -32px, 0);
         transform: translate3d(-110px, 50px, 0);
         background: url("./icons/037-chat-min.png") no-repeat;
         background-position: center;
@@ -259,6 +273,7 @@
         -webkit-transform: translate3d(-0.25084px, -104.9997px, 0);
         transform: translate3d(-0.25084px, -104.9997px, 0);
      }
+*/}
      
      .blue {
         background-color: #669AE1;

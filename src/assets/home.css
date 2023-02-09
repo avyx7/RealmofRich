@@ -21,10 +21,13 @@
     box-sizing: border-box;
 }
 .RORlogo{
-    margin: 1vw;
+    margin: 1vw 1vw;
     width: 6vw;
     height: 7vw;
     object-fit: fill;
+}
+.menuitemactive{
+    background-size: 50px;
 }
 @media only screen and (min-width: 700px)  {
 .home-container{
@@ -38,15 +41,19 @@
 
 .SideNav{
     background-color:white;
-    grid-column: 1/1;
+    grid-column: 1/2;
     height:100vh;
+}
+.homegrid{
+    grid-column: 2/3;
+    overflow-x: hidden;
 }
 #SideNavmin{
     margin-left: 5%;
     padding: 5% 10%;
 }
 .nav-menu-items li{
-    padding: 1vh 5vh;
+    padding: 1vw 3vw;
     width:100%;
     height:7vh;
 }
@@ -83,24 +90,43 @@
     background: url("./icons/045-trophy-min.png") no-repeat;
     background-size: 30px;
 }
+.menuitemactive{
+    height:50px;
+    width: 50px;
+    background-size: 50px;
+    background-position: center;
+    margin-left:-1vw;margin-top:-1vw;
+}
+@media only screen and (min-width: 700px) and (max-width: 900px)  {
+    .menuitemactive{
+        height:40px;
+        width: 40px;
+    }
+}
 .mobile-menu{
     display: none;
 }
 }
 
 @media only screen and (max-width: 700px)  {
+    /*
     .home-container{
         display: grid;
         grid-template-rows: 85% 13%;
         height:100vh;
     }
+    */
     .SideNav{display: none;}
     .mobile-menu{
-        grid-row: 2/2;
+
         width:100vw;
         /*height:13vh;*/
+        height: 8.3vh;
+        max-height: 60px;
         position:fixed;
         bottom: 0;
+        left:0;
+        right:0;
         outline-color:black;
         outline-style: groove;
         background-color: white;
@@ -109,25 +135,26 @@
     }
     .mobile-nav{
         height:100%;
-        margin-bottom: -4.4vh;
-        padding: 1.4vh 0;
+        padding: 1.4vh 2vw;
     }
     .mobile-menu-items{
         text-decoration: none;
         display: grid;
-        grid-template-columns: 8% 28% 28% 28% 8%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap:1vw;
+        place-items: center;
     }
     .mobile-menu-items li{
         align-items: center;
     }
     .li-home{
-        grid-column: 2/2;
+        grid-column: 1/2;
     }
     .li-game-finances{
-        grid-column: 3/3;
+        grid-column: 2/3;
     }
     .li-education{
-        grid-column: 4/4;
+        grid-column: 3/4;
     }
 
     .navicon{
@@ -147,4 +174,45 @@
         background: url("./icons/045-trophy-min.png") no-repeat;
         background-size: 30px;
     }
+    .menuitemactive{
+        height:40px;
+        width: 40px;
+        background-size: 40px;
+        background-position: center;
+    }
 }
+
+/*<-----------------------------------------start of Loading Screen ------------------------------------------->*/
+.LoadingScreengrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height:100vh;
+    width:100vw;
+    box-sizing: border-box;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #c623d5, #d5ba23);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.title{
+    position:absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: calc(12px + 8vh);
+    background: -webkit-linear-gradient(#F7DC49, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/*<-----------------------------------------end of Loading Screen ------------------------------------------->*/

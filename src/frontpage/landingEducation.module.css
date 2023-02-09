@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;1,500&family=Raleway:wght@500,900&display=swap');
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr;
+    grid-gap:1rem;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../assets/homepage/eheader.jpg);
+    background-position: center;
+}
+#headertext{
+    grid-column: 1/3;
+    padding: 5vw; 
+}
+#getStarted{
+    margin:5vw;
+
+}
+.econtainer{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 2fr 4fr;
+    grid-gap:1rem;
+    height: 56.25vw;
+    max-height: 80vh;
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    padding: 10vh;
+}
+@media screen and (max-width: 800px) {
+    .econtainer{
+        padding: 4vh;
+    }
+}
+#pithagoras{
+    background-image: url(../assets/homepage/pithagoras.jpg);
+}
+#lincoln{
+    background-image: url(../assets/homepage/lincoln.png);
+}
+#newton{
+    background-image: url(../assets/homepage/newton.png);
+}
+#viete{
+    background-image: url(../assets/homepage/viete.png);
+}
+#galileo{
+    background-image: url(../assets/homepage/galileo.png);
+}
+.name{
+    grid-row:1/2;
+    grid-column:1/2;
+    color:white;
+    font-family: 'Raleway', sans-serif;
+    font-size: calc(12px + 6vh);
+    font-weight:800;
+}
+.message{
+    grid-row:1/2;
+    grid-column:3/4;
+    color:white;
+    font-family: 'Raleway', sans-serif;
+    font-weight:800;
+    font-size: calc(12px + 6vh);
+    background: -webkit-linear-gradient(#F7DC49, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+@media screen and (max-width: 800px) {
+    .name, .message{
+        font-size: calc(12px + 1vh);
+    }
+}

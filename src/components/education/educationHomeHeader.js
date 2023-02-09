@@ -31,10 +31,10 @@ function EducationHomeHeader(props) {
                 </div>
                 <div className="profilecontainer">
                     <div className="profilegrid">
-                        <div className="vip"><img src = "../icons/002-coin.png" alt = "vip icon"/></div>
+                        <div className="vip"><img src = "../icons/002-coin.png" alt = "vip icon" onClick = {()=>props.toggleopenclose()}/></div>
                         
                         <div className="shoppingcart">
-                        <i class="fi fi fi-bs-shopping-cart carticon"></i>
+                        <i className= "fi fi-rr-shopping-cart carticon"></i>
                         </div>
 
                         <div className="profile"><img className = {"profilepic "+(pulse ? "pulse-button":'')}
