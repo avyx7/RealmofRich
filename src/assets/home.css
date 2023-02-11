@@ -90,10 +90,15 @@
     background: url("./icons/045-trophy-min.png") no-repeat;
     background-size: 30px;
 }
+.shortlogo{
+    background: url("./icons/shortlogo-min.png") no-repeat;
+    background-size: contain;
+
+}
 .menuitemactive{
     height:50px;
     width: 50px;
-    background-size: 50px;
+    background-size: contain;
     background-position: center;
     margin-left:-1vw;margin-top:-1vw;
 }
@@ -101,6 +106,8 @@
     .menuitemactive{
         height:40px;
         width: 40px;
+        background-size: contain;
+        background-position: center;
     }
 }
 .mobile-menu{
@@ -156,6 +163,9 @@
     .li-education{
         grid-column: 3/4;
     }
+    .li-profile{
+        grid-column: 4/5;
+    }
 
     .navicon{
         height:30px;
@@ -174,10 +184,14 @@
         background: url("./icons/045-trophy-min.png") no-repeat;
         background-size: 30px;
     }
+    .shortlogo{
+        background: url("./icons/shortlogo-min.png") no-repeat;
+        background-size: contain;
+    }
     .menuitemactive{
         height:40px;
         width: 40px;
-        background-size: 40px;
+        background-size: contain;
         background-position: center;
     }
 }

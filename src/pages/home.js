@@ -47,6 +47,12 @@ function Home(props) {
                       <div className = "nav-text">Education</div>
                     </Link>
                   </li>
+                  <li className = ''>
+                    <Link to = "/profile">
+                      <div className = {"navicon shortlogo"+(menuitem == 'profile' ? " menuitemactive":'')} onClick={()=>setmenuitem('profile')} ></div>
+                      <div className = "nav-text">Profile</div>
+                    </Link>
+                  </li>
                 </ul>
 
           </div>
@@ -93,6 +99,12 @@ function Home(props) {
                 <li className = 'li-education' onClick={()=>setmenuitem('education')}>
                   <Link to = "/education">
                     <div className = {"navicon trophy"+(menuitem == 'education' ? " menuitemactive":'')} ></div>
+
+                  </Link>
+                </li>
+                <li className = 'li-profile' onClick={()=>setmenuitem('profile')}>
+                  <Link to = "/profile">
+                    <div className = {"navicon shortlogo"+(menuitem == 'profile' ? " menuitemactive":'')} ></div>
 
                   </Link>
                 </li>

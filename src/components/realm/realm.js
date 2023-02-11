@@ -28,34 +28,38 @@ export default function Realm() {
             <img className='mightIcon'src ={might} />
             <div className='mightValue'>155,000</div>
           </div>
-          <div className='leader'>
-            <div className='leaderRectangle'>
-              Leader
-              <div className='leaderLevel'>
-                60
-              </div>
-            </div>
-
-          </div>
-          <div className='gems'>
-            <img className='gemIcon' src={gem}/>
-            <div className='gemLevel'>
-              155k
-            </div>
-
-          </div>
-          <div className='exp'>
-            <img className='expIcon' src={star}/>
-            <div className='expLevel'>
-              26/278
-            </div>
-
-          </div>
-          <div className='vipLevel'>
-            <div className='vipLevel1'>
-                VIP Level 15
+          <div className='belowmightcontainer'>
+            <div className='leader'>
+              <div className='leaderRectangle'>
+                Leader
+                <div className='leaderLevel'>
+                  60
+                </div>
               </div>
 
+            </div>
+            <div className='extrastatscontainer'>
+            <div className='gems'>
+              <img className='gemIcon' src={gem}/>
+              <div className='gemLevel'>
+                155k
+              </div>
+
+            </div>
+            <div className='exp'>
+              <img className='expIcon' src={star}/>
+              <div className='expLevel'>
+                26/278
+              </div>
+
+            </div>
+            <div className='vipLevel'>
+              <div className='vipLevel1'>
+                  VIP Level 15
+                </div>
+
+            </div>
+            </div>
           </div>
 
         </div>

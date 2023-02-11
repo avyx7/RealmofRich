@@ -19,6 +19,7 @@ import {firebaseConfig} from './firebaselock';
 import Pepper from './components/pepper/pepper';
 import Realm from './components/realm/realm';
 import EducationHome from './pages/educationHome';
+import Profile from './pages/profile';
 
 import Privacy from "./frontpage/privacypolicy";
 import CompanyInformation from "./frontpage/companyinfo";
@@ -179,6 +180,8 @@ function App() {
                   {/*<Route path = "/user" element = {<Realm/>} />*/}
                 </Route>
                 <Route path = "/education" element = {<EducationHome/>}>
+                </Route>
+                <Route path = "/profile" element = {<Profile/>}>
                 </Route>
               </Route>
             </Route>
