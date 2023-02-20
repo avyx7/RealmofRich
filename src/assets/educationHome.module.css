@@ -13,7 +13,7 @@ grid-gap: 6%;
 background: rgb(51, 53, 69);
 place-items: center;
 }
-.not-active{display: none; height:0}
+.notactive{display: none; height:0}
 .profilemenucontainer{
   position: relative;
 }
@@ -25,7 +25,7 @@ place-items: center;
   max-width: 49vw;
 }
 .profilevipicon{
-  width: 10vw;
+  width: 2vw;
 }
 @media screen and (max-width: 700px){
   /*
@@ -50,10 +50,12 @@ place-items: center;
   grid-column: 1/2;
   width: 100%;
   max-width: 50vw;
+  height: 6vh;
   }
   .profilecontainer{
     grid-column: 2/3;
     width:100%;
+    height: 9vh;
   }
   .profilegrid{
     display: grid;
@@ -75,6 +77,9 @@ place-items: center;
   }
   .profile img{
     max-width: 100%;
+  }
+  .profilevipicon{
+    width: 6vw;
   }
     /* ------animation styles fadein LOGO image---- */
   @keyframes fadeIn {
@@ -102,14 +107,19 @@ place-items: center;
   } 
 }
 @media screen and (min-width: 700px){
+  .educationhomeheader{
+    place-items:unset;
+  }
   .wrapper{
     grid-column: 1/2;
     width: 100%;
     max-width: 50vw;
+    height:5vh;
   }
   .profilecontainer{
     grid-column: 2/3;
     width:100%;
+    height:12vh;
   }
   .profilegrid{
     display: grid;
@@ -148,14 +158,14 @@ letter-spacing: +1.3px;
 margin-bottom: 1rem;
 }
   
-.searchBar {
+.searchBareducation {
 width: 100%;
 display: flex;
 flex-direction: row;
 align-items: center;
 }
   
-#searchQueryInput {
+#searchQueryInputeducation {
 width: 100%;
 height: 2.8rem;
 background: #f5f5f5;
@@ -166,7 +176,7 @@ padding: 0 3.5rem 0 1.5rem;
 font-size: 1rem;
 }
   
-#searchQuerySubmit {
+#searchQuerySubmiteducation {
 width: 3.5rem;
 height: 2.8rem;
 margin-left: -3.5rem;
@@ -174,11 +184,11 @@ background: none;
 border: none;
 outline: none;
 }
-#searchQuerySubmit:hover {
+#searchQuerySubmiteducation:hover {
 cursor: pointer;
 }
 /*Beginning of pulse animation*/
-.pulse-button {
+.pulsebutton {
   color: white;
   border: none;
   border-radius: 50%;
@@ -191,7 +201,7 @@ cursor: pointer;
 -o-animation: pulse 1.5s infinite; /* Opera */
 animation: pulse 1.5s infinite; /* W3C */
 }
-.pulse-button:hover {
+.pulsebutton:hover {
   -webkit-animation: none;
   -moz-animation: none; /* Firefox */
 -ms-animation: none; /* Internet Explorer */
@@ -232,64 +242,7 @@ align-items: center;
 background: /*rgb(123, 132, 192)*/ rgb(34, 37, 57);
 }
 
-/*Beginning of Shop Button animations*/
-.shoptext{
-  position: relative;
-  height:100%;
-  overflow: hidden;
-}
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-}
-.pointer {cursor: pointer;}
-.blobtext{
-  position: absolute;
-  left:50%;
-  transform: translate(-50%, 0%);
-  font-family: Roboto;
-  z-index: 2;
-  line-height: 60px;
-  font-size: 300%;
-  color:white;
-  text-align: center;
-  font-weight: 700;
-  text-shadow: 10px 10px 20px rgb(29 40 114);
-}
 
-.waviy span {
-  position: relative;
-  display: inline-block;
-  color: #fff;
-  font-size:1em;
-  animation: waviy 1s infinite;
-  animation-delay: calc(.1s * var(--i));
-  
-}
-@keyframes waviy {
-  0%,40%,100% {
-    transform: translateY(0)
-  }
-  20% {
-    transform: translateY(-20px)
-  }
-}
-
-.svgblob{
-  position:absolute;
-  width:30vw;
-  z-index: 1;
-  top: -51px;
-  left:30vw;
-}
-
-
-/*END of Shop Button animations*/
 
 
 /*Beginning of Education Caraousel */
@@ -449,21 +402,21 @@ background: /*rgb(123, 132, 192)*/ rgb(34, 37, 57);
 
 
   /*---------- Profile Menu ------*/
-  .profile-menu{
+  .profilemenu{
     background-color: white;
 
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.profile-menu-items{
+.profilemenuitems{
     padding: 1vh 5vh;
     width:100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.profile-menu-items:last-child {
+.profilemenuitems:last-child {
     border-bottom: none;
     padding: 1vh 5vh 0 5vh;
   }
-.profile-menu-items a{
+.profilemenuitems a{
     text-decoration: none;
 }
 .nav-text{
@@ -1413,7 +1366,7 @@ table th {
   text-transform: uppercase;
 }
 
-.bubbly-button {
+.bubblybutton {
   font-family: "Helvetica", "Arial", sans-serif;
   display: inline-block;
   font-size: 1em;
@@ -1432,14 +1385,14 @@ table th {
   box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
 }
 @media screen and (max-width: 700px){
-  .bubbly-button {
+  .bubblybutton {
     padding: 1em 1em;
   }
 }
-.bubbly-button:focus {
+.bubblybutton:focus {
   outline: 0;
 }
-.bubbly-button:before, .bubbly-button:after {
+.bubblybutton:before, .bubblybutton:after {
   position: absolute;
   content: "";
   display: block;
@@ -1450,28 +1403,28 @@ table th {
   transition: all ease-in-out 0.5s;
   background-repeat: no-repeat;
 }
-.bubbly-button:before {
+.bubblybutton:before {
   display: none;
   top: -105%;
   background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
   background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
 }
-.bubbly-button:after {
+.bubblybutton:after {
   display: none;
   bottom: -105%;
   background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
   background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
 }
-.bubbly-button:active {
+.bubblybutton:active {
   transform: scale(0.9);
   background-color: #e60074;
   box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
 }
-.bubbly-button.animate:before {
+.bubblybutton.animate:before {
   display: block;
   animation: topBubbles ease-in-out 1s forwards;
 }
-.bubbly-button.animate:after {
+.bubblybutton.animate:after {
   display: block;
   animation: bottomBubbles ease-in-out 1s forwards;
 }

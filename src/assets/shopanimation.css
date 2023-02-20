@@ -1,0 +1,58 @@
+/*Beginning of Shop Button animations*/
+.shoptext{
+    position: relative;
+    height:100%;
+    overflow: hidden;
+  }
+  .noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+  .pointer {cursor: pointer;}
+  .blobtext{
+    position: absolute;
+    left:50%;
+    transform: translate(-50%, 0%);
+    font-family: Roboto;
+    z-index: 2;
+    line-height: 60px;
+    font-size: 300%;
+    color:white;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 10px 10px 20px rgb(29 40 114);
+  }
+  
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size:1em;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+    
+  }
+  @keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+  }
+  
+  .svgblob{
+    position:absolute;
+    width:30vw;
+    z-index: 1;
+    top: -51px;
+    left:30vw;
+  }
+  
+  
+  /*END of Shop Button animations*/

@@ -1,31 +1,32 @@
 import React, {useEffect } from 'react';
 import close from "../assets/icons/close.png";
+import style from '../assets/educationHome.module.css';
 
 function UpgradeVIP(props) {
     return (
         <div>
-            <div className="completebackground backgroundVIP">
-                <div className='educationmodalhead'>
-                    <div className='educationmodalheadcontainer'>
-                        <div className='educationmodalheadtext'>
+            <div className={`${style.completebackground}`+ ` ${style.backgroundVIP}`}>
+                <div className={style.educationmodalhead}>
+                    <div className={style.educationmodalheadcontainer}>
+                        <div className={style.educationmodalheadtext}>
                         </div>
-                        <div className='educationmodalclosebutton' >
+                        <div className={style.educationmodalclosebutton} >
                           <img src = {close} onClick = {props.toggleopenclose}/>
                         </div>
                     </div>
                   </div>
-                  <div className='educationmodalcontent' id = "educationmodalcontentid">
-                    <div className='pricingcontainer'>
-                    <div className='upgradeVIPheading'>
+                  <div className={style.educationmodalcontent} id = {style.educationmodalcontentid}>
+                    <div className={style.pricingcontainer}>
+                    <div className={style.upgradeVIPheading}>
                       UPGRADE VIP
                     </div>
-                    <div className="segment">
-                        <span className ="segmenttextcontent" id="pricing">
-                          <h2><div className="textcenter bold">Choose your plan.</div>
+                    <div className={style.segment}>
+                        <span className ={style.segmenttextcontent} id={style.pricing}>
+                          <h2><div className={`${style.textcenter}`+ ` ${style.bold}`}>Choose your plan.</div>
                             You pay on a monthly basis. It is a subscription. Cancel anytime and you enjoy it for the rest of the month.
                           </h2>
                           </span>
-                        <div className="tablecontainer">
+                        <div className={style.tablecontainer}>
                           <table>
                             <caption>RealmOfRich Plans</caption>
                             <thead>
@@ -64,10 +65,10 @@ function UpgradeVIP(props) {
                               <tr>
                                 <td scope="row" data-label="Acount"></td>
                                 <td data-label="Due Date">
-                                  <button className="bubbly-button">Silver VIP</button>
+                                  <button className={style.bubblybutton}>Silver VIP</button>
                                 </td>
                                 <td data-label="Amount">
-                                  <button className="bubbly-button">Bronze VIP</button>
+                                  <button className={style.bubblybutton}>Bronze VIP</button>
                                 </td>
                                 
                               </tr>

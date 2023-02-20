@@ -2,27 +2,26 @@ import { useState } from 'react';
 import {Navigate, Link, useParams, Outlet } from 'react-router-dom';
 import '../assets/home.css';
 import EducationHome from "./educationHome";
-import '../assets/educationHome.css';
-import Pepper from '../components/pepper/pepper';
-import Realm from '../components/realm/realm';
+import Pepper from './pepper';
+import Realm from './realm';
 import firebase from "firebase/app";
 import 'firebase/auth';
 import Frontpage from '../frontpage/frontpage';
+import img from "../291105576.png";
 
-function Home(props) {
+function Home() {
 
-    let {c} = useParams();
     const [menuitem, setmenuitem] = useState("home");
-
+    const c='';
     return (
       <>
         
         <div className ="home-container" id = {c=="home"? '':'homecontainermin'}>
         {/*<h3>ID: {c}</h3>*/}
             <div className="SideNav" id = {c=="home"? 'SideNavmin' : ''}>
-              
+              <div className='sidenavfixed'>
               <Link className="" to ="#">
-                <img className = {c=="home"? '': "RORlogo"} src = {c=="home"? "IMG_1019.JPG": "291105576.png"} />
+                <img className = {c=="home"? '': "RORlogo"} src = {img} />
               </Link>
             
           
@@ -54,7 +53,7 @@ function Home(props) {
                     </Link>
                   </li>
                 </ul>
-
+            </div>
           </div>
 
 

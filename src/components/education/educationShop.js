@@ -6,72 +6,73 @@ import book1 from "../../assets/education/book1.gif";import book2 from "../../as
 import darkPink from "../../assets/education/darkPink.png";import darkYellow from "../../assets/education/darkYellow.png";
 import purple from "../../assets/education/purple.png";
 import card1 from "../../assets/education/card1.jpg";import card2 from "../../assets/education/card2.jpg"
-import card3 from "../../assets/education/card3.jpg";import card5 from "../../assets/education/card5.jpg";import card7 from "../../assets/education/card7.jpg"
+import card3 from "../../assets/education/card3.jpg";import card5 from "../../assets/education/card5.jpg";import card7 from "../../assets/education/card7.jpg";
+import style from '../../assets/educationHome.module.css';
 
 
 function EducationShop() {
   return (
     <>
-    <div className='educationalItems'>
-        <div className='educationalItemsbanner'>
+    <div className={style.educationalItems}>
+        <div className={style.educationalItemsbanner}>
             <img className='' src={banner} />
-            <div className='educationalItemsbannertext'>
+            <div className={style.educationalItemsbannertext}>
                 Educational Items
             </div>
         </div>
         
-        <div class="educationPara">
-            <div class="educationShopBanner">
-                <span className='educationShopBannertext'> AUDIO BOOKS</span>
+        <div class={style.educationPara}>
+            <div class={style.educationShopBanner}>
+                <span className={style.educationShopBannertext}> AUDIO BOOKS</span>
             </div>
-            <div className='educationalItemsgrid'>
-                <div className='winnerMindset'>
-                    <div className='winnerMindsetgrid'>
-                            <img className='decor' src={salebanner} />
+            <div className={style.educationalItemsgrid}>
+                <div className={style.winnerMindset}>
+                    <div className={style.winnerMindsetgrid}>
+                            <img className={style.decor} src={salebanner} />
 
-                            <img className='buyButton' src={buybutton991} />
+                            <img className={style.buyButton} src={buybutton991} />
                     </div>
                     
                 </div>
-                <div className='examPrep'>
-                    <div className='examPrepgrid'>
+                <div className={style.examPrep}>
+                    <div className={style.examPrepgrid}>
 
-                            <img className='decor' src={examprepdecor} />
+                            <img className={style.decor} src={examprepdecor} />
 
-                            <img className='buyButton' src={buybutton992} />
+                            <img className={style.buyButton} src={buybutton992} />
                     </div>
                 </div>
 
             </div>
-            <div className='educationalItemsgrid1'>
-                <div className='audioBook1'>
-                    <img className='audiobookimg' src={book1} />
+            <div className={style.educationalItemsgrid1}>
+                <div className={style.audioBook1}>
+                    <img className={style.audiobookimg} src={book1} />
                     <div>
-                        <div className='bookName'>Audio book1</div>
-                        <div className='buyButtonsecondcontainer'>
-                            <img className='buyButtonsecond' src = {darkPink} />
-                            <div className='buttonprice'>₹130</div>
+                        <div className={style.bookName}>Audio book1</div>
+                        <div className={style.buyButtonsecondcontainer}>
+                            <img className={style.buyButtonsecond} src = {darkPink} />
+                            <div className={style.buttonprice}>₹130</div>
                         </div>  
                     </div>
                 
                 </div>
-                <div className='audioBook2'>
-                    <img className='audiobookimg' src={book2} />
+                <div className={style.audioBook2}>
+                    <img className={style.audiobookimg} src={book2} />
                     <div>
-                        <div className='bookName'>Audio book2</div>
-                        <div className='buyButtonsecondcontainer'>
-                            <img className='buyButtonsecond' src = {darkYellow} />
-                            <div className='buttonprice'>₹130</div>
+                        <div className={style.bookName}>Audio book2</div>
+                        <div className={style.buyButtonsecondcontainer}>
+                            <img className={style.buyButtonsecond} src = {darkYellow} />
+                            <div className={style.buttonprice}>₹130</div>
                         </div>  
                     </div>
                 </div>
-                <div className='audioBook3'>
-                    <img className='audiobookimg' src={book3} />
+                <div className={style.audioBook3}>
+                    <img className={style.audiobookimg} src={book3} />
                     <div>
-                        <div className='bookName'>Audio book3</div>
-                        <div className='buyButtonsecondcontainer'>
-                            <img className='buyButtonsecond' src = {purple} />
-                            <div className='buttonprice'>₹130</div>
+                        <div className={style.bookName}>Audio book3</div>
+                        <div className={style.buyButtonsecondcontainer}>
+                            <img className={style.buyButtonsecond} src = {purple} />
+                            <div className={style.buttonprice}>₹130</div>
                         </div>  
                     </div>
                 </div>
@@ -80,27 +81,27 @@ function EducationShop() {
 
         </div>
 
-        <div class="educationPara">
-            <div class="educationShopBanner">
-                <span className='educationShopBannertext'> Explained in 100 SECONDS</span>
+        <div class={style.educationPara}>
+            <div class={style.educationShopBanner}>
+                <span className={style.educationShopBannertext}> Explained in 100 SECONDS</span>
             </div>
-            <div className='educationalItemsgrid'>
-                <div className='forces'>
+            <div className={style.educationalItemsgrid}>
+                <div className={style.forces}>
                     <img className='' src = {card1} />
                 </div>
-                <div className='heat'>
+                <div className={style.heat}>
                     <img className='' src = {card2} />
                 </div>
 
             </div>
-            <div className='educationalItemsgrid1'>
-                <div className='algebra'>
+            <div className={style.educationalItemsgrid1}>
+                <div className={style.algebra}>
                     <img className='' src = {card3} />
                 </div>
-                <div className='fractional'>
+                <div className={style.fractional}>
                     <img className='' src = {card5} />
                 </div>
-                <div className='bundle'>
+                <div className={style.bundle}>
                     <img className='' src = {card7} />
                 </div>
 

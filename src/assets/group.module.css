@@ -361,7 +361,7 @@
 
 }
 
-.icon-animate{
+.iconanimate{
    position:relative;
    transition-property: background-size;
    transition-duration: 0.3s;
@@ -584,7 +584,7 @@
     margin-top: 2px;
 }
 
-.push-to-side{
+.pushtoside{
     background: url("./icons/003-exchange-min.png") no-repeat;
     background-size: 2vw 2vw;
 }
@@ -592,7 +592,7 @@
     background: url("./icons/down-arrow.png") no-repeat;
     background-size: 2vw 2vw;
 }
-.minimize-invert{
+.minimizeinvert{
    background: url("./icons/down-arrow.png") no-repeat;
    background-size: 2vw 2vw;
    transform: rotate(180deg);

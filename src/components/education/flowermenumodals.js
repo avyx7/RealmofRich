@@ -4,6 +4,7 @@ import coin from "../../assets/education/IMG_17875.png"
 import { auth } from '../../App';
 import flag from "../../assets/icons/001-flag.png";import bonus from "../../assets/icons/002-bonus.png";
 import trophy from "../../assets/icons/004-trophy.png";
+import style from '../../assets/educationHome.module.css';
 
 function Achievementmodal() {
     const styles = {
@@ -12,254 +13,254 @@ function Achievementmodal() {
         }
       };
   return (
-    <div className='achievementModalgrid'>
-        <div className='achiementTasks'>
-            <div className='stars'>
-                <img className='star' id ='star1' src={star} />
-                <img className='star' id ='star2' src={star} />
-                <img className='star' id ='star3' src={star} />
+    <div className={style.achievementModalgrid}>
+        <div className={style.achiementTasks}>
+            <div className={style.stars}>
+                <img className={style.star} id ={style.star1} src={star} />
+                <img className={style.star} id ={style.star2} src={star} />
+                <img className={style.star} id ={style.star3} src={star} />
             </div>
-            <div className='tasks'>
-                <div className='tasksheading'>
+            <div className={style.tasks}>
+                <div className={style.tasksheading}>
                     Get an Exp at local Bakery
                 </div>
-                <div className='tasksdescription'>
+                <div className={style.tasksdescription}>
                     Work your hand at a local bakery
                 </div>
                 
             </div>
-            <div className='completionlevel'>
-                <div className='completionlevelindicator'>
-                    <div className='completionlevelindicatorfill' style={styles.completionlevelindicatorfill}></div>
+            <div className={style.completionlevel}>
+                <div className={style.completionlevelindicator}>
+                    <div className={style.completionlevelindicatorfill} style={styles.completionlevelindicatorfill}></div>
                 </div>
-                <div className='rewards'>
-                    <span className='rewardtext'> Rewards:</span>
-                    <div className='exprewards'>1000 x <img src = {expstar}/></div>
-                    <div className='guildcoinsrewards'>20 x <img src = {coin}/></div>
+                <div className={style.rewards}>
+                    <span className={style.rewardtext}> Rewards:</span>
+                    <div className={style.exprewards}>1000 x <img src = {expstar}/></div>
+                    <div className={style.guildcoinsrewards}>20 x <img src = {coin}/></div>
                 </div>
             </div>
 
         </div>
 
-        <div className='achiementTasks'>
-            <div className='stars'>
-                <img className='star' id ='star1' src={star} />
-                <img className='star' id ='star2' src={star} />
-                <img className='star' id ='star3' src={star} />
+        <div className={style.achiementTasks}>
+            <div className={style.stars}>
+                <img className={style.star} id ={style.star1} src={star} />
+                <img className={style.star} id ={style.star2} src={star} />
+                <img className={style.star} id ={style.star3} src={star} />
             </div>
-            <div className='tasks'>
-                <div className='tasksheading'>
+            <div className={style.tasks}>
+                <div className={style.tasksheading}>
                     Get an Exp at local Bakery
                 </div>
-                <div className='tasksdescription'>
+                <div className={style.tasksdescription}>
                     Work your hand at a local bakery
                 </div>
                 
             </div>
-            <div className='completionlevel'>
-                <div className='completionlevelindicator'>
-                    <div className='completionlevelindicatorfill' style={styles.completionlevelindicatorfill}></div>
+            <div className={style.completionlevel}>
+                <div className={style.completionlevelindicator}>
+                    <div className={style.completionlevelindicatorfill} style={styles.completionlevelindicatorfill}></div>
                 </div>
-                <div className='rewards'>
-                    <span className='rewardtext'> Rewards:</span>
-                    <div className='exprewards'>1000 x <img src = {expstar}/></div>
-                    <div className='guildcoinsrewards'>20 x <img src = {coin}/></div>
+                <div className={style.rewards}>
+                    <span className={style.rewardtext}> Rewards:</span>
+                    <div className={style.exprewards}>1000 x <img src = {expstar}/></div>
+                    <div className={style.guildcoinsrewards}>20 x <img src = {coin}/></div>
                 </div>
             </div>
 
         </div>
 
-        <div className='achiementTasks'>
-            <div className='stars'>
-                <img className='star' id ='star1' src={star} />
-                <img className='star' id ='star2' src={star} />
-                <img className='star' id ='star3' src={star} />
+        <div className={style.achiementTasks}>
+            <div className={style.stars}>
+                <img className={style.star} id ={style.star1} src={star} />
+                <img className={style.star} id ={style.star2} src={star} />
+                <img className={style.star} id ={style.star3} src={star} />
             </div>
-            <div className='tasks'>
-                <div className='tasksheading'>
+            <div className={style.tasks}>
+                <div className={style.tasksheading}>
                     Get an Exp at local Bakery
                 </div>
-                <div className='tasksdescription'>
+                <div className={style.tasksdescription}>
                     Work your hand at a local bakery
                 </div>
                 
             </div>
-            <div className='completionlevel'>
-                <div className='completionlevelindicator'>
-                    <div className='completionlevelindicatorfill' style={styles.completionlevelindicatorfill}></div>
+            <div className={style.completionlevel}>
+                <div className={style.completionlevelindicator}>
+                    <div className={style.completionlevelindicatorfill} style={styles.completionlevelindicatorfill}></div>
                 </div>
-                <div className='rewards'>
-                    <span className='rewardtext'> Rewards:</span>
-                    <div className='exprewards'>1000 x <img src = {expstar}/></div>
-                    <div className='guildcoinsrewards'>20 x <img src = {coin}/></div>
+                <div className={style.rewards}>
+                    <span className={style.rewardtext}> Rewards:</span>
+                    <div className={style.exprewards}>1000 x <img src = {expstar}/></div>
+                    <div className={style.guildcoinsrewards}>20 x <img src = {coin}/></div>
                 </div>
             </div>
 
         </div>
 
-        <div className='achiementTasks'>
-            <div className='stars'>
-                <img className='star' id ='star1' src={star} />
-                <img className='star' id ='star2' src={star} />
-                <img className='star' id ='star3' src={star} />
+        <div className={style.achiementTasks}>
+            <div className={style.stars}>
+                <img className={style.star} id ={style.star1} src={star} />
+                <img className={style.star} id ={style.star2} src={star} />
+                <img className={style.star} id ={style.star3} src={star} />
             </div>
-            <div className='tasks'>
-                <div className='tasksheading'>
+            <div className={style.tasks}>
+                <div className={style.tasksheading}>
                     Get an Exp at local Bakery
                 </div>
-                <div className='tasksdescription'>
+                <div className={style.tasksdescription}>
                     Work your hand at a local bakery
                 </div>
                 
             </div>
-            <div className='completionlevel'>
-                <div className='completionlevelindicator'>
-                    <div className='completionlevelindicatorfill' style={styles.completionlevelindicatorfill}></div>
+            <div className={style.completionlevel}>
+                <div className={style.completionlevelindicator}>
+                    <div className={style.completionlevelindicatorfill} style={styles.completionlevelindicatorfill}></div>
                 </div>
-                <div className='rewards'>
-                    <span className='rewardtext'> Rewards:</span>
-                    <div className='exprewards'>1000 x <img src = {expstar}/></div>
-                    <div className='guildcoinsrewards'>20 x <img src = {coin}/></div>
+                <div className={style.rewards}>
+                    <span className={style.rewardtext}> Rewards:</span>
+                    <div className={style.exprewards}>1000 x <img src = {expstar}/></div>
+                    <div className={style.guildcoinsrewards}>20 x <img src = {coin}/></div>
                 </div>
             </div>
 
         </div>
 
-        <div className='achiementTasks'>
-            <div className='stars'>
-                <img className='star' id ='star1' src={star} />
-                <img className='star' id ='star2' src={star} />
-                <img className='star' id ='star3' src={star} />
+        <div className={style.achiementTasks}>
+            <div className={style.stars}>
+                <img className={style.star} id ={style.star1} src={star} />
+                <img className={style.star} id ={style.star2} src={star} />
+                <img className={style.star} id ={style.star3} src={star} />
             </div>
-            <div className='tasks'>
-                <div className='tasksheading'>
+            <div className={style.tasks}>
+                <div className={style.tasksheading}>
                     Get an Exp at local Bakery
                 </div>
-                <div className='tasksdescription'>
+                <div className={style.tasksdescription}>
                     Work your hand at a local bakery
                 </div>
                 
             </div>
-            <div className='completionlevel'>
-                <div className='completionlevelindicator'>
-                    <div className='completionlevelindicatorfill' style={styles.completionlevelindicatorfill}></div>
+            <div className={style.completionlevel}>
+                <div className={style.completionlevelindicator}>
+                    <div className={style.completionlevelindicatorfill} style={styles.completionlevelindicatorfill}></div>
                 </div>
-                <div className='rewards'>
-                    <span className='rewardtext'> Rewards:</span>
-                    <div className='exprewards'>1000 x <img src = {expstar}/></div>
-                    <div className='guildcoinsrewards'>20 x <img src = {coin}/></div>
+                <div className={style.rewards}>
+                    <span className={style.rewardtext}> Rewards:</span>
+                    <div className={style.exprewards}>1000 x <img src = {expstar}/></div>
+                    <div className={style.guildcoinsrewards}>20 x <img src = {coin}/></div>
                 </div>
             </div>
 
         </div>
 
-        <div className='achiementTasks'>
-            <div className='stars'>
-                <img className='star' id ='star1' src={star} />
-                <img className='star' id ='star2' src={star} />
-                <img className='star' id ='star3' src={star} />
+        <div className={style.achiementTasks}>
+            <div className={style.stars}>
+                <img className={style.star} id ={style.star1} src={star} />
+                <img className={style.star} id ={style.star2} src={star} />
+                <img className={style.star} id ={style.star3} src={star} />
             </div>
-            <div className='tasks'>
-                <div className='tasksheading'>
+            <div className={style.tasks}>
+                <div className={style.tasksheading}>
                     Get an Exp at local Bakery
                 </div>
-                <div className='tasksdescription'>
+                <div className={style.tasksdescription}>
                     Work your hand at a local bakery
                 </div>
                 
             </div>
-            <div className='completionlevel'>
-                <div className='completionlevelindicator'>
-                    <div className='completionlevelindicatorfill' style={styles.completionlevelindicatorfill}></div>
+            <div className={style.completionlevel}>
+                <div className={style.completionlevelindicator}>
+                    <div className={style.completionlevelindicatorfill} style={styles.completionlevelindicatorfill}></div>
                 </div>
-                <div className='rewards'>
-                    <span className='rewardtext'> Rewards:</span>
-                    <div className='exprewards'>1000 x <img src = {expstar}/></div>
-                    <div className='guildcoinsrewards'>20 x <img src = {coin}/></div>
+                <div className={style.rewards}>
+                    <span className={style.rewardtext}> Rewards:</span>
+                    <div className={style.exprewards}>1000 x <img src = {expstar}/></div>
+                    <div className={style.guildcoinsrewards}>20 x <img src = {coin}/></div>
                 </div>
             </div>
 
         </div>
 
-        <div className='achiementTasks'>
-            <div className='stars'>
-                <img className='star' id ='star1' src={star} />
-                <img className='star' id ='star2' src={star} />
-                <img className='star' id ='star3' src={star} />
+        <div className={style.achiementTasks}>
+            <div className={style.stars}>
+                <img className={style.star} id ={style.star1} src={star} />
+                <img className={style.star} id ={style.star2} src={star} />
+                <img className={style.star} id ={style.star3} src={star} />
             </div>
-            <div className='tasks'>
-                <div className='tasksheading'>
+            <div className={style.tasks}>
+                <div className={style.tasksheading}>
                     Get an Exp at local Bakery
                 </div>
-                <div className='tasksdescription'>
+                <div className={style.tasksdescription}>
                     Work your hand at a local bakery
                 </div>
                 
             </div>
-            <div className='completionlevel'>
-                <div className='completionlevelindicator'>
-                    <div className='completionlevelindicatorfill' style={styles.completionlevelindicatorfill}></div>
+            <div className={style.completionlevel}>
+                <div className={style.completionlevelindicator}>
+                    <div className={style.completionlevelindicatorfill} style={styles.completionlevelindicatorfill}></div>
                 </div>
-                <div className='rewards'>
-                    <span className='rewardtext'> Rewards:</span>
-                    <div className='exprewards'>1000 x <img src = {expstar}/></div>
-                    <div className='guildcoinsrewards'>20 x <img src = {coin}/></div>
+                <div className={style.rewards}>
+                    <span className={style.rewardtext}> Rewards:</span>
+                    <div className={style.exprewards}>1000 x <img src = {expstar}/></div>
+                    <div className={style.guildcoinsrewards}>20 x <img src = {coin}/></div>
                 </div>
             </div>
 
         </div>
 
-        <div className='achiementTasks'>
-            <div className='stars'>
-                <img className='star' id ='star1' src={star} />
-                <img className='star' id ='star2' src={star} />
-                <img className='star' id ='star3' src={star} />
+        <div className={style.achiementTasks}>
+            <div className={style.stars}>
+                <img className={style.star} id ={style.star1} src={star} />
+                <img className={style.star} id ={style.star2} src={star} />
+                <img className={style.star} id ={style.star3} src={star} />
             </div>
-            <div className='tasks'>
-                <div className='tasksheading'>
+            <div className={style.tasks}>
+                <div className={style.tasksheading}>
                     Get an Exp at local Bakery
                 </div>
-                <div className='tasksdescription'>
+                <div className={style.tasksdescription}>
                     Work your hand at a local bakery
                 </div>
                 
             </div>
-            <div className='completionlevel'>
-                <div className='completionlevelindicator'>
-                    <div className='completionlevelindicatorfill' style={styles.completionlevelindicatorfill}></div>
+            <div className={style.completionlevel}>
+                <div className={style.completionlevelindicator}>
+                    <div className={style.completionlevelindicatorfill} style={styles.completionlevelindicatorfill}></div>
                 </div>
-                <div className='rewards'>
-                    <span className='rewardtext'> Rewards:</span>
-                    <div className='exprewards'>1000 x <img src = {expstar}/></div>
-                    <div className='guildcoinsrewards'>20 x <img src = {coin}/></div>
+                <div className={style.rewards}>
+                    <span className={style.rewardtext}> Rewards:</span>
+                    <div className={style.exprewards}>1000 x <img src = {expstar}/></div>
+                    <div className={style.guildcoinsrewards}>20 x <img src = {coin}/></div>
                 </div>
             </div>
 
         </div>
 
-        <div className='achiementTasks'>
-            <div className='stars'>
-                <img className='star' id ='star1' src={star} />
-                <img className='star' id ='star2' src={star} />
-                <img className='star' id ='star3' src={star} />
+        <div className={style.achiementTasks}>
+            <div className={style.stars}>
+                <img className={style.star} id ={style.star1} src={star} />
+                <img className={style.star} id ={style.star2} src={star} />
+                <img className={style.star} id ={style.star3} src={star} />
             </div>
-            <div className='tasks'>
-                <div className='tasksheading'>
+            <div className={style.tasks}>
+                <div className={style.tasksheading}>
                     Get an Exp at local Bakery
                 </div>
-                <div className='tasksdescription'>
+                <div className={style.tasksdescription}>
                     Work your hand at a local bakery
                 </div>
                 
             </div>
-            <div className='completionlevel'>
-                <div className='completionlevelindicator'>
-                    <div className='completionlevelindicatorfill' style={styles.completionlevelindicatorfill}></div>
+            <div className={style.completionlevel}>
+                <div className={style.completionlevelindicator}>
+                    <div className={style.completionlevelindicatorfill} style={styles.completionlevelindicatorfill}></div>
                 </div>
-                <div className='rewards'>
-                    <span className='rewardtext'> Rewards:</span>
-                    <div className='exprewards'>1000 x <img src = {expstar}/></div>
-                    <div className='guildcoinsrewards'>20 x <img src = {coin}/></div>
+                <div className={style.rewards}>
+                    <span className={style.rewardtext}> Rewards:</span>
+                    <div className={style.exprewards}>1000 x <img src = {expstar}/></div>
+                    <div className={style.guildcoinsrewards}>20 x <img src = {coin}/></div>
                 </div>
             </div>
 
@@ -272,170 +273,170 @@ function Achievementmodal() {
 export function Leaderboard() {
     const {photoURL } = auth.currentUser;
   return (
-    <div className='achievementModalgrid'>
-        <div className='leaderboardslot'>
-            <div className='numberedList'>
-                <div className='number'>1</div>
-                <div className='leaderprofilepic'><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
+    <div className={style.achievementModalgrid}>
+        <div className={style.leaderboardslot}>
+            <div className={style.numberedList}>
+                <div className={style.number}>1</div>
+                <div className={style.leaderprofilepic}><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
             </div>
-            <div className='milestone'>
+            <div className={style.milestone}>
                 <img className='' src={flag} />
             </div>
-            <div className='bonus'>
+            <div className={style.bonus}>
                 <img className='' src={bonus} />
             </div>
-            <div className='trophies'>
-                <div className='trophyicon'>
+            <div className={style.trophies}>
+                <div className={style.trophyicon}>
                     <img className='' src={trophy} />
                 </div>
-                <div className='trophynumber'>
+                <div className={style.trophynumber}>
                     2256
                 </div>
             </div>
         </div>
 
-        <div className='leaderboardslot'>
-            <div className='numberedList'>
-                <div className='number'>1</div>
-                <div className='leaderprofilepic'><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
+        <div className={style.leaderboardslot}>
+            <div className={style.numberedList}>
+                <div className={style.number}>1</div>
+                <div className={style.leaderprofilepic}><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
             </div>
-            <div className='milestone'>
+            <div className={style.milestone}>
                 <img className='' src={flag} />
             </div>
-            <div className='bonus'>
+            <div className={style.bonus}>
                 <img className='' src={bonus} />
             </div>
-            <div className='trophies'>
-                <div className='trophyicon'>
+            <div className={style.trophies}>
+                <div className={style.trophyicon}>
                     <img className='' src={trophy} />
                 </div>
-                <div className='trophynumber'>
+                <div className={style.trophynumber}>
                     2256
                 </div>
             </div>
         </div>
 
-        <div className='leaderboardslot'>
-            <div className='numberedList'>
-                <div className='number'>1</div>
-                <div className='leaderprofilepic'><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
+        <div className={style.leaderboardslot}>
+            <div className={style.numberedList}>
+                <div className={style.number}>1</div>
+                <div className={style.leaderprofilepic}><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
             </div>
-            <div className='milestone'>
+            <div className={style.milestone}>
                 <img className='' src={flag} />
             </div>
-            <div className='bonus'>
+            <div className={style.bonus}>
                 <img className='' src={bonus} />
             </div>
-            <div className='trophies'>
-                <div className='trophyicon'>
+            <div className={style.trophies}>
+                <div className={style.trophyicon}>
                     <img className='' src={trophy} />
                 </div>
-                <div className='trophynumber'>
+                <div className={style.trophynumber}>
                     2256
                 </div>
             </div>
         </div>
 
-        <div className='leaderboardslot'>
-            <div className='numberedList'>
-                <div className='number'>1</div>
-                <div className='leaderprofilepic'><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
+        <div className={style.leaderboardslot}>
+            <div className={style.numberedList}>
+                <div className={style.number}>1</div>
+                <div className={style.leaderprofilepic}><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
             </div>
-            <div className='milestone'>
+            <div className={style.milestone}>
                 <img className='' src={flag} />
             </div>
-            <div className='bonus'>
+            <div className={style.bonus}>
                 <img className='' src={bonus} />
             </div>
-            <div className='trophies'>
-                <div className='trophyicon'>
+            <div className={style.trophies}>
+                <div className={style.trophyicon}>
                     <img className='' src={trophy} />
                 </div>
-                <div className='trophynumber'>
+                <div className={style.trophynumber}>
                     2256
                 </div>
             </div>
         </div>
 
-        <div className='leaderboardslot'>
-            <div className='numberedList'>
-                <div className='number'>1</div>
-                <div className='leaderprofilepic'><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
+        <div className={style.leaderboardslot}>
+            <div className={style.numberedList}>
+                <div className={style.number}>1</div>
+                <div className={style.leaderprofilepic}><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
             </div>
-            <div className='milestone'>
+            <div className={style.milestone}>
                 <img className='' src={flag} />
             </div>
-            <div className='bonus'>
+            <div className={style.bonus}>
                 <img className='' src={bonus} />
             </div>
-            <div className='trophies'>
-                <div className='trophyicon'>
+            <div className={style.trophies}>
+                <div className={style.trophyicon}>
                     <img className='' src={trophy} />
                 </div>
-                <div className='trophynumber'>
+                <div className={style.trophynumber}>
                     2256
                 </div>
             </div>
         </div>
 
-        <div className='leaderboardslot'>
-            <div className='numberedList'>
-                <div className='number'>1</div>
-                <div className='leaderprofilepic'><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
+        <div className={style.leaderboardslot}>
+            <div className={style.numberedList}>
+                <div className={style.number}>1</div>
+                <div className={style.leaderprofilepic}><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
             </div>
-            <div className='milestone'>
+            <div className={style.milestone}>
                 <img className='' src={flag} />
             </div>
-            <div className='bonus'>
+            <div className={style.bonus}>
                 <img className='' src={bonus} />
             </div>
-            <div className='trophies'>
-                <div className='trophyicon'>
+            <div className={style.trophies}>
+                <div className={style.trophyicon}>
                     <img className='' src={trophy} />
                 </div>
-                <div className='trophynumber'>
+                <div className={style.trophynumber}>
                     2256
                 </div>
             </div>
         </div>
 
-        <div className='leaderboardslot'>
-            <div className='numberedList'>
-                <div className='number'>1</div>
-                <div className='leaderprofilepic'><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
+        <div className={style.leaderboardslot}>
+            <div className={style.numberedList}>
+                <div className={style.number}>1</div>
+                <div className={style.leaderprofilepic}><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
             </div>
-            <div className='milestone'>
+            <div className={style.milestone}>
                 <img className='' src={flag} />
             </div>
-            <div className='bonus'>
+            <div className={style.bonus}>
                 <img className='' src={bonus} />
             </div>
-            <div className='trophies'>
-                <div className='trophyicon'>
+            <div className={style.trophies}>
+                <div className={style.trophyicon}>
                     <img className='' src={trophy} />
                 </div>
-                <div className='trophynumber'>
+                <div className={style.trophynumber}>
                     2256
                 </div>
             </div>
         </div>
 
-        <div className='leaderboardslot'>
-            <div className='numberedList'>
-                <div className='number'>1</div>
-                <div className='leaderprofilepic'><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
+        <div className={style.leaderboardslot}>
+            <div className={style.numberedList}>
+                <div className={style.number}>1</div>
+                <div className={style.leaderprofilepic}><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
             </div>
-            <div className='milestone'>
+            <div className={style.milestone}>
                 <img className='' src={flag} />
             </div>
-            <div className='bonus'>
+            <div className={style.bonus}>
                 <img className='' src={bonus} />
             </div>
-            <div className='trophies'>
-                <div className='trophyicon'>
+            <div className={style.trophies}>
+                <div className={style.trophyicon}>
                     <img className='' src={trophy} />
                 </div>
-                <div className='trophynumber'>
+                <div className={style.trophynumber}>
                     2256
                 </div>
             </div>
@@ -451,11 +452,11 @@ export function CreateGuild() {
     
   return (
     <>
-    <div className='createguildhead'>Create your own guild</div>
+    <div className={style.createguildhead}>Create your own guild</div>
 
     {/*<label for="guildsearch">Search for Guild</label>*/}
-    <input type="search" id="guildsearch" name="gsearch" placeholder='Search for Guild'></input>
-    <div className='createguildinternal'>
+    <input type="search" id={style.guildsearch} name="gsearch" placeholder='Search for Guild'></input>
+    <div className={style.createguildinternal}>
 
     </div>
     </>
@@ -464,64 +465,69 @@ export function CreateGuild() {
 
 export function MyGuilds() {
   return (
-    <div className='achievementModalgrid'>
-        <div className='guildsList'>
-            <div className='castleicon'></div>
-            <div className='guildname'>DrSoumya's Guild</div>
-            <div className='members'>
-                <div className='membersprop'>Members:</div>
+    <div className={style.achievementModalgrid}>
+        <div className={style.guildsList}>
+            <div className={style.castleicon}></div>
+            <div className={style.guildname}>DrSoumya's Guild</div>
+            <div className={style.members}>
+                <div className={style.membersprop}>Members:</div>
                 26/30
             </div>
-            <div className='publicprivate'>Public</div>
+            <div className={style.publicprivate}>Public</div>
         </div>
-        <div className='guildsList'>
-            <div className='castleicon'></div>
-            <div className='guildname'>DrSoumya's Guild</div>
-            <div className='members'>
-                <div className='membersprop'>Members:</div>
+        <div className={style.guildsList}>
+            <div className={style.castleicon}></div>
+            <div className={style.guildname}>DrSoumya's Guild</div>
+            <div className={style.members}>
+                <div className={style.membersprop}>Members:</div>
                 26/30
             </div>
-            <div className='publicprivate'>Public</div>
-        </div><div className='guildsList'>
-            <div className='castleicon'></div>
-            <div className='guildname'>DrSoumya's Guild</div>
-            <div className='members'>
-                <div className='membersprop'>Members:</div>
+            <div className={style.publicprivate}>Public</div>
+        </div>
+        <div className={style.guildsList}>
+            <div className={style.castleicon}></div>
+            <div className={style.guildname}>DrSoumya's Guild</div>
+            <div className={style.members}>
+                <div className={style.membersprop}>Members:</div>
                 26/30
             </div>
-            <div className='publicprivate'>Public</div>
-        </div><div className='guildsList'>
-            <div className='castleicon'></div>
-            <div className='guildname'>DrSoumya's Guild</div>
-            <div className='members'>
-                <div className='membersprop'>Members:</div>
+            <div className={style.publicprivate}>Public</div>
+        </div>
+        <div className={style.guildsList}>
+            <div className={style.castleicon}></div>
+            <div className={style.guildname}>DrSoumya's Guild</div>
+            <div className={style.members}>
+                <div className={style.membersprop}>Members:</div>
                 26/30
             </div>
-            <div className='publicprivate'>Public</div>
-        </div><div className='guildsList'>
-            <div className='castleicon'></div>
-            <div className='guildname'>DrSoumya's Guild</div>
-            <div className='members'>
-                <div className='membersprop'>Members:</div>
+            <div className={style.publicprivate}>Public</div>
+        </div>
+        <div className={style.guildsList}>
+            <div className={style.castleicon}></div>
+            <div className={style.guildname}>DrSoumya's Guild</div>
+            <div className={style.members}>
+                <div className={style.membersprop}>Members:</div>
                 26/30
             </div>
-            <div className='publicprivate'>Public</div>
-        </div><div className='guildsList'>
-            <div className='castleicon'></div>
-            <div className='guildname'>DrSoumya's Guild</div>
-            <div className='members'>
-                <div className='membersprop'>Members:</div>
+            <div className={style.publicprivate}>Public</div>
+        </div>
+        <div className={style.guildsList}>
+            <div className={style.castleicon}></div>
+            <div className={style.guildname}>DrSoumya's Guild</div>
+            <div className={style.members}>
+                <div className={style.membersprop}>Members:</div>
                 26/30
             </div>
-            <div className='publicprivate'>Public</div>
-        </div><div className='guildsList'>
-            <div className='castleicon'></div>
-            <div className='guildname'>DrSoumya's Guild</div>
-            <div className='members'>
-                <div className='membersprop'>Members:</div>
+            <div className={style.publicprivate}>Public</div>
+        </div>
+        <div className={style.guildsList}>
+            <div className={style.castleicon}></div>
+            <div className={style.guildname}>DrSoumya's Guild</div>
+            <div className={style.members}>
+                <div className={style.membersprop}>Members:</div>
                 26/30
             </div>
-            <div className='publicprivate'>Public</div>
+            <div className={style.publicprivate}>Public</div>
         </div>
 
         
@@ -531,155 +537,141 @@ export function MyGuilds() {
 
 export function Friends() {
   return (
-    <div className='achievementModalgrid'>
-        <div className='FriendsList'>
-            <div className='leaderprofilepic'><img src = {"../icons/profilepic-min.png"} /></div>
-            <div className='personname'>
+    <div className={style.achievementModalgrid}>
+        <div className={style.FriendsList}>
+            <div className={style.leaderprofilepic}><img src = {"../icons/profilepic-min.png"} /></div>
+            <div className={style.personname}>
                 Soumya Dutta
             </div>
-            <div className='mighte'>
-                <div className='mightprop'>might:</div>
+            <div className={style.mighte}>
+                <div className={style.mightprop}>might:</div>
                 80k
             </div>
-            <div className='trophies'>
-                <div className='trophyicon'>
+            <div className={style.trophies}>
+                <div className={style.trophyicon}>
                     <img className='' src={trophy} />
                 </div>
-                <div className='trophynumber'>
+                <div className={style.trophynumber}>
                     2256
                 </div>
             </div>
         </div>
-        <div className='FriendsList'>
-            <div className='numberedList'>
-                <div className='leaderprofilepic'><img src = {"../icons/profilepic-min.png"} /></div>
-            </div>
-            <div className='personname'>
+        <div className={style.FriendsList}>
+            <div className={style.leaderprofilepic}><img src = {"../icons/profilepic-min.png"} /></div>
+            <div className={style.personname}>
                 Soumya Dutta
             </div>
-            <div className='mighte'>
-                <div className='mightprop'>might:</div>
+            <div className={style.mighte}>
+                <div className={style.mightprop}>might:</div>
                 80k
             </div>
-            <div className='trophies'>
-                <div className='trophyicon'>
+            <div className={style.trophies}>
+                <div className={style.trophyicon}>
                     <img className='' src={trophy} />
                 </div>
-                <div className='trophynumber'>
+                <div className={style.trophynumber}>
                     2256
                 </div>
             </div>
-        </div><div className='FriendsList'>
-            <div className='numberedList'>
-                <div className='leaderprofilepic'><img src = {"../icons/profilepic-min.png"} /></div>
-            </div>
-            <div className='personname'>
+        </div><div className={style.FriendsList}>
+            <div className={style.leaderprofilepic}><img src = {"../icons/profilepic-min.png"} /></div>
+            <div className={style.personname}>
                 Soumya Dutta
             </div>
-            <div className='mighte'>
-                <div className='mightprop'>might:</div>
+            <div className={style.mighte}>
+                <div className={style.mightprop}>might:</div>
                 80k
             </div>
-            <div className='trophies'>
-                <div className='trophyicon'>
+            <div className={style.trophies}>
+                <div className={style.trophyicon}>
                     <img className='' src={trophy} />
                 </div>
-                <div className='trophynumber'>
+                <div className={style.trophynumber}>
                     2256
                 </div>
             </div>
-        </div><div className='FriendsList'>
-            <div className='numberedList'>
-                <div className='leaderprofilepic'><img src = {"../icons/profilepic-min.png"} /></div>
-            </div>
-            <div className='personname'>
+        </div><div className={style.FriendsList}>
+            <div className={style.leaderprofilepic}><img src = {"../icons/profilepic-min.png"} /></div>
+            <div className={style.personname}>
                 Soumya Dutta
             </div>
-            <div className='mighte'>
-                <div className='mightprop'>might:</div>
+            <div className={style.mighte}>
+                <div className={style.mightprop}>might:</div>
                 80k
             </div>
-            <div className='trophies'>
-                <div className='trophyicon'>
+            <div className={style.trophies}>
+                <div className={style.trophyicon}>
                     <img className='' src={trophy} />
                 </div>
-                <div className='trophynumber'>
+                <div className={style.trophynumber}>
                     2256
                 </div>
             </div>
-        </div><div className='FriendsList'>
-            <div className='numberedList'>
-                <div className='leaderprofilepic'><img src = {"../icons/profilepic-min.png"} /></div>
-            </div>
-            <div className='personname'>
+        </div><div className={style.FriendsList}>
+            <div className={style.leaderprofilepic}><img src = {"../icons/profilepic-min.png"} /></div>
+            <div className={style.personname}>
                 Soumya Dutta
             </div>
-            <div className='mighte'>
-                <div className='mightprop'>might:</div>
+            <div className={style.mighte}>
+                <div className={style.mightprop}>might:</div>
                 80k
             </div>
-            <div className='trophies'>
-                <div className='trophyicon'>
+            <div className={style.trophies}>
+                <div className={style.trophyicon}>
                     <img className='' src={trophy} />
                 </div>
-                <div className='trophynumber'>
+                <div className={style.trophynumber}>
                     2256
                 </div>
             </div>
-        </div><div className='FriendsList'>
-            <div className='numberedList'>
-                <div className='leaderprofilepic'><img src = {"../icons/profilepic-min.png"} /></div>
-            </div>
-            <div className='personname'>
+        </div><div className={style.FriendsList}>
+            <div className={style.leaderprofilepic}><img src = {"../icons/profilepic-min.png"} /></div>
+            <div className={style.personname}>
                 Soumya Dutta
             </div>
-            <div className='mighte'>
-                <div className='mightprop'>might:</div>
+            <div className={style.mighte}>
+                <div className={style.mightprop}>might:</div>
                 80k
             </div>
-            <div className='trophies'>
-                <div className='trophyicon'>
+            <div className={style.trophies}>
+                <div className={style.trophyicon}>
                     <img className='' src={trophy} />
                 </div>
-                <div className='trophynumber'>
+                <div className={style.trophynumber}>
                     2256
                 </div>
             </div>
-        </div><div className='FriendsList'>
-            <div className='numberedList'>
-                <div className='leaderprofilepic'><img src = {"../icons/profilepic-min.png"} /></div>
-            </div>
-            <div className='personname'>
+        </div><div className={style.FriendsList}>
+            <div className={style.leaderprofilepic}><img src = {"../icons/profilepic-min.png"} /></div>
+            <div className={style.personname}>
                 Soumya Dutta
             </div>
-            <div className='mighte'>
-                <div className='mightprop'>might:</div>
+            <div className={style.mighte}>
+                <div className={style.mightprop}>might:</div>
                 80k
             </div>
-            <div className='trophies'>
-                <div className='trophyicon'>
+            <div className={style.trophies}>
+                <div className={style.trophyicon}>
                     <img className='' src={trophy} />
                 </div>
-                <div className='trophynumber'>
+                <div className={style.trophynumber}>
                     2256
                 </div>
             </div>
-        </div><div className='FriendsList'>
-            <div className='numberedList'>
-                <div className='leaderprofilepic'><img src = {"../icons/profilepic-min.png"} /></div>
-            </div>
-            <div className='personname'>
+        </div><div className={style.FriendsList}>
+            <div className={style.leaderprofilepic}><img src = {"../icons/profilepic-min.png"} /></div>
+            <div className={style.personname}>
                 Soumya Dutta
             </div>
-            <div className='mighte'>
-                <div className='mightprop'>might:</div>
+            <div className={style.mighte}>
+                <div className={style.mightprop}>might:</div>
                 80k
             </div>
-            <div className='trophies'>
-                <div className='trophyicon'>
+            <div className={style.trophies}>
+                <div className={style.trophyicon}>
                     <img className='' src={trophy} />
                 </div>
-                <div className='trophynumber'>
+                <div className={style.trophynumber}>
                     2256
                 </div>
             </div>
@@ -690,62 +682,62 @@ export function Friends() {
 
 export function Alerts() {
     return (
-      <div className='achievementModalgrid'>
-          <div className='AlertList'>
-            <div className='alert'>
+      <div className={style.achievementModalgrid}>
+          <div className={style.AlertList}>
+            <div className={style.alert}>
                 someone accepted your friendship request
             </div>
-            <div className='alerttime'>
+            <div className={style.alerttime}>
                 59 seconds ago
             </div>
           </div>
-          <div className='AlertList'>
-            <div className='alert'>
+          <div className={style.AlertList}>
+            <div className={style.alert}>
                 someone accepted your friendship request
             </div>
-            <div className='alerttime'>
+            <div className={style.alerttime}>
                 59 seconds ago
             </div>
-          </div><div className='AlertList'>
-            <div className='alert'>
+          </div><div className={style.AlertList}>
+            <div className={style.alert}>
                 someone accepted your friendship request
             </div>
-            <div className='alerttime'>
+            <div className={style.alerttime}>
                 59 seconds ago
             </div>
-          </div><div className='AlertList'>
-            <div className='alert'>
+          </div><div className={style.AlertList}>
+            <div className={style.alert}>
                 someone accepted your friendship request
             </div>
-            <div className='alerttime'>
+            <div className={style.alerttime}>
                 59 seconds ago
             </div>
-          </div><div className='AlertList'>
-            <div className='alert'>
+          </div><div className={style.AlertList}>
+            <div className={style.alert}>
                 someone accepted your friendship request
             </div>
-            <div className='alerttime'>
+            <div className={style.alerttime}>
                 59 seconds ago
             </div>
-          </div><div className='AlertList'>
-            <div className='alert'>
+          </div><div className={style.AlertList}>
+            <div className={style.alert}>
                 someone accepted your friendship request
             </div>
-            <div className='alerttime'>
+            <div className={style.alerttime}>
                 59 seconds ago
             </div>
-          </div><div className='AlertList'>
-            <div className='alert'>
+          </div><div className={style.AlertList}>
+            <div className={style.alert}>
                 someone accepted your friendship request
             </div>
-            <div className='alerttime'>
+            <div className={style.alerttime}>
                 59 seconds ago
             </div>
-          </div><div className='AlertList'>
-            <div className='alert'>
+          </div><div className={style.AlertList}>
+            <div className={style.alert}>
                 someone accepted your friendship request
             </div>
-            <div className='alerttime'>
+            <div className={style.alerttime}>
                 59 seconds ago
             </div>
           </div>
@@ -755,78 +747,78 @@ export function Alerts() {
 export function Mail() {
     const {photoURL } = auth.currentUser;
     return (
-      <div className='achievementModalgrid'>
-          <div className='MailList'>
-            <div className='leaderprofilepic'><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
-            <div className='subjectLine'>
+      <div className={style.achievementModalgrid}>
+          <div className={style.MailList}>
+            <div className={style.leaderprofilepic}><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
+            <div className={style.subjectLine}>
                 someone accepted your friendship request
             </div>
-            <div className='mailtime'>
+            <div className={style.mailtime}>
                 59 seconds ago
             </div>
           </div>
-          <div className='MailList'>
-            <div className='leaderprofilepic'><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
-            <div className='subjectLine'>
+          <div className={style.MailList}>
+            <div className={style.leaderprofilepic}><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
+            <div className={style.subjectLine}>
                 someone accepted your friendship request
             </div>
-            <div className='mailtime'>
+            <div className={style.mailtime}>
                 59 seconds ago
             </div>
-          </div><div className='MailList'>
-            <div className='leaderprofilepic'><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
-            <div className='subjectLine'>
+          </div><div className={style.MailList}>
+            <div className={style.leaderprofilepic}><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
+            <div className={style.subjectLine}>
                 someone accepted your friendship request
             </div>
-            <div className='mailtime'>
+            <div className={style.mailtime}>
                 59 seconds ago
             </div>
-          </div><div className='MailList'>
-            <div className='leaderprofilepic'><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
-            <div className='subjectLine'>
+          </div><div className={style.MailList}>
+            <div className={style.leaderprofilepic}><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
+            <div className={style.subjectLine}>
                 someone accepted your friendship request
             </div>
-            <div className='mailtime'>
+            <div className={style.mailtime}>
                 59 seconds ago
             </div>
-          </div><div className='MailList'>
-            <div className='leaderprofilepic'><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
-            <div className='subjectLine'>
+          </div><div className={style.MailList}>
+            <div className={style.leaderprofilepic}><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
+            <div className={style.subjectLine}>
                 someone accepted your friendship request
             </div>
-            <div className='mailtime'>
+            <div className={style.mailtime}>
                 59 seconds ago
             </div>
-          </div><div className='MailList'>
-            <div className='leaderprofilepic'><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
-            <div className='subjectLine'>
+          </div><div className={style.MailList}>
+            <div className={style.leaderprofilepic}><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
+            <div className={style.subjectLine}>
                 someone accepted your friendship request
             </div>
-            <div className='mailtime'>
+            <div className={style.mailtime}>
                 59 seconds ago
             </div>
-          </div><div className='MailList'>
-            <div className='leaderprofilepic'><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
-            <div className='subjectLine'>
+          </div><div className={style.MailList}>
+            <div className={style.leaderprofilepic}><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
+            <div className={style.subjectLine}>
                 someone accepted your friendship request
             </div>
-            <div className='mailtime'>
+            <div className={style.mailtime}>
                 59 seconds ago
             </div>
-          </div><div className='MailList'>
-            <div className='leaderprofilepic'><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
-            <div className='subjectLine'>
+          </div><div className={style.MailList}>
+            <div className={style.leaderprofilepic}><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
+            <div className={style.subjectLine}>
                 someone accepted your friendship request
             </div>
-            <div className='mailtime'>
+            <div className={style.mailtime}>
                 59 seconds ago
             </div>
-          </div><div className='MailList'>
-            <div className='leaderprofilepic'><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
-            <div className='subjectLine'>
+          </div><div className={style.MailList}>
+            <div className={style.leaderprofilepic}><img src = {photoURL || "../icons/profilepic-min.png"} /></div>
+            <div className={style.subjectLine}>
                 someone accepted your friendship request
             </div>
-            <div className='mailtime'>
+            <div className={style.mailtime}>
                 59 seconds ago
             </div>
           </div>

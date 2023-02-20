@@ -1,9 +1,13 @@
 import React, { useEffect, useState} from 'react';
 import EducationHomeHeader from "../components/education/educationHomeHeader";
 import EducationCarousel from "../components/education/educationCarousel";
-import '../assets/educationHome.css';
-import '../assets/group.css';
-import '../assets/chat.css';
+import style from '../assets/educationHome.module.css';
+/*
+import '../assets/chat.module.css';
+import '../assets/group.module.css';
+*/
+import style1 from '../assets/chat.module.css';
+
 import DogAnimated from "../features/dogAnimated";
 import ChatModule from "../features/chat/chatmodule";
 import UpgradeVIP from "../components/upgradeVIP";
@@ -22,29 +26,6 @@ import shopFront from "../assets/education/shop_front_curved2.png";import megasa
 import Achievementmodal, { MyGuilds, Friends, Alerts, Mail } from '../components/education/flowermenumodals';import {Leaderboard} from '../components/education/flowermenumodals';
 import {CreateGuild} from '../components/education/flowermenumodals';
 
-const educationShopStyles = {
-    content: {
-        top: '0',
-        right: '0',
-        bottom: '0',
-        left: '0',
-        border: 'none',
-        padding:'0',
-        background: 'none',
-    },
-  };
-const customStyles = {
-    content: {
-        top: '10vh',
-        right: '23vw',
-        bottom: '10vh',
-        left: '23vw',
-        border: 'none',
-        padding:'0',
-        background: 'none',
-    },
-  };
-  
 
 function EducationHome() {
     const [chatOpen, setchatOpen] = useState(true);
@@ -158,26 +139,26 @@ function EducationHome() {
      return (
         <>
                 {/*---------------------------------Education Shop------------------------------------ */}
-                <div className={educationShopIsOpen? 'educationmodalcontainer' : 'not-active'}>
-                    <div className='educationmodalhead'>
-                        <div className='educationmodalheadcontainer'>
-                            <div className='educationmodalheadtext'>
-                                <img className='educationshopfront' src = {shopFront} />
-                                <img className='megasale' src = {megasale} />
+                <div className={educationShopIsOpen? `${style.educationmodalcontainer}` : `${style.notactive}`}>
+                    <div className={style.educationmodalhead}>
+                        <div className={style.educationmodalheadcontainer}>
+                            <div className={style.educationmodalheadtext}>
+                                <img className={style.educationshopfront} src = {shopFront} />
+                                <img className={style.megasale} src = {megasale} />
                             </div>
-                            <div className='educationmodalclosebutton' >
+                            <div className={style.educationmodalclosebutton} >
                                 <img src = {close} onClick={closeeducationShop}/>
                             </div>
                         </div>
                     </div>
-                    <div className='educationmodalcontent' id = "educationmodalcontentid">
+                    <div className={style.educationmodalcontent} id = {style.educationmodalcontentid}>
                         
                         <EducationShop/>
                     </div>
                 </div>
 
                 {/*---------------------------------Pricing page------------------------------------ */}
-                <div className={upgradeVIP? '' : 'not-active'}>
+                <div className={upgradeVIP? '' : `${style.notactive}`}>
                 <UpgradeVIP
                 toggleopenclose = {toggleupgradeVIP}
                  />
@@ -186,53 +167,53 @@ function EducationHome() {
                 {/*---------------------------------Flower menu Modals------------------------------ */}
 
 
-                <div className={flowermenuIsOpen? 'flowermodaloverlay' : 'not-active'}>       
-                <div className='flowermodal' id = 'flowermodal'>
-                <div className='modalcontainer'>
-                        <div className='modalhead'>
-                            <div className='modalheadcontainer'>
-                                <div className='modalheadtext'>
+                <div className={flowermenuIsOpen? `${style.flowermodaloverlay}` : `${style.notactive}`}>       
+                <div className={style.flowermodal} id = {style.flowermodal}>
+                <div className={style.modalcontainer}>
+                        <div className={style.modalhead}>
+                            <div className={style.modalheadcontainer}>
+                                <div className={style.modalheadtext}>
                                 </div>
-                                <div className='modalclosebutton' >
+                                <div className={style.modalclosebutton} >
                                 <img src = {close} onClick={toggleflowermenu}/>
                                 </div>
                             </div>
                         </div>
-                        <div className='modalcontent'>
+                        <div className={style.modalcontent}>
 
-                    <div className='flowermenu'>
-                        <div className='flowermenu_achievement' onClick={()=> openFlowerModal('achievement')}></div>
-                        <div className='flowermenu_leaderboard' onClick={()=> openFlowerModal('leaderboard')}></div>
-                        <div className='flowermenu_creategroup' onClick={()=> openFlowerModal('creategroup')}></div>
-                        <div className='flowermenu_friends' onClick={()=> openFlowerModal('friends')}></div>
-                        <div className='flowermenu_mygroups' onClick={()=> openFlowerModal('mygroups')}></div>
-                        <div className='flowermenu_alerts' onClick={()=> openFlowerModal('alerts')}></div>
-                        <div className='flowermenu_mail' onClick={()=> openFlowerModal('mail')}></div>
-                        <div className='flowermenu_giftbox' onClick={()=> openFlowerModal('giftbox')}></div>
+                    <div className={style.flowermenu}>
+                        <div className={style.flowermenu_achievement} onClick={()=> openFlowerModal('achievement')}></div>
+                        <div className={style.flowermenu_leaderboard} onClick={()=> openFlowerModal('leaderboard')}></div>
+                        <div className={style.flowermenu_creategroup} onClick={()=> openFlowerModal('creategroup')}></div>
+                        <div className={style.flowermenu_friends} onClick={()=> openFlowerModal('friends')}></div>
+                        <div className={style.flowermenu_mygroups} onClick={()=> openFlowerModal('mygroups')}></div>
+                        <div className={style.flowermenu_alerts} onClick={()=> openFlowerModal('alerts')}></div>
+                        <div className={style.flowermenu_mail} onClick={()=> openFlowerModal('mail')}></div>
+                        <div className={style.flowermenu_giftbox} onClick={()=> openFlowerModal('giftbox')}></div>
                     </div>
                 </div>
                 </div>
                 </div>
                 </div>
 
-            <div className={FlowermodalIsOpen? 'flowermodaloverlay' : 'not-active'}>       
-                <div className='flowermodal'>
-                    <div className='modalcontainer'>
-                        <div className='modalhead'>
-                            <div className='modalheadcontainer'>
-                                <div className='modalheadtext'>
+            <div className={FlowermodalIsOpen? `${style.flowermodaloverlay}` : `${style.notactive}`}>       
+                <div className={style.flowermodal}>
+                    <div className={style.modalcontainer}>
+                        <div className={style.modalhead}>
+                            <div className={style.modalheadcontainer}>
+                                <div className={style.modalheadtext}>
                                 {FlowermodalOption == 'achievement'? 'Achievement': FlowermodalOption == 'leaderboard' ? 'Leaderboard' : 
                                 FlowermodalOption == 'creategroup' ? 'Create Guild' : FlowermodalOption == 'friends' ? 'Friends' :
                                 FlowermodalOption == 'mygroups' ? 'My Guilds' : FlowermodalOption == 'alerts' ? 'Alerts' :
                                 FlowermodalOption == 'mail' ? 'Mail' : FlowermodalOption == 'giftbox' ? 'Giftbox' : "Else"
                                 }
                                 </div>
-                                <div className='modalclosebutton' >
+                                <div className={style.modalclosebutton} >
                                 <img src = {close} onClick={closeFlowerModal}/>
                                 </div>
                             </div>
                         </div>
-                        <div className='modalcontent' id = {FlowermodalOption == 'creategroup' ? 'modalcontent':''}>
+                        <div className={style.modalcontent} id = {FlowermodalOption == 'creategroup' ? `${style.modalcontent}`:''}>
                                 {FlowermodalOption == 'achievement'? <Achievementmodal/>: FlowermodalOption == 'leaderboard' ? <Leaderboard/> : 
                                 FlowermodalOption == 'creategroup' ? <CreateGuild/> : FlowermodalOption == 'friends' ? <Friends/> :
                                 FlowermodalOption == 'mygroups' ? <MyGuilds/> : FlowermodalOption == 'alerts' ? <Alerts/> :
@@ -279,45 +260,45 @@ function EducationHome() {
             openeducationShop = {openeducationShop}
             //setlogout = {setlogout}
             />
-            <div id="main">
+            <div id={style.main}>
             <EducationCarousel/>
-            <div className='mainContent'>
-                <div className='Main_achievement' onClick={()=> openFlowerModal('achievement')}>
+            <div className={style.mainContent}>
+                <div className={style.Main_achievement} onClick={()=> openFlowerModal('achievement')}>
                     Achievement
                     <img src={img1} />
                 </div>
-                <div className='Main_leadersboard' onClick={()=> openFlowerModal('leaderboard')}>
+                <div className={style.Main_leadersboard} onClick={()=> openFlowerModal('leaderboard')}>
                     Leaderboard
                     <img src={img2} />
                 </div>
-                <div className='Main_mygroups' onClick={()=> openFlowerModal('mygroups')}>
+                <div className={style.Main_mygroups} onClick={()=> openFlowerModal('mygroups')}>
                     My groups
                     <img src={img3} />
                 </div>
-                <div className='Main_searchgroup' onClick={()=> openFlowerModal('creategroup')}>
+                <div className={style.Main_searchgroup} onClick={()=> openFlowerModal('creategroup')}>
                     Create Guild
                     <img src={img4} />
                 </div>
-                <div className='Main_friend' onClick={()=> openFlowerModal('friends')}>
+                <div className={style.Main_friend} onClick={()=> openFlowerModal('friends')}>
                     Friends
                 </div>
-                <div className='Main_alerts' onClick={()=> openFlowerModal('alerts')}>
+                <div className={style.Main_alerts} onClick={()=> openFlowerModal('alerts')}>
                     Alerts
                     <img src={img5} />
                 </div>
-                <div className='Main_mail' onClick={()=> openFlowerModal('mail')}>
+                <div className={style.Main_mail} onClick={()=> openFlowerModal('mail')}>
                     Mail
                     <img src={img6} />
                 </div>
-                <div className='Main_gifts' onClick={()=> openFlowerModal('giftbox')}>
+                <div className={style.Main_gifts} onClick={()=> openFlowerModal('giftbox')}>
                     Gifts
                     <img src={img7} />
                 </div>
             </div>
 
-            <div className='videoTabs'>
-                <button class="videoTab1">Premium</button>
-                <button class="videoTab2">Not Premium</button>
+            <div className={style.videoTabs}>
+                <button class={style.videoTab1}>Premium</button>
+                <button class={style.videoTab2}>Not Premium</button>
             </div>
             
                 {/*<Vimeo/>*/}
@@ -356,7 +337,7 @@ function EducationHome() {
         */
 
             return(
-            <div className={"sticktobottom"+(props.chatOpen ? "":' sticktobottom-inactive')/*+(addmargin ? ' addmargintochat' :'')*/}>
+            <div className={`${style1.sticktobottom}`+(props.chatOpen ? "": ' '+`${style1.sticktobottominactive}`)/*+(addmargin ? ' addmargintochat' :'')*/}>
             <DogAnimated/>
             
             <ChatModule 

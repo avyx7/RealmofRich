@@ -1,0 +1,634 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;1,500&display=swap');
+.pepperContainer{
+    margin-left: 5vw;
+    margin-top:2rem;
+    margin-right:5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:2rem;
+}
+@media only screen and (max-width: 700px) {
+  .pepperContainer{
+    grid-template-columns: unset;
+    margin-top:3vh;
+    margin-left: 0;
+    margin-right:0;
+  }
+  .pepperContainer *{
+    box-sizing: border-box;
+  }
+}
+
+.pepperContainer *{
+  font-family: 'Vollkorn', serif;
+  font-size: 100%;
+}
+/*<---------------------------------------Hello World animation--------------------------------->*/
+.contentContainer{
+  position: relative;
+  height:50px;
+}
+@media only screen and (max-width: 700px) {
+  .contentContainer *{
+    font-size:90%;
+  }
+}
+.content {
+  position: absolute;
+  overflow: hidden;
+  font-size: 35px;
+  line-height: 40px;
+  color: #ecf0f1;
+}
+.content__container {
+  font-weight: 600;
+  overflow: hidden;
+  height: 40px;
+  padding: 0 40px;
+}
+.content__container:before {
+  content: "[";
+  left: 0;
+}
+.content__container:after {
+  content: "]";
+  position: absolute;
+  right: 0;
+}
+.content__container:after, .content__container:before {
+  position: absolute;
+  top: 0;
+  color: #16a085;
+  font-size: 42px;
+  line-height: 40px;
+  -webkit-animation-name: opacity;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.content__container__text {
+  display: inline;
+  float: left;
+  margin: 0;
+}
+.content__container__list {
+  margin-top: 0;
+  padding-left: 90px;
+  text-align: left;
+  list-style: none;
+  -webkit-animation-name: change;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: change;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.content__container__list__item {
+  line-height: 40px;
+  margin: 0;
+}
+
+@-webkit-keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes change {
+  0%, 12.66%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  16.66%, 29.32% {
+    transform: translate3d(0, -25%, 0);
+  }
+  33.32%, 45.98% {
+    transform: translate3d(0, -50%, 0);
+  }
+  49.98%, 62.64% {
+    transform: translate3d(0, -75%, 0);
+  }
+  66.64%, 79.3% {
+    transform: translate3d(0, -50%, 0);
+  }
+  83.3%, 95.96% {
+    transform: translate3d(0, -25%, 0);
+  }
+}
+@keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes change {
+  0%, 12.66%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  16.66%, 29.32% {
+    transform: translate3d(0, -25%, 0);
+  }
+  33.32%, 45.98% {
+    transform: translate3d(0, -50%, 0);
+  }
+  49.98%, 62.64% {
+    transform: translate3d(0, -75%, 0);
+  }
+  66.64%, 79.3% {
+    transform: translate3d(0, -50%, 0);
+  }
+  83.3%, 95.96% {
+    transform: translate3d(0, -25%, 0);
+  }
+}
+/*<---------------------------------------end of Hello World animation--------------------------------->*/
+.Peeps{
+    grid-column: 1/2;
+
+}
+.rightSideBar{
+    grid-column: 2/3;
+    height:100vh;
+}
+.rightSideBargrid{
+    width: 100%;
+    max-width: calc((93vw - 5vw - 5vw - 2rem)*0.5);
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-gap:2rem;
+    position:fixed;
+}
+@media only screen and (max-width: 700px) {
+  .rightSideBar{
+    grid-column: unset;
+    display: none;
+  }
+}
+/*<!-----------------------------------------------Blackhole ------------------------------------------>*/
+.blackhole{
+    grid-column: 1/2;
+    height:100vh;
+    overflow: hidden;
+    background: #24C6DC; 
+    background: -webkit-linear-gradient(to bottom, #514A9D, #24C6DC);  
+    background: linear-gradient(to bottom, #8a4a9d, #2440dc); 
+    top: 0;
+    width: 100px;
+    position: fixed;
+}
+.boxFixed{
+
+}
+.box{
+  position: relative;
+  width:100%;
+  height:100vh;
+}
+.box div {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 6px solid rgba(255,255,255,0.8);
+}
+
+.box div:nth-child(1) {
+  top: 12%;
+  left: 42%;
+  animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(2) {
+  top: 70%;
+  left: 50%;
+  animation: animate 7s linear infinite;
+}
+.box div:nth-child(3) {
+  top: 17%;
+  left: 6%;
+  animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(4) {
+  top: 20%;
+  left: 60%;
+  animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(5) {
+  top: 67%;
+  left: 10%;
+  animation: animate 6s linear infinite;
+}
+
+.box div:nth-child(6) {
+  top: 80%;
+  left: 70%;
+  animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(7) {
+  top: 60%;
+  left: 80%;
+  animation: animate 15s linear infinite;
+}
+
+.box div:nth-child(8) {
+  top: 32%;
+  left: 25%;
+  animation: animate 16s linear infinite;
+}
+
+.box div:nth-child(9) {
+  top: 90%;
+  left: 25%;
+  animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(10) {
+  top: 20%;
+  left: 80%;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(-90px) rotate(360deg);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: scale(1.3) translateY(-90px) rotate(-180deg);
+    border-radius: 50%;
+    opacity: 0;
+  }
+}
+/*--------------------------------------------------start of Black hole  1------------------------------------------*/
+.rulercontainer{
+  display: flex;
+  flex-direction: column;
+}
+.rulercontainer *{
+  font-size: 100%;
+  font-weight: bold;
+  font-family: Roboto;;
+  color:white;
+}
+.marker{
+  height:4vh;
+  width:30%;
+  border-top: 1px solid #ffffff;
+}
+.boldmarker{
+  height:4vh;
+  width:50%;
+  border-top: 3px solid #ffffff;
+}
+.boldmarker *{
+  margin-top:calc(-4vh + 1.7rem);
+  line-height:1rem;
+  margin-left: calc( 0.5vw + 50px)
+}
+/*--------------------------------------------------End of Black hole  1------------------------------------------*/
+/*--------------------------------------------------End of Black hole------------------------------------------*/
+.pepperSideBar{
+    grid-column: 2/3;
+}
+.pepperSideBarContainer{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap:1rem;
+}
+.firstSideBar{
+    grid-row: 1/2;
+    width:100%;
+    height:45vh;
+    border-radius:25px;
+    background-color: rgb(218, 218, 218);
+}
+.secondSideBar{
+    grid-row: 2/3;
+    width:100%;
+    height:35vh;
+    border-radius:25px;
+    background-color: rgb(218, 218, 218);
+}
+textarea {
+  display: block;
+  margin: 0;
+  border: 2px solid #74637f;
+  border-radius: 0;
+  color: #444;
+  background-color: transparent;
+  overflow: auto;
+  resize: none;
+  transition: transform 1s;
+  width:100%;
+  font-size:90%;
+}
+
+.Pepper{
+    padding-top:2vh;
+    padding-bottom:2vh;
+    width:100%;
+    min-height: 20vh;
+    border-bottom: 2px solid rgb(237,237,237);
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+}
+.PepperOwner{
+  grid-column: 1/2;
+  padding:0 2vw;
+}
+.PepperContent{
+  grid-column: 2/3;
+  font-weight: 400;
+  padding-right:3vw;
+}
+.profilePic{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  grid-column: 1/2;
+}
+.ownerName{
+  display: flex;
+  flex-direction: row;
+  font-size: 110%;
+}
+.displayName{
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  max-width: calc((91% - 50px)*0.4);
+  margin-right: 0.6vw;
+}
+.userhandle{
+  font-size: 90%;
+  font-family: cursive;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  max-width: calc((91% - 50px)*0.4);
+  margin-right: 0.6vw;
+}
+.createdtime{
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  max-width: calc((91% - 50px)*0.2);
+  margin-right: 0.6vw;
+}
+.PepperText{
+  margin: 0.6vh 0;
+}
+.images{
+  border-radius: 25px;
+
+}
+.PepperInputArea{
+  height: 6em;
+  border: 1px solid rgb(0,0,0,0.1);
+  font-size: 120%;
+}
+textarea:focus { 
+  outline: none !important;
+  border: 1px solid rgb(0,0,0,0.1);
+}
+.PepperInputAreaButtons{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-items: center;
+  margin-top: 2vh;
+}
+@media only screen and (max-width: 700px) {
+  .PepperOwner{
+    padding:0 3vw;
+  }
+  .profilePic{
+    width: 50px;
+    height: 50px;
+  }
+  .images{
+    border-radius: 5%;
+    width:calc(91vw - 50px);
+  }
+  .displayName{
+    font-weight: bold;
+    max-width:calc((91vw - 50px)*0.4);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+  }
+  .userhandle{
+    font-size: 90%;
+    font-family: cursive;
+    max-width:calc(((91vw - 50px)*0.4));
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+  }
+  .createdtime{
+    text-transform: uppercase;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    max-width: calc((91vw - 50px)*0.2);
+    margin-right: 0.6vw;
+  }
+  .images{
+    border-radius: 25px;
+    width:calc(91vw - 60px);
+  }
+  .PepperInputArea{
+    width: calc(91vw - 50px - 5vw);
+    height: 6em;
+    border: 1px solid rgb(0,0,0,0.1);
+  }
+  .PepperInputAreaButtons{
+    width: calc(91vw - 50px - 5vw);
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+  }
+}
+.PepperInputAreaButtons img{
+  display: block;
+  width:2vw;
+}
+.add_pepper{
+  width: 5vw;
+  background: radial-gradient(circle farthest-side at bottom right, #ff0000, #ffa500, #ffff00, #00ff00, #0000ff, #ee82ee);
+  background-size: 1000% 500%;
+  -webkit-animation: gradientbg 15s ease infinite;
+  -moz-animation: gradientbg 15s ease infinite;
+  animation-name: gradientbg;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-delay: ;
+  animation-iteration-count: infinite;
+  animation-direction: ;
+  animation-fill-mode: ;
+}
+@-webkit-keyframes gradientbg {
+  0%{background-position:0% 7%}
+  50%{background-position:100% 94%}
+  100%{background-position:0% 7%}
+}
+@-moz-keyframes gradientbg {
+  0%{background-position:0% 7%}
+  50%{background-position:100% 94%}
+  100%{background-position:0% 7%}
+}
+@keyframes gradientbg {
+  0%{background-position:0% 7%}
+  50%{background-position:100% 94%}
+  100%{background-position:0% 7%}
+}
+
+.add_pepper img{
+  margin: auto;
+}
+@media only screen and (max-width: 700px) {
+  .add_pepper{
+    width: 12vw;
+  }
+  .PepperInputAreaButtons img{
+    width:6vw;
+  }
+}
+.PepperActionButtons{
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-items: center;
+
+}
+.PepperActionButtons img{
+  width:1.6vw;
+}
+.PepperActionButtonsComment, .PepperActionButtonsRepost, .PepperActionButtonsLike, .PepperActionButtonsShare{
+  display: flex;
+  flex-direction: row;
+}
+.commentNumber, .repostNumber, .likeNumber{
+  margin: 0 0.6vw;
+  line-height:1.6vw;
+}
+.PepperActionButtonsComment{
+  grid-column: 1/1;
+}
+.PepperActionButtonsRepost{
+  grid-column: 2/2;
+}
+.PepperActionButtonsLike{
+  grid-column: 3/3;
+}
+.PepperActionButtonsShare{
+  grid-column: 4/4;
+}
+
+@media only screen and (max-width: 700px) {
+  .PepperActionButtons img{
+    width:6vw;
+  }
+  .commentNumber, .repostNumber, .likeNumber{
+    margin: 0 1vw;
+    line-height:6vw;
+  }
+}
+
+/*-------------------------------------Side Bar styling-----------------------------------------*/
+.layoutcontainer, .layoutcontainer1{
+  display: flex;
+  flex-direction: row;
+}
+.layoutcontainer1{
+  background-color: rgb(187, 187, 187);
+}
+
+@media only screen and (min-width: 701px) {
+  .layoutcontainer1{
+    display: none;
+  }
+}
+.jobs, .matrimony{
+  width: 8vh;
+  height: 8vh;
+  margin: auto;
+  border-radius: 5%;
+}
+.jobicon, .matrimonyicon{
+  width: 8vh;
+  height: 8vh;
+  background-color: rgb(56, 56, 56);
+  border:5px solid rgb(56, 56, 56);
+  border-radius: 50%;
+}
+@media only screen and (max-width: 700px) {
+  .layoutcontainer{
+    display: none;
+  }
+  .jobs, .matrimony{
+    width: 6vh;
+    height: 6vh;
+  }
+  .jobicon, .matrimonyicon{
+    width: 6vh;
+    height: 6vh;
+  }
+}
+.searchBarpepper{
+  grid-row: 1/2;
+  grid-column: 4/7;
+  place-items: start;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  margin: 1vh auto;
+}
+.searchBarpepper>input {
+  width:100%;
+}
+#searchQueryInputpepper{
+  width: 100%;
+  height: 2.8rem;
+  background: #f5f5f5;
+  outline: none;
+  border: none;
+  border-radius: 0.625rem;
+  padding: 0 3.5rem 0 1.5rem;
+  font-size: 1rem;
+  }
+    
+  #searchQuerySubmit {
+  width: 3.5rem;
+  height: 2.8rem;
+  margin-left: -3.5rem;
+  background: none;
+  border: none;
+  outline: none;
+  }
+  #searchQuerySubmit:hover {
+  cursor: pointer;
+  }
+  .firstSideBarcontent{
+    padding:0 5%;
+  }
+  .firstSideBarcontent *{
+    font-family: Roboto;
+  }
+  .whatshappening{
+    font-size: 130%;
+    font-weight: bold;
+  }
+  .secondSideBarcontent{
+    padding: 5%;
+  }

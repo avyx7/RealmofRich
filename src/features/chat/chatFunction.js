@@ -2,6 +2,7 @@ import React, {useRef, useState, useEffect} from 'react';
 import firebase from "firebase/app";
 import {auth} from "../../App";
 import { useList } from 'react-firebase-hooks/database';
+import style from '../../assets/chat.module.css';
 
 
   export function ChatRoom(props){
@@ -108,8 +109,8 @@ import { useList } from 'react-firebase-hooks/database';
     const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
   
     return (<>
-      <div className={`message ${messageClass}`}>
-        <img className ="profilepic" src={photoURL || '../icons/profilepic-min.png'} />
+      <div className={`${style.message} ${style.[messageClass]}`}>
+        <img className ={style.profilepic} src={photoURL || '../icons/profilepic-min.png'} />
         <p>{text}</p>
       </div>
     </>)
@@ -117,7 +118,7 @@ import { useList } from 'react-firebase-hooks/database';
   
   
     return (
-      <div className="chatbonegrid">
+      <div className={style.chatbonegrid}>
         <main>
         {/*error && <strong>Error: {error}</strong>*/}
         {/*loading && <span>List: Loading...</span>*/}
@@ -137,8 +138,8 @@ import { useList } from 'react-firebase-hooks/database';
   
         </main>
   
-        <div className="inputbox">
-          <form className="chatform" onSubmit={sendMessage}>
+        <div className={style.inputbox}>
+          <form className={style.chatform} onSubmit={sendMessage}>
   
             <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" /*onFocus={props.addmargin} onBlur={props.addmargin}*/ />
   

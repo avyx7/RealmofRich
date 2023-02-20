@@ -16,8 +16,8 @@ import 'firebaseui/dist/firebaseui.css';
 
 import Home from './pages/home';
 import {firebaseConfig} from './firebaselock';
-import Pepper from './components/pepper/pepper';
-import Realm from './components/realm/realm';
+import Pepper from './pages/pepper';
+import Realm from './pages/realm';
 import EducationHome from './pages/educationHome';
 import Profile from './pages/profile';
 
@@ -32,6 +32,8 @@ import userEvent from '@testing-library/user-event';
 import LandingEducation from './frontpage/landingEducationPage';
 
 import { useCookies } from 'react-cookie';
+import Peeps from './components/pepper/Peeps';
+import ViewPepper from './components/pepper/ViewPepper';
 
 export const realm = firebase.initializeApp(firebaseConfig);
 export const auth = firebase.auth();
@@ -175,18 +177,28 @@ function App() {
                 </Route>
               <Route element = {uservar ? <Home uservar = {uservar}/> : <Navigate to="/" />}>
                 <Route path = "/home" element = {<Pepper/>}>
+                  {/*<Route path = "/user" element = {<Realm/>} />*/}
+                  <Route index element = {<Peeps/>} />
+                  <Route path = "post">
+                    <Route index element = {<Peeps/>} />
+                    <Route path = ":postId" element = {<ViewPepper/>} />
+                  </Route>
                 </Route>
+
+                
+
                 <Route path = "/realm" element = {<Realm/>}>
                   {/*<Route path = "/user" element = {<Realm/>} />*/}
                 </Route>
+
                 <Route path = "/education" element = {<EducationHome/>}>
                 </Route>
+
                 <Route path = "/profile" element = {<Profile/>}>
                 </Route>
               </Route>
             </Route>
-            <Route path = "/:c" element = {<Home/>}>
-            </Route>
+            {/*<Route path = "*" element = {<NotFound/>} /> */}
             <Route path = "/privacypolicy" element = {<Privacy/>}>
             </Route>
             <Route path = "/companyinfo" element = {<CompanyInformation/>}>

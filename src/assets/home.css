@@ -44,6 +44,9 @@
     grid-column: 1/2;
     height:100vh;
 }
+.sidenavfixed{
+    position:fixed;
+}
 .homegrid{
     grid-column: 2/3;
     overflow-x: hidden;

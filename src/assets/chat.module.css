@@ -28,7 +28,7 @@
   background-color: #181717;
   padding-right: 5vw;
 }
-.chatgrid-inactive{
+.chatgridinactive{
   display: none;
 }
  /*
@@ -58,19 +58,19 @@
   background-size: contain;
 
 }
-.downArrow-maximize{
+.downArrowmaximize{
   transform: rotate(180deg);
 }
 .chatcontainer header {
   height: 3vh;
 }
-.chatcontainer-inactive{
+.chatcontainerinactive{
   height:3vh;
 }
-.sticktobottom-inactive{
+.sticktobottominactive{
   height: calc(3vw + 60px);
 }
-.sticktobottom-inactive .puppy{
+.sticktobottominactive .puppy{
   display: block;
 }
   .chatgrid{
@@ -128,17 +128,17 @@
   .chatcontainer header {
     height: 3vw;
   }
-  .chatcontainer-inactive{
+  .chatcontainerinactive{
     height:3vw;
   }
-  .sticktobottom-inactive{
+  .sticktobottominactive{
     height:3vw;
   }
 .chatgrid{
   display: grid;
   grid-template-columns: 1.25fr 2fr 1.25fr;
 }
-.chatgrid-inactive{
+.chatgridinactive{
   display: none;
 }
 .leftchat{
